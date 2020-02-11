@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+#error-content {
+  display: flex;
+  align-items: center;
+}
+
+div.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 10vh;
+    text-align: center;
+    height: auto;
+  }
+}
+
+.button {
+  background: red;
+  color: #fff;
+  padding: 0.5rem 5rem;
+  box-shadow: 0 1px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover,
+:focus {
+  box-shadow: 0 1px 15px 0px rgba(0, 0, 0, 0.8);
+}
