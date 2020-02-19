@@ -1,0 +1,16 @@
+<div class="text-center mt-5">
+  <h3 class="title">{{ title }}</h3>
+</div>
+<div id="slider" class="slider mb-5 mt-5">
+  <div class="wrapper">
+    <div id="items" class="items">
+      <img
+        src="../../../assets/images/slider/{{ item }}"
+        alt="..."
+        title=""
+        *ngFor="let item of list"
+        class="slide"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+@import '../../../styles.scss';
+
+#footer-nav {
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: $dark;
+  color: $white;
+}
+
+figure {
+  background: $white;
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  margin-top: -20px;
+  border-radius: 50px;
+  @media (orientation: portrait) {
+    margin: 15px auto;
+  }
+}
+
+.lightgrey {
+  background-color: $lightGray;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  div {
+    text-align: center !important;
+  }
+}
+
+.link {
+  background: none;
+  color: $white;
+}
+
+figure.vertical-center {
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
+}

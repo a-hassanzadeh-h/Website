@@ -1,11 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+$green: #2cd1aa;
+$blue: #2496ed;
+$lightGray: #606060;
+$dark: #333333;
+$white: #fff;
+
 body {
   font-family: 'Bai Jamjuree';
+  color: $dark;
+  font-size: 18px;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+}
+
+a {
+  border-bottom: 1px transparent solid;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
 }
 
 .button {
   border: none;
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin: 20px 0 10px 0;
+  font-size: 13px;
+  background: transparent;
+  border: 1px solid $green;
+  color: $white;
+  outline: transparent;
+}
+
+.button:hover,
+.button:focus {
+  background: $green !important;
+}
+
+.badge {
+  border: none;
   border-radius: 50px;
   padding: 5px 30px;
   margin: 20px 0 10px 0;
+}
+
+.link {
+  outline: none;
+  color: $white;
+  border-bottom: 1px transparent solid;
+}
+
+.link:hover,
+.link:focus {
+  border-bottom: 1px solid $green;
 }
