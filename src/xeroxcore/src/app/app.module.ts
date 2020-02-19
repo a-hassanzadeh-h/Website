@@ -1,10 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Error404Component } from './error404/error404.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { DownloadsComponent } from './downloads/downloads.component';
+import { Error404Component } from './errors/error404/error404.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
@@ -12,7 +14,10 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     AppComponent,
     Error404Component,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    DownloadsComponent,
+    ArticlesComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
