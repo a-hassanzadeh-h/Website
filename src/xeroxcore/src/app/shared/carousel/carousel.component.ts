@@ -6,12 +6,6 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements AfterViewInit {
-  private carousel;
-  private slider;
-  private next;
-  private prev;
-  private direction;
-
   public title = 'Supported Technology';
   public list = [
     '.NET_Core.png',
@@ -22,6 +16,12 @@ export class CarouselComponent implements AfterViewInit {
     'Moby-logo.png',
     'Postgresql.png'
   ];
+
+  private carousel;
+  private slider;
+  private next;
+  private prev;
+  private direction;
 
   constructor(private elementRef: ElementRef) {}
 
