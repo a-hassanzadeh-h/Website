@@ -15,6 +15,10 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.w-99 {
+  width: 99%;
+}
+
 .hide-tablet {
   @media (max-width: 1024px) {
     display: none;
