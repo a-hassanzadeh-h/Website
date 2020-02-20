@@ -13,10 +13,10 @@ export class HomeComponent implements AfterViewInit {
   ];
 
   benefitsList = [
-    { img: 'addfeatures.png', text: 'Secure' },
-    { img: 'analytics.png', text: 'Efficient' },
-    { img: 'shipping.png', text: 'Maintainable' },
-    { img: 'shipping.png', text: 'Easy to deply' }
+    { img: 'security.png', text: 'Secure' },
+    { img: 'performance.png', text: 'Efficient' },
+    { img: 'maintenance.png', text: 'Maintainable' },
+    { img: 'deployment.png', text: 'Easy to deply' }
   ];
   constructor() {}
 

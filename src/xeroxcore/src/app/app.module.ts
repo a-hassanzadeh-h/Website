@@ -11,6 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HotarticlesComponent } from './shared/hotarticles/hotarticles.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SocialMediaComponent } from './shared/social-media/social-media.component';
+import { HighlightsComponent } from './shared/highlights/highlights.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SocialMediaComponent } from './shared/social-media/social-media.compone
     ArticlesComponent,
     SocialMediaComponent,
     CarouselComponent,
-    HotarticlesComponent
+    HotarticlesComponent,
+    HighlightsComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
