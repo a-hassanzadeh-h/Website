@@ -43,3 +43,9 @@ figure.vertical-center {
     align-items: center;
   }
 }
+
+.vertical-center {
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}

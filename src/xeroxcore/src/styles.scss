@@ -29,10 +29,6 @@ a {
 .vertical-center {
   display: flex;
   align-items: center;
-
-  @media (max-width: 1024px) {
-    display: block;
-  }
 }
 
 .button {
@@ -50,6 +46,7 @@ a {
 .button:hover,
 .button:focus {
   background: $green !important;
+  color: $white;
 }
 
 .badge {
@@ -81,4 +78,17 @@ a {
 .link:hover,
 .link:focus {
   border-bottom: 1px solid $green;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $green;
 }

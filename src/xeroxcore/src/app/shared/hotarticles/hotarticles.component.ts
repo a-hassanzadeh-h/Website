@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-hotarticles',
   templateUrl: './hotarticles.component.html',
   styleUrls: ['./hotarticles.component.scss']
 })
-export class HotarticlesComponent implements OnInit {
+export class HotarticlesComponent implements OnInit, AfterViewInit {
   list = [
     {
       Title: 'Patch 3.58.2',
@@ -33,6 +33,15 @@ export class HotarticlesComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  implementDelay() {
+    const cards = document.querySelectorAll('.cardx');
+    let delay = 150;
+    cards.forEach(card => {
+      delay += 150;
+      card.setAttribute('data-aos-delay', delay.toString());
+    });
+  }
+
   public GetBadgeClass(type: string): string {
     switch (type.toLowerCase()) {
       case 'security':
@@ -42,5 +51,9 @@ export class HotarticlesComponent implements OnInit {
       case 'patch':
         return 'patch';
     }
+  }
+
+  ngAfterViewInit() {
+    this.implementDelay();
   }
 }

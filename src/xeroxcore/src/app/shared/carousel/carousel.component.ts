@@ -45,7 +45,7 @@ export class CarouselComponent implements AfterViewInit {
   }
 
   private autoSpin(): void {
-    setInterval(() => this.NextSlide(), 4000);
+    setInterval(() => this.NextSlide(), 2500);
   }
 
   private moveElement(): void {

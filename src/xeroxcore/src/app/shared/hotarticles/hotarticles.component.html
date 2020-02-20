@@ -1,14 +1,15 @@
 <div>
   <div class="container-fluid ">
     <div class="row pt-3">
-      <div *ngFor="let item of list" class="col-lg-4">
+      <div *ngFor="let item of list; let i = index" class="col-lg-4">
         <div
           class="row w-80 cardx"
           data-aos="zoom-in-down"
-          data-aos-once="true"
+          data-aos-delay="300"
+          data-aos-offset="350"
         >
-          <div class="col-xl-8 col-md-12 title vertical-center">
-            {{ item.Title }}
+          <div class="col-xl-8 col-md-12 vertical-center">
+            <h4 class="title">{{ item.Title }}</h4>
           </div>
           <div class="col-xl-4 col-md-12 vertical-center">
             <a class="badge m-auto {{ GetBadgeClass(item.type) }}">{{

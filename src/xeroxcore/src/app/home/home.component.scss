@@ -1,0 +1,35 @@
+@import '../../styles.scss';
+
+#banner {
+  height: 500px;
+  background-image: url(../../assets/images/home/3236.jpg);
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  #banner-title {
+    font-size: 36px;
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 48px;
+}
+
+figcaption {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+.hide-tablet {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
