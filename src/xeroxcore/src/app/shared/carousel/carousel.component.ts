@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -6,14 +6,14 @@ import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements AfterViewInit {
-  carousel;
-  slider;
-  next;
-  prev;
-  direction;
+  private carousel;
+  private slider;
+  private next;
+  private prev;
+  private direction;
 
-  title = 'Supported Technology';
-  list = [
+  public title = 'Supported Technology';
+  public list = [
     '.NET_Core.png',
     'Angular.png',
     'aws.png',
@@ -25,27 +25,30 @@ export class CarouselComponent implements AfterViewInit {
 
   constructor(private elementRef: ElementRef) {}
 
-  ngAfterViewInit(): void {
-    this.next = document.querySelector('.next');
-    this.prev = document.querySelector('.prev');
-    this.carousel = document.querySelector('.carousel');
-    this.slider = document.querySelector('.slider');
-    this.moveElement();
-    this.elementRef.nativeElement
-      .querySelector('.slider')
-      .addEventListener('transitionend', this.moveElement.bind(this));
+  public ngAfterViewInit(): void {
+    this.InitElements();
+    this.InitEventListener();
     this.autoSpin();
   }
 
-  autoSpin() {
-    setInterval(() => this.nextt(), 4000);
-  }
-
-  moveElement() {
+  private InitElements(): void {
     this.next = document.querySelector('.next');
     this.prev = document.querySelector('.prev');
     this.carousel = document.querySelector('.carousel');
     this.slider = document.querySelector('.slider');
+  }
+
+  private InitEventListener(): void {
+    this.elementRef.nativeElement
+      .querySelector('.slider')
+      .addEventListener('transitionend', this.moveElement.bind(this));
+  }
+
+  private autoSpin(): void {
+    setInterval(() => this.NextSlide(), 4000);
+  }
+
+  private moveElement(): void {
     // get the last element and append it to the front
     if (this.direction === 1) {
       this.slider.prepend(this.slider.lastElementChild);
@@ -60,14 +63,13 @@ export class CarouselComponent implements AfterViewInit {
     });
   }
 
-  nextt() {
+  public NextSlide(): void {
     this.direction = -1;
     this.carousel.style.justifyContent = 'flex-start';
-    console.log('helo');
     this.slider.style.transform = 'translate(-20%)';
   }
 
-  prevv() {
+  public PreviuseSlide(): void {
     if (this.direction === -1) {
       this.direction = 1;
       this.slider.appendChild(this.slider.firstElementChild);

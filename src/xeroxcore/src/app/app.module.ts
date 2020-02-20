@@ -9,8 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SocialMediaComponent } from './shared/social-media/social-media.component';
-import { CarocarouselComponent } from './shared/carocarousel/carocarousel.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselComponent } from './shared/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { CarouselComponent } from './carousel/carousel.component';
     DownloadsComponent,
     ArticlesComponent,
     SocialMediaComponent,
-    CarocarouselComponent,
     CarouselComponent
   ],
   imports: [BrowserModule, AppRoutingModule],

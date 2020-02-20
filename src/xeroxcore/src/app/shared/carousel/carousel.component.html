@@ -1,0 +1,19 @@
+<div class="text-center mt-5">
+  <h3 class="title">{{ title }}</h3>
+</div>
+<div class="container-fluid">
+  <div class="carousel">
+    <div class="slider">
+      <section *ngFor="let item of list">
+        <figure class="text-center">
+          <img
+            class="w-75"
+            src="../../assets/images/slider/{{ item }}"
+            alt="..."
+            title=""
+          />
+        </figure>
+      </section>
+    </div>
+  </div>
+</div>
