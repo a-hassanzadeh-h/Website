@@ -4,8 +4,6 @@ import { Subscription } from 'rxjs';
 export class SubscriptionDestroyer implements OnDestroy {
   private subscritption: Subscription;
 
-  constructor() {}
-
   public AddSubscription(subscrition: Subscription): void {
     if (subscrition !== null) {
       this.subscritption.add(subscrition);

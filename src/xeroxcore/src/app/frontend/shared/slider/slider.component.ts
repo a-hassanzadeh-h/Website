@@ -7,6 +7,7 @@ import { ISliderContent } from '../../Models/Interface/ISliderContent';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
+  @Input() backgroundText = 'XEROXCORE';
   @Input() slides: ISliderContent[];
   constructor() {}
 

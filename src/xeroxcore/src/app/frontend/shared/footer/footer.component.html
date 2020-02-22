@@ -3,10 +3,31 @@
     <div id="footer-nav" class="row pt-5 mb-3">
       <div class="col-lg-5">
         <div class="vertical-center">
-          <a href="/home" class="m-2 link">Home</a>
-          <a href="/downloads" class="m-2 link">Downloads</a>
-          <a href="/articles" class="m-2 link">Articles</a>
-          <a href="/contact" class="m-2 link">Contact</a>
+          <a
+            href="/home"
+            referrerpolicy="no-referrer"
+            [routerLink]="['/home']"
+            routerLinkActive="router-link-active"
+            class="m-2 link"
+            >Home</a
+          >
+          <a
+            href="/downloads"
+            referrerpolicy="no-referrer"
+            [routerLink]="['/downloads']"
+            class="m-2 link"
+            >Downloads</a
+          >
+          <a
+            href="/articles"
+            referrerpolicy="no-referrer"
+            [routerLink]="['/articles']"
+            class="m-2 link"
+            >Articles</a
+          >
+          <a href="/contact" referrerpolicy="no-referrer" class="m-2 link"
+            >Contact</a
+          >
         </div>
       </div>
       <div id="footer-logo" class="col-lg-2 text-center">
@@ -33,9 +54,15 @@
     </div>
     <div id="rules-policy" class="row mb-5">
       <div class="m-auto">
-        <a href="/termsofuse" class=" m-1 link">Terms of Use</a>
-        <a href="/pagerules" class=" m-3 link">Page Rules</a>
-        <a href="/privacypolicy" class=" m-1 link">Privacy Policy</a>
+        <a href="/termsofuse" referrerpolicy="no-referrer" class=" m-1 link"
+          >Terms of Use</a
+        >
+        <a href="/pagerules" referrerpolicy="no-referrer" class=" m-3 link"
+          >Page Rules</a
+        >
+        <a href="/privacypolicy" referrerpolicy="no-referrer" class=" m-1 link"
+          >Privacy Policy</a
+        >
       </div>
     </div>
   </div>

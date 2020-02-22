@@ -1,5 +1,40 @@
 @import '../../../../styles.scss';
 
+#background-text {
+  position: absolute;
+  top: 150px;
+  right: 175px;
+  opacity: 0.14;
+
+  p {
+    font-size: 1400%;
+    font-weight: 900;
+  }
+
+  @media (max-width: 1440px) {
+    right: 175px;
+    p {
+      text-align: center;
+      font-size: 1000%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    p {
+      text-align: center;
+      font-size: 800%;
+    }
+  }
+
+  @media (max-width: 763px) {
+    display: none;
+  }
+}
+
 #slider {
   height: 100vh;
   background: #fff;

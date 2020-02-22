@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 })
 export class AppComponent implements OnInit {
   title = 'xeroxcore';
+  frontEnd = true;
   ngOnInit() {
     AOS.init();
   }
