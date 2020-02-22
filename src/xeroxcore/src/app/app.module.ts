@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ArticlesComponent } from './articles/articles.component';
-import { DownloadsComponent } from './downloads/downloads.component';
 import { Error404Component } from './errors/error404/error404.component';
-import { HomeComponent } from './home/home.component';
-import { CarouselComponent } from './shared/carousel/carousel.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { HotarticlesComponent } from './shared/hotarticles/hotarticles.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { SocialMediaComponent } from './shared/social-media/social-media.component';
-import { HighlightsComponent } from './shared/highlights/highlights.component';
-import { SliderComponent } from './shared/slider/slider.component';
+import { ArticlesComponent } from './frontend/articles/articles.component';
+import { DownloadsComponent } from './frontend/downloads/downloads.component';
+import { HomeComponent } from './frontend/home/home.component';
+import { CarouselComponent } from './frontend/shared/carousel/carousel.component';
+import { FooterComponent } from './frontend/shared/footer/footer.component';
+import { HighlightsComponent } from './frontend/shared/highlights/highlights.component';
+import { HotarticlesComponent } from './frontend/shared/hotarticles/hotarticles.component';
+import { NavbarComponent } from './frontend/shared/navbar/navbar.component';
+import { SliderComponent } from './frontend/shared/slider/slider.component';
+import { SocialMediaComponent } from './frontend/shared/social-media/social-media.component';
 
 @NgModule({
   declarations: [
