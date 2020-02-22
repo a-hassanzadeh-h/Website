@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HighlightsComponent } from './highlights/highlights.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -9,7 +10,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  imports: [AppRoutingModule],
+  imports: [AppRoutingModule, CommonModule],
   declarations: [
     HighlightsComponent,
     CarouselComponent,
