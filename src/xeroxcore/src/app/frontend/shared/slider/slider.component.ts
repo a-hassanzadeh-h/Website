@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ISliderContent } from 'src/app/models/Interface/ISliderContent';
+import { ISliderContent } from '../../Models/Interface/ISliderContent';
 
 @Component({
   selector: 'app-slider',
