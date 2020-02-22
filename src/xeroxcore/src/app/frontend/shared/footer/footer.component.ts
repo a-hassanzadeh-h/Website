@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,9 +8,7 @@ import { Subscription } from 'rxjs';
 })
 export class FooterComponent implements OnDestroy {
   private subs: Subscription;
-  constructor(private router: Router) {
-    this.subs = this.router.events.subscribe(url => console.log(url));
-  }
+  constructor() {}
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
