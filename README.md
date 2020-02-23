@@ -13,9 +13,8 @@ If you wish to put the project in production, please check our [Deployment secti
 The following tools are required for the App to function please make sure that necessary tools
 are installed and if not, install them utilizing the provider's main pages.
 
-- [Node.js](https://nodejs.org/en/) - dotnet core 3 and greater
-- [Angular CLI](https://cli.angular.io/) - PostgreSQL (Required by default)
-
+- [Node.js](https://nodejs.org/en/) - Node.js 12.x.x
+- [Angular CLI](https://cli.angular.io/) - Angular CLI
 
 ### Installing
 
@@ -23,12 +22,14 @@ are installed and if not, install them utilizing the provider's main pages.
 
 #### Angular CLI
 
+### Deployment
+
 ### Built With
 
 API was built with the following tools in a Windows Environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Angular](https://www.postgresql.org/) - SQL Database
+- [Angular](https://www.postgresql.org/) - Angular
 
 ### Contributing
 
