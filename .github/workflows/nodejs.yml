@@ -25,10 +25,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - working-directory: src/xeroxcore  
     - run: npm install -g @angular/cli
-    - run: npm update
+    - working-directory: src/xeroxcore 
       env:
         CI: true
-    - name: Release Angular App 
+    - name: Release Angular App
+      working-directory: src/xeroxcore  
       run: ng b --prod=true
