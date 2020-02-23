@@ -6,16 +6,24 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { FrontendComponent } from './frontend.component';
 import { FrontendRoutingModule } from './frontend-routing.module';
+import { GlobalSharedModule } from '../shared/globalshared.module';
+import { MessageboxService } from '../shared/service/messagebox.service';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, FrontendRoutingModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    FrontendRoutingModule,
+    GlobalSharedModule
+  ],
   declarations: [
     HomeComponent,
     DownloadsComponent,
     ArticlesComponent,
     FrontendComponent
   ],
-  exports: [HomeComponent, DownloadsComponent, ArticlesComponent],
+  providers: [MessageboxService],
+  exports: [],
   bootstrap: [FrontendComponent]
 })
 export class FrontendModule {}

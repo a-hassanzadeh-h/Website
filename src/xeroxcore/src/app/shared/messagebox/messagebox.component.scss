@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+$red: #d34b4b;
+
+#messagebox {
+  background: $white;
+  border-radius: 5px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 60px;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: $dark !important;
+}
+
+.hide {
+  top: -150px !important;
+}
+
+.button {
+  color: $dark;
+}
+
+button:nth-child(1) {
+  border-color: $blue;
+}
+
+button:nth-child(2) {
+  border-color: $red;
+}
+
+.button:nth-child(1):hover,
+:focus {
+  background-color: $blue !important;
+}
+
+.button:nth-child(2):hover,
+:focus,
+:checked {
+  background-color: $red !important;
+}

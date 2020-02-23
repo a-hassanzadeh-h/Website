@@ -8,9 +8,10 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GlobalSharedModule } from 'src/app/shared/globalshared.module';
 
 @NgModule({
-  imports: [AppRoutingModule, CommonModule],
+  imports: [AppRoutingModule, CommonModule, GlobalSharedModule],
   declarations: [
     HighlightsComponent,
     CarouselComponent,

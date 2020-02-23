@@ -1,0 +1,24 @@
+<div
+  id="messagebox"
+  class="w-50 m-auto vertical-center"
+  [class.hide]="!showMessage"
+>
+  <div class="text-center m-auto">
+    <header>
+      <h4 class="title">{{ message.title }}</h4>
+    </header>
+    <div>
+      <p class="my-1">{{ message.text }}</p>
+    </div>
+    <footer>
+      <button
+        [class.d-none]="!message.multiOption"
+        class="button  mx-1"
+        (click)="actionClick()"
+      >
+        {{ message.optionTitle }}
+      </button>
+      <button class="button mx-1" (click)="CloseMessageBox()">Close</button>
+    </footer>
+  </div>
+</div>
