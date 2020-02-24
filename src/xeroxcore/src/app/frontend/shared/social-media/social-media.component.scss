@@ -136,7 +136,7 @@ a {
   cursor: pointer;
   transition: all 0.4s ease;
 
-  .slider-nav-item:before {
+  .item:before {
     position: absolute;
     content: '';
     height: calc(100% + 16px);
