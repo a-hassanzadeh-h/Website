@@ -18,9 +18,10 @@ export class HomeComponent implements AfterViewInit {
     { img: 'maintenance.png', text: 'Maintainable' },
     { img: 'deployment.png', text: 'Easy to deply' }
   ];
+
   constructor() {}
 
-  implementDelay() {
+  public implementDelay(): void {
     const cards = document.querySelectorAll('.action');
     let delay = 150;
     cards.forEach(card => {
@@ -29,7 +30,7 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     this.implementDelay();
   }
 }

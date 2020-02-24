@@ -27,11 +27,11 @@ export class MessageboxComponent extends SubscriptionDestroyer {
     );
   }
 
-  public CloseMessageBox() {
+  public CloseMessageBox(): void {
     this.showMessage = false;
   }
 
-  public actionClick() {
+  public actionClick(): void {
     this.message.action();
     this.showMessage = false;
   }

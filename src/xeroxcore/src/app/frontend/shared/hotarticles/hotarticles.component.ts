@@ -33,7 +33,7 @@ export class HotarticlesComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {}
 
-  implementDelay() {
+  private implementDelay(): void {
     const cards = document.querySelectorAll('.cardx');
     let delay = 150;
     cards.forEach(card => {
@@ -53,7 +53,7 @@ export class HotarticlesComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     this.implementDelay();
   }
 }
