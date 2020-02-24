@@ -3,9 +3,11 @@
 [![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/Xeroxcore/Xeroxcore-Website/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/Xeroxcore/Xeroxcore-Website/branches/master)
 [![Known Vulnerabilities](https://snyk.io/test/github/Xeroxcore/Xeroxcore-Website/badge.svg?targetFile=src/xeroxcore/package.json)](https://snyk.io/test/github/Xeroxcore/Xeroxcore-Website?targetFile=src/xeroxcore/package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5a8bb139071b16695cd3/maintainability)](https://codeclimate.com/github/Xeroxcore/Xeroxcore-Website/maintainability)
+[![CodeFactor](https://www.codefactor.io/repository/github/xeroxcore/xeroxcore-website/badge)](https://www.codefactor.io/repository/github/xeroxcore/xeroxcore-website)
 ![GitHub repo size](https://img.shields.io/github/repo-size/xeroxcore/Xeroxcore-Website)
 ![GitHub issues](https://img.shields.io/github/issues/xeroxcore/Xeroxcore-Website)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Xeroxcore/Xeroxcore-Website/blob/master/LICENSE)
+
 
 ## Introduction
 
