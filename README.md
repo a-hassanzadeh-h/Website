@@ -1,5 +1,10 @@
 ![Xeroxcore logo](https://github.com/Xeroxcore/Xeroxcore/blob/master/resources/images/Xeroxcore_Logo.png)
 <br/><br/>
+[![Black Duck Security Risk](https://copilot.blackducksoftware.com/github/repos/Xeroxcore/Xeroxcore-Website/branches/master/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/Xeroxcore/Xeroxcore-Website/branches/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5a8bb139071b16695cd3/maintainability)](https://codeclimate.com/github/Xeroxcore/Xeroxcore-Website/maintainability)
+![GitHub repo size](https://img.shields.io/github/repo-size/xeroxcore/Xeroxcore-Website)
+![GitHub issues](https://img.shields.io/github/issues/xeroxcore/Xeroxcore-Website)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Xeroxcore/Xeroxcore-Website/blob/master/LICENSE)
 
 ## Introduction
 
@@ -58,7 +63,7 @@ enviroment.
 3. all files will be exported to src/dist.
 4. move file to your server.
  4.1 make sure that all redirects are passing trough index.html
-  4.1.1 [Angular Deployment Config](https://angular.io/guide/deployment)
+  4.1.1 Angular Deployment Config visit https://angular.io/guide/deployment
 ```
 
 ### Built With
