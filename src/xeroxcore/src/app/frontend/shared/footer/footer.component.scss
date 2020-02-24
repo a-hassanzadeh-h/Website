@@ -22,6 +22,11 @@ figure {
   }
 }
 
+.active {
+  border-bottom: 1px solid $green;
+  color: white;
+}
+
 .lightgrey {
   background-color: $lightGray;
 }

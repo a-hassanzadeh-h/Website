@@ -1,15 +1,47 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageboxService } from 'src/app/shared/service/messagebox.service';
+import { Router } from '@angular/router';
+import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class NavbarComponent extends SubscriptionDestroyer implements OnInit {
+  private messageService: MessageboxService;
+  private url: string;
+  constructor(
+    private messageBoxService: MessageboxService,
+    private router: Router
+  ) {
+    super();
+    this.AddSubscription(
+      router.events.subscribe(() => (this.url = this.router.url))
+    );
+    this.messageBoxService = messageBoxService;
   }
 
+  ngOnInit() {}
+
+  public isActive(url: string): boolean {
+    if (this.url.includes(url)) {
+      return true;
+    }
+    return false;
+  }
+
+  public createMessageBox(pageName: string, url: string): boolean {
+    this.messageBoxService.redirectToPage(pageName, url);
+    return false;
+  }
+
+  public openCloseNav() {
+    const x = document.getElementById('myTopnav');
+    if (x.className === 'topnav') {
+      x.className += ' responsive';
+    } else {
+      x.className = 'topnav';
+    }
+  }
 }

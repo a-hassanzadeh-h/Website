@@ -7,7 +7,7 @@
             href="/home"
             referrerpolicy="no-referrer"
             [routerLink]="['/home']"
-            routerLinkActive="router-link-active"
+            [class.active]="isActive('home')"
             class="m-2 link"
             >Home</a
           >
@@ -15,6 +15,7 @@
             href="/downloads"
             referrerpolicy="no-referrer"
             [routerLink]="['/downloads']"
+            [class.active]="isActive('downloads')"
             class="m-2 link"
             >Downloads</a
           >
@@ -22,6 +23,7 @@
             href="/articles"
             referrerpolicy="no-referrer"
             [routerLink]="['/articles']"
+            [class.active]="isActive('articles')"
             class="m-2 link"
             >Articles</a
           >

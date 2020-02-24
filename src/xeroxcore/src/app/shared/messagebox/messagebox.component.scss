@@ -8,14 +8,14 @@ $red: #d34b4b;
   position: fixed;
   left: 0;
   right: 0;
-  top: 100px;
-  transition: all 1s ease-in-out;
+  top: 120px;
+  transition: all 400ms ease-in-out;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   color: $dark !important;
 }
 
 .hide {
-  top: -150px !important;
+  top: -250px !important;
 }
 
 .button {
