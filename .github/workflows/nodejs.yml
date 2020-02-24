@@ -12,7 +12,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,16 +19,16 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install Angular Cli 
-      run: npm install -g @angular/cli
-    - name: Install Angular App Dependancies
-      working-directory: src/xeroxcore  
-      run: npm update 
-    - name: Release Angular App
-      working-directory: src/xeroxcore  
-      run: ng b --prod=true
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Angular Cli
+        run: npm install -g @angular/cli
+      - name: Install Angular App Dependancies
+        working-directory: src/xeroxcore
+        run: npm update
+      - name: Release Angular App
+        working-directory: src/xeroxcore
+        run: ng b --prod=true

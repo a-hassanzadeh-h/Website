@@ -59,10 +59,6 @@ h2 {
 }
 
 .justify-content-center {
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
-}
-.justify-content-center {
   -webkit-box-pack: center !important;
   -ms-flex-pack: center !important;
   justify-content: center !important;
@@ -84,7 +80,7 @@ h2 {
   margin-bottom: 1rem !important;
 }
 
-.process-scetion .slider-nav-item {
+.slider-nav-item {
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
