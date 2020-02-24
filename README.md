@@ -3,6 +3,10 @@
 
 ## Introduction
 
+Xeroxcore website shows of how to integrate with xeroxcore API and at the same time giving other
+developers a template site to copy and change for their own needs. This project is good for
+new Anuglar Developers trying to learn more about Angular.
+
 ### Getting started
 
 These instructions are aimed at helping you set up the project for development or testing purposes.
@@ -18,11 +22,44 @@ are installed and if not, install them utilizing the provider's main pages.
 
 ### Installing
 
+This sections explains how to install necessary components to run the Angular App in a development
+enviroment. Each section will explain how to install
+
 #### Node.js
+
+##### Windows
+
+```
+1. open a browser and go to Node.js website https://node.org
+2. Dowload the latest version.
+3. run node-v.xx.xx.x-x64.msi and follow the installation steps
+4. open command line an enter npm -v output: x.xx.x showing version.
+```
 
 #### Angular CLI
 
+Installing Angular requres node.js so if you havent installed Node.js then go to the previuse step
+and install Node.js.
+
+```
+1. open command line
+2. npm install -g @angular/cli
+3. ng --version output: information about angular,node etc.
+```
+
 ### Deployment
+
+This part explain how to deploy Xeroxcore Website on a server in a non containerized
+enviroment.
+
+```
+1. Open commandline to and navigate to src/xeroxcore.
+2. enter following command (ng b --prod=true).
+3. all files will be exported to src/dist.
+4. move file to your server.
+ 4.1 make sure that all redirects are passing trough index.html
+  4.1.1 [Angular Deployment Config](https://angular.io/guide/deployment)
+```
 
 ### Built With
 
