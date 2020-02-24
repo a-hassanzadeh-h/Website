@@ -31,6 +31,11 @@ export class FooterComponent extends SubscriptionDestroyer
     return false;
   }
 
+  public notReady(): boolean {
+    this.messageBoxService.methodNotReady();
+    return false;
+  }
+
   public createMessageBox(pageName: string, url: string): boolean {
     this.messageBoxService.redirectToPage(pageName, url);
     return false;

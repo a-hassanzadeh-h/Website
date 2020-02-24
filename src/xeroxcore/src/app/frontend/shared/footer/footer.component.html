@@ -27,7 +27,11 @@
             class="m-2 link"
             >Articles</a
           >
-          <a href="/contact" referrerpolicy="no-referrer" class="m-2 link"
+          <a
+            href="/contact"
+            referrerpolicy="no-referrer"
+            class="m-2 link"
+            (click)="notReady()"
             >Contact</a
           >
         </div>
@@ -45,8 +49,8 @@
       <div class="col-lg-5">
         <div class="vertical-center">
           <div class="text-right w-100">
-            <button class="button m-1">Sign in</button>
-            <button class="button m-1">Register</button>
+            <button class="button m-1" (click)="notReady()">Sign in</button>
+            <button class="button m-1" (click)="notReady()">Register</button>
           </div>
         </div>
       </div>
@@ -56,13 +60,25 @@
     </div>
     <div id="rules-policy" class="row mb-5">
       <div class="m-auto">
-        <a href="/termsofuse" referrerpolicy="no-referrer" class=" m-1 link"
+        <a
+          href="/termsofuse"
+          referrerpolicy="no-referrer"
+          class=" m-1 link"
+          (click)="notReady()"
           >Terms of Use</a
         >
-        <a href="/pagerules" referrerpolicy="no-referrer" class=" m-3 link"
+        <a
+          href="/pagerules"
+          referrerpolicy="no-referrer"
+          class=" m-3 link"
+          (click)="notReady()"
           >Page Rules</a
         >
-        <a href="/privacypolicy" referrerpolicy="no-referrer" class=" m-1 link"
+        <a
+          href="/privacypolicy"
+          referrerpolicy="no-referrer"
+          class=" m-1 link"
+          (click)="notReady()"
           >Privacy Policy</a
         >
       </div>

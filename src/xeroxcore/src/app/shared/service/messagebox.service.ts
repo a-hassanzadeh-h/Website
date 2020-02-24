@@ -23,4 +23,13 @@ export class MessageboxService {
     };
     this.message.next(message);
   }
+
+  public methodNotReady(): void {
+    const message = new Messagebox();
+    message.title = 'Not Ready yet';
+    message.text =
+      'The Page or function is not ready. We apologize for the inconvinance';
+    message.multiOption = false;
+    this.message.next(message);
+  }
 }

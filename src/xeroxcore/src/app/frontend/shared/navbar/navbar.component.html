@@ -53,12 +53,18 @@
       [class.active]="isActive('articles')"
       >Articles</a
     >
-    <a href="/contact" class="link" referrerpolicy="no-referrer">Contact</a>
+    <a
+      href="/contact"
+      class="link"
+      referrerpolicy="no-referrer"
+      (click)="notReady()"
+      >Contact</a
+    >
 
     <div>
       <div class="vertical-center">
-        <button class="button m-1">Sign in</button>
-        <button class="button m-1">Register</button>
+        <button class="button m-1" (click)="notReady()">Sign in</button>
+        <button class="button m-1" (click)="notReady()">Register</button>
       </div>
     </div>
 

@@ -8,7 +8,7 @@ import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent extends SubscriptionDestroyer implements OnInit {
+export class NavbarComponent extends SubscriptionDestroyer {
   private messageService: MessageboxService;
   private url: string;
   constructor(
@@ -22,8 +22,6 @@ export class NavbarComponent extends SubscriptionDestroyer implements OnInit {
     this.messageBoxService = messageBoxService;
   }
 
-  ngOnInit() {}
-
   public isActive(url: string): boolean {
     if (this.url.includes(url)) {
       return true;
@@ -33,6 +31,11 @@ export class NavbarComponent extends SubscriptionDestroyer implements OnInit {
 
   public createMessageBox(pageName: string, url: string): boolean {
     this.messageBoxService.redirectToPage(pageName, url);
+    return false;
+  }
+
+  public notReady(): boolean {
+    this.messageBoxService.methodNotReady();
     return false;
   }
 
