@@ -37,11 +37,11 @@ export class NavbarComponent extends SubscriptionDestroyer implements OnInit {
   }
 
   public openCloseNav() {
-    const x = document.getElementById('myTopnav');
-    if (x.className === 'topnav') {
-      x.className += ' responsive';
+    const topNav = document.getElementById('Topnav');
+    if (topNav.className === 'topnav') {
+      topNav.className += ' responsive';
     } else {
-      x.className = 'topnav';
+      topNav.className = 'topnav';
     }
   }
 }

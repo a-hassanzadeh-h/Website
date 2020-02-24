@@ -71,14 +71,25 @@ a {
 }
 
 .link {
+  display: inline-block;
   outline: none;
   color: $white;
-  border-bottom: 1px transparent solid;
 }
 
-.link:hover,
-.link:focus {
-  border-bottom: 1px solid $green;
+.link:after {
+  display: block;
+  content: '';
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-bottom: 2px solid $green;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.link:hover:after,
+.link:focus:after {
+  transform: scaleX(1) !important;
 }
 
 ::-webkit-scrollbar {

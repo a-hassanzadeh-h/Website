@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,9 @@ export class HomeComponent implements AfterViewInit {
     { img: 'deployment.png', text: 'Easy to deply' }
   ];
 
-  constructor() {}
+  constructor(private titleService: Title) {
+    titleService.setTitle('Xeroxcore Home');
+  }
 
   public implementDelay(): void {
     const cards = document.querySelectorAll('.action');

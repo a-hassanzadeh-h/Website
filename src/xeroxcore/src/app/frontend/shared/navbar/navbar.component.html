@@ -17,7 +17,7 @@
       ></a>
     </div>
   </div>
-  <div class="topnav" id="myTopnav">
+  <div class="topnav" id="Topnav">
     <a
       href="/home"
       referrerpolicy="no-referrer"
@@ -31,13 +31,15 @@
     /></a>
     <a
       href="/home"
+      class="link"
       referrerpolicy="no-referrer"
       [class.active]="isActive('home')"
       [routerLink]="['/home']"
-      >Home</a
+      ><span>Home</span></a
     >
     <a
       href="/downloads"
+      class="link"
       referrerpolicy="no-referrer"
       [routerLink]="['/downloads']"
       [class.active]="isActive('downloads')"
@@ -45,12 +47,13 @@
     >
     <a
       href="/articles"
+      class="link"
       referrerpolicy="no-referrer"
       [routerLink]="['/articles']"
       [class.active]="isActive('articles')"
       >Articles</a
     >
-    <a href="/contact" referrerpolicy="no-referrer">Contact</a>
+    <a href="/contact" class="link" referrerpolicy="no-referrer">Contact</a>
 
     <div>
       <div class="vertical-center">

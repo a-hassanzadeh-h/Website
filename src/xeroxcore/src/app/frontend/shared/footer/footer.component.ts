@@ -31,8 +31,12 @@ export class FooterComponent extends SubscriptionDestroyer
     return false;
   }
 
-  createMessageBox(pageName: string, url: string): boolean {
+  public createMessageBox(pageName: string, url: string): boolean {
     this.messageBoxService.redirectToPage(pageName, url);
     return false;
+  }
+
+  public GetYear(): string {
+    return new Date().getFullYear().toString();
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-downloads',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./downloads.component.scss']
 })
 export class DownloadsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private titleService: Title) {
+    titleService.setTitle('Xeroxcore Downloads');
   }
 
+  ngOnInit(): void {}
 }

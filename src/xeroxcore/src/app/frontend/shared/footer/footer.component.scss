@@ -22,9 +22,8 @@ figure {
   }
 }
 
-.active {
-  border-bottom: 1px solid $green;
-  color: white;
+.active:after {
+  transform: scaleX(1) !important;
 }
 
 .lightgrey {
