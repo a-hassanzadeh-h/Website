@@ -70,3 +70,15 @@
 .w-90 {
   width: 90%;
 }
+
+.mobile-none {
+  @media (max-width: 812px) {
+    display: none;
+  }
+}
+
+.mobile-mt-40px {
+  @media (max-width: 812px) and (orientation: landscape) {
+    margin-top: 40px;
+  }
+}
