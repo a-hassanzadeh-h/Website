@@ -18,15 +18,14 @@ div.container {
 }
 
 .button {
-  background: red;
+  border-color: red;
+  background-color: transparent;
   color: #fff;
+  color: $dark;
   padding: 0.5rem 5rem;
-  box-shadow: 0 1px 15px 0px rgba(0, 0, 0, 0.3);
-  border: transparent;
 }
 
 .button:hover,
 :focus {
-  box-shadow: 0 1px 15px 0px rgba(0, 0, 0, 0.8);
   background: red !important;
 }
