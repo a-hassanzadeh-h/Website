@@ -5,8 +5,8 @@
         <div class="container-fluid">
           <div id="filter" class="filter row box-shadow">
             <mat-form-field appearance="outline" class="col-xl-3">
-              <mat-label>Type</mat-label>
-              <mat-select [(value)]="types[0].value">
+              <mat-label>Badge</mat-label>
+              <mat-select (selectionChange)="setBadgeFilter($event)">
                 <mat-option *ngFor="let type of types" [value]="type.value">
                   {{ type.viewValue }}
                 </mat-option>
@@ -23,19 +23,20 @@
             </mat-form-field>
             <mat-form-field appearance="outline" class="col-xl-3">
               <mat-label>App name</mat-label>
-              <mat-select [(value)]="sources[0].value">
-                <mat-option
-                  *ngFor="let source of sources"
-                  [value]="source.value"
-                >
-                  {{ source.viewValue }}
+              <mat-select (selectionChange)="setAppFilter($event)">
+                <mat-option *ngFor="let app of apps" [value]="app.value">
+                  {{ app.viewValue }}
                 </mat-option>
               </mat-select>
             </mat-form-field>
             <div class="col-xl-3 center-mobile p-0">
               <div>
-                <button class="button">Apply Filter</button>
-                <button class="button warning">Reset Filter</button>
+                <button class="button" (click)="filterList()">
+                  Apply Filter
+                </button>
+                <button class="button warning" (click)="resetFilter()">
+                  Reset Filter
+                </button>
               </div>
             </div>
           </div>
@@ -49,8 +50,8 @@
         </div>
       </div>
     </div>
-    <div class="row scroll">
-      <div class="container my-2" *ngFor="let item of list">
+    <div class="row scroll" [@cardAnimation]="list.length">
+      <div class="container my-2 article" *ngFor="let item of list">
         <div class="col-md-10 m-auto">
           <div class="row filter box-shadow">
             <div class="col-xl-2 col-md-12 vertical-center">
