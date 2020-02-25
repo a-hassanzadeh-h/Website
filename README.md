@@ -8,7 +8,6 @@
 ![GitHub issues](https://img.shields.io/github/issues/xeroxcore/Xeroxcore-Website)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Xeroxcore/Xeroxcore-Website/blob/master/LICENSE)
 
-
 ## Introduction
 
 Xeroxcore website shows of how to integrate with xeroxcore API and at the same time giving other
@@ -74,7 +73,7 @@ enviroment.
 API was built with the following tools in a Windows Environment.
 
 - [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
-- [Angular](https://www.postgresql.org/) - Angular
+- [Angular](https://cli.angular.io/) - Angular
 
 ### Contributing
 
@@ -87,7 +86,7 @@ information to understand how different versions might affect you and your proje
 
 - **Nasar Eddaoui** - _Initial work_ - [Nasar Eddaoui](https://github.com/Nasar165)
 
-See also the list of [contributors](https://github.com/Xeroxcore/Xeroxcore//graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Xeroxcore/Xeroxcore-Website/graphs/contributors) who participated in this project.
 
 ### License
 

@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FrontendModule } from './frontend/frontend.module';
 import { GlobalSharedModule } from './shared/globalshared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,7 +12,8 @@ import { GlobalSharedModule } from './shared/globalshared.module';
     BrowserModule,
     AppRoutingModule,
     FrontendModule,
-    GlobalSharedModule
+    GlobalSharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
