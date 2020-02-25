@@ -14,7 +14,7 @@ export const PopUpAnimation = [
     // Transition from any state to any state
     transition('* => *', [
       // Initially the all cards are not visible
-      query(':enter', style({ opacity: 0 }), { optional: true }),
+      query(':enter', style({ opacity: 0 }), { optional: false }),
 
       // Each card will appear sequentially with the delay of 300ms
       query(
