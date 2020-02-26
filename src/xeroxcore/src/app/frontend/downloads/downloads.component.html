@@ -6,6 +6,25 @@
       (select2)="setSource($event)"
     ></app-filter>
     <div class="row scroll">
+      <div id="table-row" class="container my-2 w-90 filter box-shadow">
+        <div class="row m-auto">
+          <div class="col-xl-3 col-md-12 vertical-center my-2">
+            <p class="m-50">NAME</p>
+          </div>
+          <div class="col-xl-2 col-md-12 vertical-center my-2">
+            <p class="m-25">VERSION</p>
+          </div>
+          <div class="col-xl-2 col-md-12 vertical-center my-2">
+            <p class="m-17">DATE</p>
+          </div>
+          <div class="col-xl-2 col-md-12 vertical-center my-2">
+            <p class="m--10">SIZE</p>
+          </div>
+          <div class="col-xl-3 col-md-12 vertical-center my-2">
+            <p class="m-0">ACTION</p>
+          </div>
+        </div>
+      </div>
       <div
         class="container my-2 article"
         *ngFor="let item of list"
