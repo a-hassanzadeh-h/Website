@@ -9,9 +9,24 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GlobalSharedModule } from 'src/app/shared/globalshared.module';
+import { FilterComponent } from './filter/filter.component';
+import { MatSelectModule } from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  imports: [AppRoutingModule, CommonModule, GlobalSharedModule],
+  imports: [
+    AppRoutingModule,
+    CommonModule,
+    GlobalSharedModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
+  ],
   declarations: [
     HighlightsComponent,
     CarouselComponent,
@@ -19,7 +34,8 @@ import { GlobalSharedModule } from 'src/app/shared/globalshared.module';
     SliderComponent,
     SocialMediaComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilterComponent
   ],
   exports: [
     HighlightsComponent,
@@ -28,7 +44,8 @@ import { GlobalSharedModule } from 'src/app/shared/globalshared.module';
     SliderComponent,
     SocialMediaComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilterComponent
   ]
 })
 export class SharedModule {}
