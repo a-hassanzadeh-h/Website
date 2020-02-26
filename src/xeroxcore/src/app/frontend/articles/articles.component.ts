@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
-import { ArticleFilterBarSettings } from './ArticleFilterBarSettings';
+import { FilterBarSettings } from '../Models/filterbarSettings';
 import { ArticleFilter } from './ArticleFilters';
 
 @Component({
@@ -65,8 +65,32 @@ export class ArticlesComponent implements OnInit {
     this.setFilterBar();
   }
 
+  private GetNameFilter() {
+    return [
+      { value: 'all', viewValue: 'All' },
+      { value: 'xeroxcore', viewValue: 'Xeroxcore' },
+      { value: 'Xeroxcore-website', viewValue: 'Xeroxcore-Website' },
+      { value: 'xeroxcore-mini', viewValue: 'Xeroxcore-Mini' }
+    ];
+  }
+
+  private GetBadgeFilter() {
+    return [
+      { value: 'all', viewValue: 'All' },
+      { value: 'security', viewValue: 'Security' },
+      { value: 'bug fix', viewValue: 'Bug Fix' },
+      { value: 'patch', viewValue: 'Patch' }
+    ];
+  }
+
   private setFilterBar() {
-    const filter = ArticleFilterBarSettings.CreateFilterBar();
+    const filter = new FilterBarSettings().CreateFilterBar(
+      'Badge ',
+      this.GetBadgeFilter(),
+      'App name',
+      this.GetNameFilter(),
+      'fa-th-list'
+    );
     filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
     filter.cancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
     this.filterBar = filter;

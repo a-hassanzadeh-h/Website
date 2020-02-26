@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
-import { DownloadsFilterBarSettings } from './DownloadsFilterBarSettings';
+import { FilterBarSettings } from '../Models/filterbarSettings';
 import { PopUpAnimation } from '../Models/animation';
 import { DownloadFilter } from './DownloadFilter';
 
@@ -34,13 +34,37 @@ export class DownloadsComponent implements OnInit {
       appname: 'Xeroxcore'
     }
   ];
+
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Downloads');
     this.setFilterBar();
   }
 
+  private GetNameFilter() {
+    return [
+      { value: 'all', viewValue: 'All' },
+      { value: 'xeroxcore', viewValue: 'Xeroxcore' },
+      { value: 'Xeroxcore-website', viewValue: 'Xeroxcore-Website' },
+      { value: 'xeroxcore-mini', viewValue: 'Xeroxcore-Mini' }
+    ];
+  }
+
+  private GetSourceFilter() {
+    return [
+      { value: 'all', viewValue: 'All' },
+      { value: 'github', viewValue: 'GitHub' },
+      { value: 'xeroxcore', viewValue: 'Xeroxcore' }
+    ];
+  }
+
   private setFilterBar() {
-    const filter = DownloadsFilterBarSettings.CreateFilterBar();
+    const filter = new FilterBarSettings().CreateFilterBar(
+      'App name',
+      this.GetNameFilter(),
+      'Source',
+      this.GetSourceFilter(),
+      'fa-th-list'
+    );
     filter.applyFilter = () => (this.list = this.downloadFilter.filterList());
     filter.cancelFilter = () => (this.list = this.downloadFilter.resetFilter());
     this.filterBar = filter;

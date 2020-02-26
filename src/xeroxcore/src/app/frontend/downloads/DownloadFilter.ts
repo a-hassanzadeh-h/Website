@@ -1,22 +1,9 @@
 import { Validation } from 'src/app/models/validation';
+import { BaseFilter } from '../Models/baseFilter';
 
-export class DownloadFilter {
-  private list: any[];
-
-  filter = {
-    source: 'all',
-    date: '',
-    app: 'all'
-  };
-
+export class DownloadFilter extends BaseFilter {
   constructor(originaList: any[]) {
-    this.list = originaList;
-  }
-
-  private filterByApp(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.appname, this.filter.app)
-    );
+    super(originaList);
   }
 
   private filterByBadge(): any[] {
@@ -25,7 +12,7 @@ export class DownloadFilter {
     );
   }
 
-  filterByBadgeAndApp(): any[] {
+  private filterBySourceAndApp(): any[] {
     return this.list.filter(
       item =>
         Validation.stringAreEqual(item.source, this.filter.source) &&
@@ -45,23 +32,12 @@ export class DownloadFilter {
     }
 
     if (this.filter.source !== 'all' && this.filter.app !== 'all') {
-      copyList = this.filterByBadgeAndApp();
+      copyList = this.filterBySourceAndApp();
     }
 
     if (copyList.length === 0) {
-      copyList[0] = {
-        date: '0',
-        title: 'Your Search gave 0 matches.',
-        source: '',
-        version: '',
-        size: '',
-        appname: ''
-      };
+      copyList[0] = this.noMatch();
     }
     return copyList;
-  }
-
-  public resetFilter(): any[] {
-    return this.list;
   }
 }
