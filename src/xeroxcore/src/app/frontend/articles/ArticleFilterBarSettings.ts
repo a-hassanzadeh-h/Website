@@ -1,5 +1,5 @@
-import { FilterBar } from '../Models/Interface/FilterBar';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
+import { FilterBar } from '../Models/FilterBar';
 
 export class ArticleFilterBarSettings {
   public static CreateFilterBar(): IFilterBar {
@@ -18,6 +18,7 @@ export class ArticleFilterBarSettings {
       { value: 'Xeroxcore-website', viewValue: 'Xeroxcore-Website' },
       { value: 'xeroxcore-mini', viewValue: 'Xeroxcore-Mini' }
     ];
+    filter.faIcon = 'fa-bookmark';
     return filter;
   }
 }

@@ -68,7 +68,7 @@ export class ArticlesComponent implements OnInit {
   private setFilterBar() {
     const filter = ArticleFilterBarSettings.CreateFilterBar();
     filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
-    filter.CancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
+    filter.cancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
     this.filterBar = filter;
   }
 

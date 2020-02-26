@@ -6,5 +6,6 @@ export interface IFilterBar {
   select2: string;
   select2List: ISelectFilterOption[];
   applyFilter: any;
-  CancelFilter: any;
+  cancelFilter: any;
+  faIcon: string;
 }

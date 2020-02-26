@@ -1,10 +1,10 @@
 import { Validation } from 'src/app/models/validation';
 
-export class ArticleFilter {
+export class DownloadFilter {
   private list: any[];
 
   filter = {
-    badge: 'all',
+    source: 'all',
     date: '',
     app: 'all'
   };
@@ -21,14 +21,14 @@ export class ArticleFilter {
 
   private filterByBadge(): any[] {
     return this.list.filter(item =>
-      Validation.stringAreEqual(item.badge, this.filter.badge)
+      Validation.stringAreEqual(item.source, this.filter.source)
     );
   }
 
   filterByBadgeAndApp(): any[] {
     return this.list.filter(
       item =>
-        Validation.stringAreEqual(item.badge, this.filter.badge) &&
+        Validation.stringAreEqual(item.source, this.filter.source) &&
         Validation.stringAreEqual(item.appname, this.filter.app)
     );
   }
@@ -36,7 +36,7 @@ export class ArticleFilter {
   public filterList(): any[] {
     let copyList = this.list;
 
-    if (this.filter.badge !== 'all') {
+    if (this.filter.source !== 'all') {
       copyList = this.filterByBadge();
     }
 
@@ -44,7 +44,7 @@ export class ArticleFilter {
       copyList = this.filterByApp();
     }
 
-    if (this.filter.badge !== 'all' && this.filter.app !== 'all') {
+    if (this.filter.source !== 'all' && this.filter.app !== 'all') {
       copyList = this.filterByBadgeAndApp();
     }
 
@@ -52,8 +52,9 @@ export class ArticleFilter {
       copyList[0] = {
         date: '0',
         title: 'Your Search gave 0 matches.',
-        badge: '',
-        content: '',
+        source: '',
+        version: '',
+        size: '',
         appname: ''
       };
     }

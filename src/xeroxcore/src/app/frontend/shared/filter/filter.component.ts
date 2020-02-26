@@ -25,7 +25,7 @@ export class FilterComponent implements OnInit {
   }
 
   public resetFilter(): void {
-    this.filterBar.CancelFilter();
+    this.filterBar.cancelFilter();
   }
 
   public applyFilter(): void {

@@ -1,5 +1,5 @@
-import { IFilterBar } from './IFilterbar';
-import { ISelectFilterOption } from './ISelectFilterOption';
+import { IFilterBar } from './Interface/IFilterbar';
+import { ISelectFilterOption } from './Interface/ISelectFilterOption';
 
 export class FilterBar implements IFilterBar {
   select1: string;
@@ -7,5 +7,6 @@ export class FilterBar implements IFilterBar {
   select2: string;
   select2List: ISelectFilterOption[];
   applyFilter: any;
-  CancelFilter: any;
+  cancelFilter: any;
+  faIcon: string;
 }

@@ -1,5 +1,5 @@
-import { FilterBar } from '../Models/Interface/FilterBar';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
+import { FilterBar } from '../Models/FilterBar';
 
 export class DownloadsFilterBarSettings {
   public static CreateFilterBar(): IFilterBar {
@@ -17,6 +17,7 @@ export class DownloadsFilterBarSettings {
       { value: 'github', viewValue: 'GitHub' },
       { value: 'xeroxcore', viewValue: 'Xeroxcore' }
     ];
+    filter.faIcon = 'fa-th-list';
     return filter;
   }
 }
