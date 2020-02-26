@@ -21,22 +21,3 @@ $red: #d34b4b;
 .button {
   color: $dark;
 }
-
-button:nth-child(1) {
-  border-color: $blue;
-}
-
-button:nth-child(2) {
-  border-color: $red;
-}
-
-.button:nth-child(1):hover,
-:focus {
-  background-color: $blue !important;
-}
-
-.button:nth-child(2):hover,
-:focus,
-:checked {
-  background-color: $red !important;
-}

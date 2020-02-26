@@ -6,9 +6,10 @@ $dark: #333333;
 $pink: #df0cf1;
 $white: #fff;
 $red: #d34b4b;
+$font: 'Bai Jamjuree' !important;
 
 body {
-  font-family: 'Bai Jamjuree';
+  font-family: $font;
   color: $dark;
   font-size: 18px;
 
@@ -41,11 +42,32 @@ a {
   border: 1px solid $green;
   color: $white;
   outline: transparent;
+  transition: 500ms all ease-in-out;
 }
 
 .button:hover,
 .button:focus {
   background: $green !important;
+  color: $white;
+}
+
+.warning {
+  border-color: $red;
+}
+
+.warning:hover,
+.warning:focus {
+  background: $red !important;
+  color: $white;
+}
+
+.proceed {
+  border-color: $blue;
+}
+
+.proceed:hover,
+.proceed:focus {
+  background: $blue !important;
   color: $white;
 }
 
@@ -102,4 +124,17 @@ a {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: $green;
+}
+
+.mat-form-field {
+  font-family: $font;
+}
+
+.mat-select {
+  font-family: $font;
+  font-size: 18px;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

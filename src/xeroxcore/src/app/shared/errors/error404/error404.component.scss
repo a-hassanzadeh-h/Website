@@ -18,14 +18,5 @@ div.container {
 }
 
 .button {
-  border-color: red;
-  background-color: transparent;
-  color: #fff;
   color: $dark;
-  padding: 0.5rem 5rem;
-}
-
-.button:hover,
-:focus {
-  background: red !important;
 }

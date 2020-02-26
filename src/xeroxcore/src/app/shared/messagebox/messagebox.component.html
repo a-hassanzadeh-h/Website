@@ -13,12 +13,14 @@
     <footer>
       <button
         [class.d-none]="!message.multiOption"
-        class="button  mx-1"
+        class="button proceed mx-1"
         (click)="actionClick()"
       >
         {{ message.optionTitle }}
       </button>
-      <button class="button mx-1" (click)="CloseMessageBox()">Close</button>
+      <button class="button warning mx-1" (click)="CloseMessageBox()">
+        Close
+      </button>
     </footer>
   </div>
 </div>

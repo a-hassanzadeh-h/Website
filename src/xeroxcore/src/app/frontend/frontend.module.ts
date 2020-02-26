@@ -9,12 +9,24 @@ import { FrontendRoutingModule } from './frontend-routing.module';
 import { GlobalSharedModule } from '../shared/globalshared.module';
 import { MessageboxService } from '../shared/service/messagebox.service';
 
+// Angular Material
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     FrontendRoutingModule,
-    GlobalSharedModule
+    GlobalSharedModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule
   ],
   declarations: [
     HomeComponent,

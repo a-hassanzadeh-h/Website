@@ -1,1 +1,39 @@
-<p>downloads works!</p>
+<div class="w-100 height">
+  <div id="article-container" class="container">
+    <app-filter
+      [filterBar]="filterBar"
+      (select1)="setApp($event)"
+      (select2)="setSource($event)"
+    ></app-filter>
+    <div class="row scroll">
+      <div
+        class="container my-2 article"
+        *ngFor="let item of list"
+        @cardAnimation
+      >
+        <div class="col-md-10 m-auto">
+          <div class="row filter box-shadow">
+            <div class="col-xl-3 col-md-12 vertical-center">
+              <p class="m-0">{{ item.title }}</p>
+            </div>
+            <div class="col-xl-2 col-md-12 vertical-center my-2">
+              <p class="m-0">{{ item.version }}</p>
+            </div>
+            <div class="col-xl-2 col-md-12 vertical-center my-2">
+              <p class="m-0">{{ item.date }}</p>
+            </div>
+            <div class="col-xl-1 col-md-12 vertical-center my-2">
+              <p class="m-0">{{ item.size }}</p>
+            </div>
+            <div class="col-xl-4 col-md-12">
+              <div>
+                <button class="button">View Hash</button>
+                <button class="button warning proceed">Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

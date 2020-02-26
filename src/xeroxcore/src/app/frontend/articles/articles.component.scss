@@ -4,10 +4,52 @@
   padding-top: 120px;
 }
 
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 75vh;
+  @media (max-width: 1024px) and (orientation: portrait) {
+    max-height: 70vh;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    max-height: 47vh;
+  }
+
+  @media (max-width: 812px) and (orientation: portrait) {
+    max-height: 57vh;
+  }
+  @media (max-width: 736px) and (orientation: portrait) {
+    max-height: 47vh;
+  }
+}
+
+.vertical-center {
+  @media (max-width: 1024px) and (orientation: portrait) {
+    display: block;
+  }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    display: block;
+  }
+}
+
+.button {
+  color: $dark;
+  padding: 10px 25px;
+  margin: 8px 0.35em 10px;
+}
+
 .filter {
-  border-radius: 5px;
-  background-color: red;
-  height: 75px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: $white;
+  @media (max-width: 1024px) and (orientation: portrait) {
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    text-align: center;
+  }
 }
 
 .height {
@@ -18,4 +60,31 @@
     rgba(36, 150, 237, 0.1) 60%,
     rgba(255, 255, 255, 0.1) 100%
   );
+  @media (max-width: 812px) and (orientation: landscape) {
+    height: initial;
+    padding: 10px 0;
+  }
+}
+
+.badge {
+  @media (max-width: 812px) {
+    margin: auto;
+  }
+}
+
+.center-mobile {
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.5em 0;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0;
+  @media (max-width: 812px) {
+    padding-bottom: 1.34375em;
+  }
 }

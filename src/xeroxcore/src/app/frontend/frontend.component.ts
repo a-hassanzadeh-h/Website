@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-frontend',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./frontend.component.scss']
 })
 export class FrontendComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    AOS.init();
+  }
 
   ngOnInit(): void {}
 }
