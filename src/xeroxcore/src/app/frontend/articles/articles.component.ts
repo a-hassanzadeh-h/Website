@@ -89,7 +89,7 @@ export class ArticlesComponent implements OnInit {
       this.GetBadgeFilter(),
       'App name',
       this.GetNameFilter(),
-      'fa-th-list'
+      'fa-bookmark'
     );
     filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
     filter.cancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
