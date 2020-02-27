@@ -20,7 +20,7 @@ export class DownloadsComponent implements OnInit {
     {
       date: '2020-01-15',
       title: 'Xeroxcore-website',
-      version: 'Security',
+      version: '3.52.2',
       size: '2.05mb',
       source: 'Xeroxcore',
       appname: 'Xeroxcore-website'
@@ -28,7 +28,7 @@ export class DownloadsComponent implements OnInit {
     {
       date: '2020-01-14',
       title: 'Xeroxcore',
-      version: 'Security',
+      version: '2.48.5',
       size: '3.00mb',
       source: 'Github',
       appname: 'Xeroxcore'
@@ -49,11 +49,11 @@ export class DownloadsComponent implements OnInit {
     ];
   }
 
-  private GetSourceFilter() {
+  private GetVersionFilter() {
     return [
       { value: 'all', viewValue: 'All' },
-      { value: 'github', viewValue: 'GitHub' },
-      { value: 'xeroxcore', viewValue: 'Xeroxcore' }
+      { value: '3.52.2', viewValue: '3.52.2' },
+      { value: '2.48.5', viewValue: '2.48.5' }
     ];
   }
 
@@ -61,8 +61,8 @@ export class DownloadsComponent implements OnInit {
     const filter = new FilterBarSettings().CreateFilterBar(
       'App name',
       this.GetNameFilter(),
-      'Source',
-      this.GetSourceFilter(),
+      'Version',
+      this.GetVersionFilter(),
       'fa-th-list'
     );
     filter.applyFilter = () => (this.list = this.downloadFilter.filterList());
@@ -75,7 +75,7 @@ export class DownloadsComponent implements OnInit {
   }
 
   public setSource($event): void {
-    this.downloadFilter.filter.source = $event;
+    this.downloadFilter.filter.version = $event;
   }
 
   ngOnInit(): void {

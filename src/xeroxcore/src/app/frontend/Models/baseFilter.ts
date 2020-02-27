@@ -5,7 +5,7 @@ export class BaseFilter implements IBaseFilter {
   public list: any[];
 
   public filter = {
-    source: 'all',
+    version: 'all',
     date: '',
     app: 'all',
     badge: 'all'

@@ -8,14 +8,14 @@ export class DownloadFilter extends BaseFilter {
 
   private filterByBadge(): any[] {
     return this.list.filter(item =>
-      Validation.stringAreEqual(item.source, this.filter.source)
+      Validation.stringAreEqual(item.version, this.filter.version)
     );
   }
 
-  private filterBySourceAndApp(): any[] {
+  private filterByVersionAndApp(): any[] {
     return this.list.filter(
       item =>
-        Validation.stringAreEqual(item.source, this.filter.source) &&
+        Validation.stringAreEqual(item.version, this.filter.version) &&
         Validation.stringAreEqual(item.appname, this.filter.app)
     );
   }
@@ -23,7 +23,7 @@ export class DownloadFilter extends BaseFilter {
   public filterList(): any[] {
     let copyList = this.list;
 
-    if (this.filter.source !== 'all') {
+    if (this.filter.version !== 'all') {
       copyList = this.filterByBadge();
     }
 
@@ -31,8 +31,8 @@ export class DownloadFilter extends BaseFilter {
       copyList = this.filterByApp();
     }
 
-    if (this.filter.source !== 'all' && this.filter.app !== 'all') {
-      copyList = this.filterBySourceAndApp();
+    if (this.filter.version !== 'all' && this.filter.app !== 'all') {
+      copyList = this.filterByVersionAndApp();
     }
 
     if (copyList.length === 0) {
