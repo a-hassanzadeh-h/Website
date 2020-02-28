@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MessageboxService } from 'src/app/shared/service/messagebox.service';
 import { Router } from '@angular/router';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';

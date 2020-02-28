@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DownloadsComponent } from './downloads.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('DownloadsComponent', () => {
   let component: DownloadsComponent;
@@ -8,9 +8,9 @@ describe('DownloadsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DownloadsComponent ]
-    })
-    .compileComponents();
+      imports: [BrowserAnimationsModule],
+      declarations: [DownloadsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
