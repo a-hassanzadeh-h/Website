@@ -41,7 +41,7 @@ export class DownloadsComponent implements OnInit {
     this.setFilterBar();
   }
 
-  private GetList(propertiIndex: number) {
+  public GetList(propertiIndex: number) {
     let list = ArrayHelper.getValueFromArray(this.originalList, propertiIndex);
     list = ArrayHelper.CreateSelectBoxArray(list);
     return list;

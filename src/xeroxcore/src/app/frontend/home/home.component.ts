@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AnimationHelper } from '../Models/animation';
 
 @Component({
   selector: 'app-home',
@@ -24,16 +25,7 @@ export class HomeComponent implements AfterViewInit {
     titleService.setTitle('Xeroxcore Home');
   }
 
-  public implementDelay(): void {
-    const cards = document.querySelectorAll('.action');
-    let delay = 150;
-    cards.forEach(card => {
-      delay += 150;
-      card.setAttribute('data-aos-delay', delay.toString());
-    });
-  }
-
   public ngAfterViewInit(): void {
-    this.implementDelay();
+    AnimationHelper.implementDelay('.action');
   }
 }

@@ -1,25 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DownloadsComponent } from './downloads.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestClass } from 'src/app/models/testClass';
 
-describe('DownloadsComponent', () => {
-  let component: DownloadsComponent;
-  let fixture: ComponentFixture<DownloadsComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [DownloadsComponent]
-    }).compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DownloadsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+const DownloadsComponentTest = new TestClass(DownloadsComponent);
+DownloadsComponentTest.runTest('DownloadsComponentTest');

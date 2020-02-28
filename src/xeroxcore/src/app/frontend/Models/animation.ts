@@ -6,6 +6,17 @@ import {
   state
 } from '@angular/animations';
 
+export class AnimationHelper {
+  public static implementDelay(className: string): void {
+    const cards = document.querySelectorAll(className);
+    let delay = 150;
+    cards.forEach(card => {
+      delay += 150;
+      card.setAttribute('data-aos-delay', delay.toString());
+    });
+  }
+}
+
 export const PopUpAnimation = [
   trigger('cardAnimation', [
     state('flyIn', style({ transform: 'translateX(0)' })),
