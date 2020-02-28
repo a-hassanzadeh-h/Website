@@ -6,7 +6,7 @@ export class DownloadFilter extends BaseFilter {
     super(originaList);
   }
 
-  private filterByBadge(): any[] {
+  private filterByVersion(): any[] {
     return this.list.filter(item =>
       Validation.stringAreEqual(item.version, this.filter.version)
     );
@@ -24,7 +24,7 @@ export class DownloadFilter extends BaseFilter {
     let copyList = this.list;
 
     if (this.filter.version !== 'all') {
-      copyList = this.filterByBadge();
+      copyList = this.filterByVersion();
     }
 
     if (this.filter.app !== 'all') {
