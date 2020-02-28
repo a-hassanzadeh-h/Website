@@ -1,5 +1,5 @@
 export class ArrayHelper {
-  private static GetPropertie<T>(object: T): string[] {
+  private static GetPropertie(object: any): string[] {
     return Object.getOwnPropertyNames(object[0]);
   }
 
@@ -7,7 +7,7 @@ export class ArrayHelper {
     return new Set(list);
   }
 
-  public static getValueFromArray<T>(list: T[], propertyIndex: number): any[] {
+  public static getValueFromArray(list: any[], propertyIndex: number): any[] {
     const propertyList = this.GetPropertie(list);
     const newList = [];
     list.forEach(item => {
