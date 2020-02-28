@@ -28,6 +28,14 @@ a {
   font-weight: 700;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.text {
+  color: $lightGray;
+}
+
 .vertical-center {
   display: flex;
   align-items: center;
@@ -43,6 +51,7 @@ a {
   color: $white;
   outline: transparent;
   transition: 500ms all ease-in-out;
+  font-weight: 700;
 }
 
 .button:hover,
