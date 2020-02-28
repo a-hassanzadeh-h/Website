@@ -4,6 +4,7 @@ import { IFilterBar } from '../Models/Interface/IFilterbar';
 import { FilterBarSettings } from '../Models/filterbarSettings';
 import { PopUpAnimation } from '../Models/animation';
 import { DownloadFilter } from './DownloadFilter';
+import { ArrayHelper } from 'src/app/models/arrayHelper';
 
 @Component({
   selector: 'app-downloads',
@@ -40,29 +41,18 @@ export class DownloadsComponent implements OnInit {
     this.setFilterBar();
   }
 
-  private GetNameFilter() {
-    return [
-      { value: 'all', viewValue: 'All' },
-      { value: 'xeroxcore', viewValue: 'Xeroxcore' },
-      { value: 'Xeroxcore-website', viewValue: 'Xeroxcore-Website' },
-      { value: 'xeroxcore-mini', viewValue: 'Xeroxcore-Mini' }
-    ];
-  }
-
-  private GetVersionFilter() {
-    return [
-      { value: 'all', viewValue: 'All' },
-      { value: '3.52.2', viewValue: '3.52.2' },
-      { value: '2.48.5', viewValue: '2.48.5' }
-    ];
+  private GetList(propertiIndex: number) {
+    let list = ArrayHelper.getValueFromArray(this.originalList, propertiIndex);
+    list = ArrayHelper.CreateSelectBoxArray(list);
+    return list;
   }
 
   private setFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'App name',
-      this.GetNameFilter(),
+      this.GetList(5),
       'Version',
-      this.GetVersionFilter(),
+      this.GetList(2),
       'fa-th-list'
     );
     filter.applyFilter = () => (this.list = this.downloadFilter.filterList());

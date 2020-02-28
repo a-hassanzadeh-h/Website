@@ -4,6 +4,7 @@ import { PopUpAnimation } from '../Models/animation';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
 import { FilterBarSettings } from '../Models/filterbarSettings';
 import { ArticleFilter } from './ArticleFilters';
+import { ArrayHelper } from 'src/app/models/arrayHelper';
 
 @Component({
   selector: 'app-articles',
@@ -65,30 +66,18 @@ export class ArticlesComponent implements OnInit {
     this.setFilterBar();
   }
 
-  private GetNameFilter() {
-    return [
-      { value: 'all', viewValue: 'All' },
-      { value: 'xeroxcore', viewValue: 'Xeroxcore' },
-      { value: 'Xeroxcore-website', viewValue: 'Xeroxcore-Website' },
-      { value: 'xeroxcore-mini', viewValue: 'Xeroxcore-Mini' }
-    ];
-  }
-
-  private GetBadgeFilter() {
-    return [
-      { value: 'all', viewValue: 'All' },
-      { value: 'security', viewValue: 'Security' },
-      { value: 'bug fix', viewValue: 'Bug Fix' },
-      { value: 'patch', viewValue: 'Patch' }
-    ];
+  private GetList(propertiIndex: number) {
+    let list = ArrayHelper.getValueFromArray(this.originalList, propertiIndex);
+    list = ArrayHelper.CreateSelectBoxArray(list);
+    return list;
   }
 
   private setFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'Badge ',
-      this.GetBadgeFilter(),
+      this.GetList(2),
       'App name',
-      this.GetNameFilter(),
+      this.GetList(4),
       'fa-bookmark'
     );
     filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
