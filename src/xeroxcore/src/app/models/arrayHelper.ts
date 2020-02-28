@@ -1,3 +1,5 @@
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
+
 export class ArrayHelper {
   private static GetPropertie(object: any): string[] {
     return Object.getOwnPropertyNames(object[0]);
@@ -23,5 +25,12 @@ export class ArrayHelper {
       newList.push({ value: element, viewValue: element });
     });
     return newList;
+  }
+
+  public static GetSelectList(originalList: any[], propertiIndex: number) {
+    let list = this.getValueFromArray(originalList, propertiIndex);
+    list.push('all');
+    list = this.CreateSelectBoxArray(list);
+    return list;
   }
 }

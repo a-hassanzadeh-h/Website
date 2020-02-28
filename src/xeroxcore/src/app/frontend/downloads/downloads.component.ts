@@ -40,18 +40,12 @@ export class DownloadsComponent implements OnInit {
     this.createDownloadFilterBar();
   }
 
-  public GetList(propertiIndex: number) {
-    let list = ArrayHelper.getValueFromArray(this.originalList, propertiIndex);
-    list = ArrayHelper.CreateSelectBoxArray(list);
-    return list;
-  }
-
   private createDownloadFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'App name',
-      this.GetList(5),
+      ArrayHelper.GetSelectList(this.originalList, 5),
       'Version',
-      this.GetList(2),
+      ArrayHelper.GetSelectList(this.originalList, 2),
       'fa-th-list'
     );
     filter.applyFilter = () => (this.list = this.downloadFilter.filterList());

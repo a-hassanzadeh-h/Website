@@ -66,18 +66,12 @@ export class ArticlesComponent implements OnInit {
     this.createArticleFilterBar();
   }
 
-  private GetList(propertiIndex: number) {
-    let list = ArrayHelper.getValueFromArray(this.originalList, propertiIndex);
-    list = ArrayHelper.CreateSelectBoxArray(list);
-    return list;
-  }
-
   private createArticleFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'Badge ',
-      this.GetList(2),
+      ArrayHelper.GetSelectList(this.originalList, 2),
       'App name',
-      this.GetList(4),
+      ArrayHelper.GetSelectList(this.originalList, 4),
       'fa-bookmark'
     );
     filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
