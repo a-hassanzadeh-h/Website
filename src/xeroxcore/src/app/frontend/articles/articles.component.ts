@@ -13,9 +13,6 @@ import { ArrayHelper } from 'src/app/models/arrayHelper';
   animations: [PopUpAnimation]
 })
 export class ArticlesComponent implements OnInit {
-  filterBar: IFilterBar;
-  articlesFIlter: ArticleFilter;
-  list: any[];
   originalList = [
     {
       date: '2020-01-15',
@@ -60,6 +57,9 @@ export class ArticlesComponent implements OnInit {
       appname: 'Xeroxcore'
     }
   ];
+  filterBar: IFilterBar;
+  articlesFIlter: ArticleFilter = new ArticleFilter(this.originalList);
+  list: any[];
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Articles');
@@ -93,12 +93,11 @@ export class ArticlesComponent implements OnInit {
     this.articlesFIlter.filter.badge = text;
   }
 
-  ngOnInit(): void {
-    this.articlesFIlter = new ArticleFilter(this.originalList);
-    this.list = this.articlesFIlter.resetFilter();
-  }
-
   public GetBadgeClass(type: string): string {
     return type.toLowerCase();
+  }
+
+  ngOnInit(): void {
+    this.list = this.articlesFIlter.resetFilter();
   }
 }

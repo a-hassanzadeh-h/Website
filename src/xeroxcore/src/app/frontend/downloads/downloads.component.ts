@@ -13,10 +13,6 @@ import { ArrayHelper } from 'src/app/models/arrayHelper';
   animations: [PopUpAnimation]
 })
 export class DownloadsComponent implements OnInit {
-  filterBar: IFilterBar;
-  downloadFilter: DownloadFilter;
-  list: any[];
-
   originalList = [
     {
       date: '2020-01-15',
@@ -35,6 +31,9 @@ export class DownloadsComponent implements OnInit {
       appname: 'Xeroxcore'
     }
   ];
+  filterBar: IFilterBar;
+  downloadFilter: DownloadFilter = new DownloadFilter(this.originalList);
+  list: any[];
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Downloads');
@@ -69,7 +68,6 @@ export class DownloadsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.downloadFilter = new DownloadFilter(this.originalList);
     this.list = this.downloadFilter.resetFilter();
   }
 }
