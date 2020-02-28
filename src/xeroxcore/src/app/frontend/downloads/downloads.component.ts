@@ -38,7 +38,7 @@ export class DownloadsComponent implements OnInit {
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Downloads');
-    this.setFilterBar();
+    this.createDownloadFilterBar();
   }
 
   public GetList(propertiIndex: number) {
@@ -47,7 +47,7 @@ export class DownloadsComponent implements OnInit {
     return list;
   }
 
-  private setFilterBar() {
+  private createDownloadFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'App name',
       this.GetList(5),

@@ -63,7 +63,7 @@ export class ArticlesComponent implements OnInit {
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Articles');
-    this.setFilterBar();
+    this.createArticleFilterBar();
   }
 
   private GetList(propertiIndex: number) {
@@ -72,7 +72,7 @@ export class ArticlesComponent implements OnInit {
     return list;
   }
 
-  private setFilterBar() {
+  private createArticleFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'Badge ',
       this.GetList(2),
