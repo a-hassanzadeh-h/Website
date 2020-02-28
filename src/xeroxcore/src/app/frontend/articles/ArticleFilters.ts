@@ -1,23 +1,8 @@
-import { Validation } from 'src/app/models/validation';
 import { BaseFilter } from '../Models/baseFilter';
 
 export class ArticleFilter extends BaseFilter {
   constructor(originaList: any[]) {
     super(originaList);
-  }
-
-  private filterByBadge(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.badge, this.filter.badge)
-    );
-  }
-
-  private filterByBadgeAndApp(): any[] {
-    return this.list.filter(
-      item =>
-        Validation.stringAreEqual(item.badge, this.filter.badge) &&
-        Validation.stringAreEqual(item.appname, this.filter.app)
-    );
   }
 
   public filterList(): any[] {

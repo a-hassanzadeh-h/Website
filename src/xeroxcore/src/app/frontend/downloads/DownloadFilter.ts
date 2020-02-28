@@ -1,23 +1,8 @@
-import { Validation } from 'src/app/models/validation';
 import { BaseFilter } from '../Models/baseFilter';
 
 export class DownloadFilter extends BaseFilter {
   constructor(originaList: any[]) {
     super(originaList);
-  }
-
-  private filterByVersion(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.version, this.filter.version)
-    );
-  }
-
-  private filterByVersionAndApp(): any[] {
-    return this.list.filter(
-      item =>
-        Validation.stringAreEqual(item.version, this.filter.version) &&
-        Validation.stringAreEqual(item.appname, this.filter.app)
-    );
   }
 
   public filterList(): any[] {
