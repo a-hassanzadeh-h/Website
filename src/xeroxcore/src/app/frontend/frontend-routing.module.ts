@@ -11,9 +11,17 @@ const frontendRoutes: Routes = [
     path: '',
     component: FrontendComponent,
     children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'downloads', component: DownloadsComponent },
-      { path: 'articles', component: ArticlesComponent },
+      { path: 'home', component: HomeComponent, data: { state: 'home' } },
+      {
+        path: 'downloads',
+        component: DownloadsComponent,
+        data: { state: 'downloads' }
+      },
+      {
+        path: 'articles',
+        component: ArticlesComponent,
+        data: { state: 'articles' }
+      },
       { path: '**', component: Error404Component }
     ]
   }

@@ -8,19 +8,17 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
 export class CarouselComponent implements AfterViewInit {
   public title = 'Supported Technology';
   public list = [
-    '.NET_Core.png',
-    'Angular.png',
-    'aws.png',
-    'Azure.png',
-    'microsoft-logo.png',
-    'Moby-logo.png',
-    'Postgresql.png'
+    'netcore.webp',
+    'angular.webp',
+    'aws.webp',
+    'azure.webp',
+    'microsoft.webp',
+    'docker.webp',
+    'postgresql.webp'
   ];
 
   private carousel;
   private slider;
-  private next;
-  private prev;
   private direction;
 
   constructor(private elementRef: ElementRef) {}
@@ -32,8 +30,6 @@ export class CarouselComponent implements AfterViewInit {
   }
 
   private InitElements(): void {
-    this.next = document.querySelector('.next');
-    this.prev = document.querySelector('.prev');
     this.carousel = document.querySelector('.carousel');
     this.slider = document.querySelector('.slider');
   }

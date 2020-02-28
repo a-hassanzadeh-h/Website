@@ -4,6 +4,16 @@
   padding-top: 120px;
 }
 
+#table-row {
+  @media (orientation: portrait) {
+    display: none;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    display: none;
+  }
+}
+
 .scroll {
   overflow-y: auto;
   overflow-x: hidden;
@@ -31,6 +41,25 @@
   @media (max-width: 1024px) and (orientation: landscape) {
     display: block;
   }
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.m-50 {
+  margin: 0 0 0 50px;
+}
+
+.m-25 {
+  margin: 0 0 0 25px;
+}
+.m-12 {
+  margin: 0 0 0 12px;
+}
+
+.m--10 {
+  margin: 0 0 0 -10px;
 }
 
 .button {

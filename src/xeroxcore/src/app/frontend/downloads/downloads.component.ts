@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
-import { DownloadsFilterBarSettings } from './DownloadsFilterBarSettings';
+import { FilterBarSettings } from '../Models/filterbarSettings';
 import { PopUpAnimation } from '../Models/animation';
 import { DownloadFilter } from './DownloadFilter';
+import { ArrayHelper } from 'src/app/models/arrayHelper';
 
 @Component({
   selector: 'app-downloads',
@@ -20,7 +21,7 @@ export class DownloadsComponent implements OnInit {
     {
       date: '2020-01-15',
       title: 'Xeroxcore-website',
-      version: 'Security',
+      version: '3.52.2',
       size: '2.05mb',
       source: 'Xeroxcore',
       appname: 'Xeroxcore-website'
@@ -28,19 +29,32 @@ export class DownloadsComponent implements OnInit {
     {
       date: '2020-01-14',
       title: 'Xeroxcore',
-      version: 'Security',
+      version: '2.48.5',
       size: '3.00mb',
       source: 'Github',
       appname: 'Xeroxcore'
     }
   ];
+
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Downloads');
     this.setFilterBar();
   }
 
+  private GetList(propertiIndex: number) {
+    let list = ArrayHelper.getValueFromArray(this.originalList, propertiIndex);
+    list = ArrayHelper.CreateSelectBoxArray(list);
+    return list;
+  }
+
   private setFilterBar() {
-    const filter = DownloadsFilterBarSettings.CreateFilterBar();
+    const filter = new FilterBarSettings().CreateFilterBar(
+      'App name',
+      this.GetList(5),
+      'Version',
+      this.GetList(2),
+      'fa-th-list'
+    );
     filter.applyFilter = () => (this.list = this.downloadFilter.filterList());
     filter.cancelFilter = () => (this.list = this.downloadFilter.resetFilter());
     this.filterBar = filter;
@@ -51,7 +65,7 @@ export class DownloadsComponent implements OnInit {
   }
 
   public setSource($event): void {
-    this.downloadFilter.filter.source = $event;
+    this.downloadFilter.filter.version = $event;
   }
 
   ngOnInit(): void {

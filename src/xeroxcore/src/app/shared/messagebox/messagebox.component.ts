@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { IMessageBox } from '../models/interface/IMessageBox';
 import { MessageboxService } from '../service/messagebox.service';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
@@ -7,7 +7,8 @@ import { Messagebox } from '../models/MessageBox';
 @Component({
   selector: 'app-messagebox',
   templateUrl: './messagebox.component.html',
-  styleUrls: ['./messagebox.component.scss']
+  styleUrls: ['./messagebox.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class MessageboxComponent extends SubscriptionDestroyer {
   public showMessage = false;

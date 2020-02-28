@@ -1,25 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FrontendComponent } from './frontend.component';
+import { TestClass } from '../models/testClass';
 
-describe('FrontendComponent', () => {
-  let component: FrontendComponent;
-  let fixture: ComponentFixture<FrontendComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FrontendComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FrontendComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+const FrontendComponentTest = new TestClass(FrontendComponent);
+FrontendComponentTest.runTest('FrontendComponentTest');

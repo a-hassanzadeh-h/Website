@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Xeroxcore</title>
+    <title>Xeroxcore Home</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -34,7 +34,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Bai+Jamjuree&display=swap"
+      href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -44,5 +44,13 @@
   </head>
   <body>
     <app-root></app-root>
+    <script>
+      const isIEOrEdge = /msie\s|trident\//i.test(window.navigator.userAgent);
+      if (isIEOrEdge) {
+        alert(
+          'Xeroxcore does not support Internet Explorer, use Chrome or Firefox'
+        );
+      }
+    </script>
   </body>
 </html>
