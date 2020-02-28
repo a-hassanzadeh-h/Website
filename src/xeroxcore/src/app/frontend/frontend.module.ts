@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ArticleComponent } from './articles/article/article.component';
 
 @NgModule({
   imports: [
@@ -32,10 +33,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     DownloadsComponent,
     ArticlesComponent,
-    FrontendComponent
+    FrontendComponent,
+    ArticleComponent
   ],
   providers: [MessageboxService],
   exports: [],
-  bootstrap: [FrontendComponent]
+  bootstrap: []
 })
 export class FrontendModule {}
