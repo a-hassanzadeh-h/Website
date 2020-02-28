@@ -8,16 +8,16 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements AfterViewInit {
   actionList = [
-    { img: 'addfeatures.png', text: 'Build more Features, no time waste' },
-    { img: 'analytics.png', text: 'Boost revenue with faster development' },
-    { img: 'shipping.png', text: 'Lunch your products faster than ever' }
+    { img: 'addfeatures.webp', text: 'Build more Features, no time waste' },
+    { img: 'analytics.webp', text: 'Boost revenue with faster development' },
+    { img: 'shipping.webp', text: 'Lunch your products faster than ever' }
   ];
 
   benefitsList = [
-    { img: 'security.png', text: 'Secure' },
-    { img: 'performance.png', text: 'Efficient' },
-    { img: 'maintenance.png', text: 'Maintainable' },
-    { img: 'deployment.png', text: 'Easy to deply' }
+    { img: 'security.webp', text: 'Secure' },
+    { img: 'performance.webp', text: 'Efficient' },
+    { img: 'maintenance.webp', text: 'Maintainable' },
+    { img: 'deployment.webp', text: 'Easy to deply' }
   ];
 
   constructor(private titleService: Title) {
