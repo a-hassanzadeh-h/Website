@@ -74,7 +74,8 @@ export class ArticlesComponent implements OnInit {
       ArrayHelper.GetSelectList(this.originalList, 0),
       'fa-bookmark'
     );
-    filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
+    filter.applyFilter = () =>
+      (this.list = this.articlesFIlter.filterArticles());
     filter.cancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
     this.filterBar = filter;
   }

@@ -48,7 +48,8 @@ export class DownloadsComponent implements OnInit {
       ArrayHelper.GetSelectList(this.originalList, 3),
       'fa-th-list'
     );
-    filter.applyFilter = () => (this.list = this.downloadFilter.filterList());
+    filter.applyFilter = () =>
+      (this.list = this.downloadFilter.filterDownloadsList());
     filter.cancelFilter = () => (this.list = this.downloadFilter.resetFilter());
     this.filterBar = filter;
   }
