@@ -6,7 +6,7 @@
           <mat-label>{{ filterBar.select1 }}</mat-label>
           <mat-select (selectionChange)="setSelect1Filter($event)">
             <mat-option
-              *ngFor="let item of filterBar.select1List"
+              *ngFor="let item of filterBar?.select1List"
               [value]="item.value"
             >
               {{ item.viewValue }}
@@ -26,7 +26,7 @@
           <mat-label>{{ filterBar.select2 }}</mat-label>
           <mat-select (selectionChange)="setSelect2Filter($event)">
             <mat-option
-              *ngFor="let item of filterBar.select2List"
+              *ngFor="let item of filterBar?.select2List"
               [value]="item.value"
             >
               {{ item.viewValue }}

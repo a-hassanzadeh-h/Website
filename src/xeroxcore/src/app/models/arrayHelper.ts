@@ -1,4 +1,3 @@
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Validation } from './validation';
 
 export class ArrayHelper {
@@ -40,9 +39,14 @@ export class ArrayHelper {
   }
 
   public static GetSelectList(originalList: any[], propertiIndex: number) {
-    let list = this.getValueFromArray(originalList, propertiIndex);
-    list.push('all');
-    list = this.CreateSelectBoxArray(list);
-    return list;
+    {
+      let list = [];
+      if (!Validation.ArrayIsEmpty(originalList)) {
+        list = this.getValueFromArray(originalList, propertiIndex);
+        list.push('all');
+        list = this.CreateSelectBoxArray(list);
+      }
+      return list;
+    }
   }
 }

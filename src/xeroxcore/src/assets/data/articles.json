@@ -1,0 +1,44 @@
+[
+  {
+    "appname": "Xeroxcore-website",
+    "date": "2020-01-15",
+    "title": "Security Patch 3.58.2",
+    "badge": "Security",
+    "content": ""
+  },
+  {
+    "appname": "Xeroxcore-website",
+    "date": "2020-01-14",
+    "title": "Security Patch 3.58.2",
+    "badge": "Bug Fix",
+    "content": ""
+  },
+  {
+    "appname": "Xeroxcore-mini",
+    "date": "2020-01-13",
+    "title": "Security Patch 3.58.2",
+    "badge": "Patch",
+    "content": ""
+  },
+  {
+    "appname": "Xeroxcore-website",
+    "date": "2020-01-12",
+    "title": "Security Patch 3.58.2",
+    "badge": "Security",
+    "content": ""
+  },
+  {
+    "appname": "Xeroxcore-mini",
+    "date": "2020-01-11",
+    "title": "Security Patch 3.58.2",
+    "badge": "Security",
+    "content": ""
+  },
+  {
+    "appname": "Xeroxcore",
+    "date": "2020-01-10",
+    "title": "Security Patch 3.58.2",
+    "badge": "Security",
+    "content": ""
+  }
+]

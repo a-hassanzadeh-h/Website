@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
-import { IFilterBar } from '../Models/Interface/IFilterbar';
-import { FilterBarSettings } from '../Models/filterbarSettings';
-import { ArticleFilter } from './ArticleFilters';
 import { ArrayHelper } from 'src/app/models/arrayHelper';
 import { BaseFilter } from '../Models/baseFilter';
+import { FilterBar } from '../Models/FilterBar';
+import { IFilterBar } from '../Models/Interface/IFilterbar';
 
 @Component({
   selector: 'app-articles',
@@ -14,70 +13,22 @@ import { BaseFilter } from '../Models/baseFilter';
   animations: [PopUpAnimation]
 })
 export class ArticlesComponent implements OnInit {
-  originalList = [
-    {
-      appname: 'Xeroxcore-website',
-      date: '2020-01-15',
-      title: 'Security Patch 3.58.2',
-      badge: 'Security',
-      content: ''
-    },
-    {
-      appname: 'Xeroxcore-website',
-      date: '2020-01-14',
-      title: 'Security Patch 3.58.2',
-      badge: 'Bug Fix',
-      content: ''
-    },
-    {
-      appname: 'Xeroxcore-mini',
-      date: '2020-01-13',
-      title: 'Security Patch 3.58.2',
-      badge: 'Patch',
-      content: ''
-    },
-    {
-      appname: 'Xeroxcore-website',
-      date: '2020-01-12',
-      title: 'Security Patch 3.58.2',
-      badge: 'Security',
-      content: ''
-    },
-    {
-      appname: 'Xeroxcore-mini',
-      date: '2020-01-11',
-      title: 'Security Patch 3.58.2',
-      badge: 'Security',
-      content: ''
-    },
-    {
-      appname: 'Xeroxcore',
-      date: '2020-01-10',
-      title: 'Security Patch 3.58.2',
-      badge: 'Security',
-      content: ''
-    }
-  ];
-  filterBar: IFilterBar;
+  originalList = [];
+  articleFilter: IFilterBar = new FilterBar(
+    'App name',
+    ArrayHelper.GetSelectList(this.originalList, 0),
+    'Version',
+    ArrayHelper.GetSelectList(this.originalList, 3),
+    () => (this.list = this.articlesFIlter.filterList()),
+    () => (this.list = this.articlesFIlter.resetFilter()),
+    'fa-bookmark'
+  );
   articlesFIlter: BaseFilter = new BaseFilter(this.originalList);
   list: any[];
+  downloadFilter: any;
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Articles');
-    this.createArticleFilterBar();
-  }
-
-  private createArticleFilterBar() {
-    const filter = new FilterBarSettings().CreateFilterBar(
-      'Badge ',
-      ArrayHelper.GetSelectList(this.originalList, 3),
-      'App name',
-      ArrayHelper.GetSelectList(this.originalList, 0),
-      'fa-bookmark'
-    );
-    filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
-    filter.cancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
-    this.filterBar = filter;
   }
 
   public setApp(text: string): void {
