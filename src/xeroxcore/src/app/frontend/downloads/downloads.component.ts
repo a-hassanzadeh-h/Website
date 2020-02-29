@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { IFilterBar } from '../Models/Interface/IFilterbar';
 import { PopUpAnimation } from '../Models/animation';
-import { ArrayHelper } from 'src/app/models/arrayHelper';
 import { BaseFilter } from '../Models/baseFilter';
-import { FilterBar } from '../Models/FilterBar';
 
 @Component({
   selector: 'app-downloads',
@@ -14,20 +11,18 @@ import { FilterBar } from '../Models/FilterBar';
 })
 export class DownloadsComponent implements OnInit {
   originalList = [];
-  downloadFilter: IFilterBar = new FilterBar(
-    'App name',
-    ArrayHelper.GetSelectList(this.originalList, 0),
-    'Version',
-    ArrayHelper.GetSelectList(this.originalList, 3),
-    () => (this.list = this.downloadsFilter.filterList()),
-    () => (this.list = this.downloadsFilter.resetFilter()),
-    'fa-th-list'
-  );
   downloadsFilter: BaseFilter = new BaseFilter(this.originalList);
   list: any[];
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Downloads');
+    this.downloadsFilter.CreateFilterBar(
+      'App, name',
+      0,
+      'Version',
+      3,
+      'fa-th-list'
+    );
   }
 
   public setApp($event): void {

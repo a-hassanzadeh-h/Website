@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
-import { ArrayHelper } from 'src/app/models/arrayHelper';
 import { BaseFilter } from '../Models/baseFilter';
-import { FilterBar } from '../Models/FilterBar';
-import { IFilterBar } from '../Models/Interface/IFilterbar';
 
 @Component({
   selector: 'app-articles',
@@ -14,29 +11,27 @@ import { IFilterBar } from '../Models/Interface/IFilterbar';
 })
 export class ArticlesComponent implements OnInit {
   originalList = [];
-  articleFilter: IFilterBar = new FilterBar(
-    'App name',
-    ArrayHelper.GetSelectList(this.originalList, 0),
-    'Version',
-    ArrayHelper.GetSelectList(this.originalList, 3),
-    () => (this.list = this.articlesFIlter.filterList()),
-    () => (this.list = this.articlesFIlter.resetFilter()),
-    'fa-bookmark'
-  );
-  articlesFIlter: BaseFilter = new BaseFilter(this.originalList);
+  articlesFilter: BaseFilter = new BaseFilter(this.originalList);
   list: any[];
   downloadFilter: any;
 
   constructor(private titleService: Title) {
     titleService.setTitle('Xeroxcore Articles');
+    this.articlesFilter.CreateFilterBar(
+      'Badge',
+      3,
+      'App name',
+      0,
+      'fa-bookmark'
+    );
   }
 
   public setApp(text: string): void {
-    this.articlesFIlter.filter.app = text;
+    this.articlesFilter.filter.app = text;
   }
 
   public setBadge(text: string): void {
-    this.articlesFIlter.filter.badge = text;
+    this.articlesFilter.filter.badge = text;
   }
 
   public GetBadgeClass(type: string): string {
@@ -44,6 +39,6 @@ export class ArticlesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.list = this.articlesFIlter.resetFilter();
+    this.list = this.articlesFilter.resetFilter();
   }
 }

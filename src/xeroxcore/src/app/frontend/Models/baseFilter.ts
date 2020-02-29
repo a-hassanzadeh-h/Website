@@ -1,10 +1,12 @@
 import { IBaseFilter } from './Interface/IBaseFilter';
 import { ArrayHelper } from 'src/app/models/arrayHelper';
 import { Validation } from 'src/app/models/validation';
+import { IFilterBar } from './Interface/IFilterbar';
+import { FilterBar } from './FilterBar';
 
 export class BaseFilter implements IBaseFilter {
   public list: any[];
-
+  componentfilter: IFilterBar;
   public filter = {
     version: 'all',
     date: '',
@@ -14,6 +16,24 @@ export class BaseFilter implements IBaseFilter {
 
   constructor(originaList: any[]) {
     this.list = originaList;
+  }
+
+  public CreateFilterBar(
+    selec1: string,
+    propertyIndex: number,
+    select2: string,
+    propertyIndex2,
+    faicon: string
+  ) {
+    this.componentfilter = new FilterBar(
+      selec1,
+      ArrayHelper.GetSelectList(this.list, propertyIndex),
+      select2,
+      ArrayHelper.GetSelectList(this.list, propertyIndex2),
+      () => (this.list = this.filterList()),
+      () => (this.list = this.resetFilter()),
+      faicon
+    );
   }
 
   public ApplyFilter(propertyIndex: number, filter): any[] {
