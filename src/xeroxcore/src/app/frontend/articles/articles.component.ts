@@ -13,8 +13,6 @@ import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
 })
 export class ArticlesComponent extends SubscriptionDestroyer {
   articlesFilter: BaseFilter = new BaseFilter();
-  list: any[];
-  downloadFilter: any;
 
   constructor(
     private titleService: Title,

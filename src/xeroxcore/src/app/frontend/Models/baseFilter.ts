@@ -10,7 +10,7 @@ export class BaseFilter implements IBaseFilter {
   componentfilter: IFilterBar;
   public filter = {
     version: 'all',
-    date: '',
+    date: 'all',
     app: 'all',
     badge: 'all'
   };
@@ -35,14 +35,8 @@ export class BaseFilter implements IBaseFilter {
     );
   }
 
-  public ApplyFilter(propertyIndex: number, filter): any[] {
-    return ArrayHelper.filterArray(this.originalList, propertyIndex, filter);
-  }
-
-  public filterByAppAndProperty(propertyIndex: number, filter): any[] {
-    let newList = this.ApplyFilter(0, this.filter.app);
-    newList = ArrayHelper.filterArray(newList, propertyIndex, filter);
-    return newList;
+  public ApplyFilter(list: any[], propertyIndex: number, filter): any[] {
+    return ArrayHelper.filterArray(list, propertyIndex, filter);
   }
 
   public resetFilter(): any[] {
@@ -53,7 +47,7 @@ export class BaseFilter implements IBaseFilter {
     switch (text) {
       case 'app':
         return 0;
-      case 'data':
+      case 'datee':
         return 1;
       case 'version':
         return 3;
@@ -68,43 +62,16 @@ export class BaseFilter implements IBaseFilter {
   public filterList(): any[] {
     let copyList = this.originalList;
 
-    const properties = Object.getOwnPropertyNames(this.filter);
+    const properties = Object.keys(this.filter);
     properties.forEach(item => {
-      if (!Validation.stringAreEqual(item, 'all')) {
-        console.log(this.GetFieldIndex(item));
+      if (!Validation.stringAreEqual(this.filter[item], 'all')) {
+        const index = this.GetFieldIndex(item);
+        copyList = this.ApplyFilter(copyList, index, this.filter[item]);
+        console.log(copyList);
       }
     });
-    console.log(copyList);
-    console.log(this.filter);
 
-    if (!Validation.stringAreEqual(this.filter.badge, 'all')) {
-      copyList = this.ApplyFilter(3, this.filter.badge);
-      console.log(copyList);
-    }
-
-    if (!Validation.stringAreEqual(this.filter.app, 'all')) {
-      copyList = this.ApplyFilter(3, this.filter.version);
-    }
-
-    if (!Validation.stringAreEqual(this.filter.app, 'all')) {
-      copyList = this.ApplyFilter(0, this.filter.app);
-    }
-
-    if (
-      !Validation.stringAreEqual(this.filter.version, 'all') &&
-      !Validation.stringAreEqual(this.filter.app, 'all')
-    ) {
-      copyList = this.filterByAppAndProperty(3, this.filter.version);
-    }
-
-    if (
-      !Validation.stringAreEqual(this.filter.app, 'all') &&
-      !Validation.stringAreEqual(this.filter.badge, 'all')
-    ) {
-      copyList = this.filterByAppAndProperty(3, this.filter.badge);
-    }
-
-    if (copyList.length === 0) {
+    if (Validation.ArrayIsEmpty(copyList)) {
       copyList[0] = this.noMatch();
     }
     return copyList;

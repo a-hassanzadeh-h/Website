@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
 import { BaseFilter } from '../Models/baseFilter';
 import { FetchDataService } from 'src/app/shared/service/fetch-data.service';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
-import { SUPER_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-downloads',
@@ -14,7 +13,6 @@ import { SUPER_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class DownloadsComponent extends SubscriptionDestroyer {
   downloadsFilter: BaseFilter = new BaseFilter();
-  list: any[];
 
   constructor(
     private titleService: Title,
