@@ -3,8 +3,8 @@ import { Title } from '@angular/platform-browser';
 import { IFilterBar } from '../Models/Interface/IFilterbar';
 import { FilterBarSettings } from '../Models/filterbarSettings';
 import { PopUpAnimation } from '../Models/animation';
-import { DownloadFilter } from './DownloadFilter';
 import { ArrayHelper } from 'src/app/models/arrayHelper';
+import { BaseFilter } from '../Models/baseFilter';
 
 @Component({
   selector: 'app-downloads',
@@ -32,7 +32,7 @@ export class DownloadsComponent implements OnInit {
     }
   ];
   filterBar: IFilterBar;
-  downloadFilter: DownloadFilter = new DownloadFilter(this.originalList);
+  downloadFilter: BaseFilter = new BaseFilter(this.originalList);
   list: any[];
 
   constructor(private titleService: Title) {
@@ -48,8 +48,7 @@ export class DownloadsComponent implements OnInit {
       ArrayHelper.GetSelectList(this.originalList, 3),
       'fa-th-list'
     );
-    filter.applyFilter = () =>
-      (this.list = this.downloadFilter.filterDownloadsList());
+    filter.applyFilter = () => (this.list = this.downloadFilter.filterList());
     filter.cancelFilter = () => (this.list = this.downloadFilter.resetFilter());
     this.filterBar = filter;
   }

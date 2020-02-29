@@ -5,6 +5,7 @@ import { IFilterBar } from '../Models/Interface/IFilterbar';
 import { FilterBarSettings } from '../Models/filterbarSettings';
 import { ArticleFilter } from './ArticleFilters';
 import { ArrayHelper } from 'src/app/models/arrayHelper';
+import { BaseFilter } from '../Models/baseFilter';
 
 @Component({
   selector: 'app-articles',
@@ -58,7 +59,7 @@ export class ArticlesComponent implements OnInit {
     }
   ];
   filterBar: IFilterBar;
-  articlesFIlter: ArticleFilter = new ArticleFilter(this.originalList);
+  articlesFIlter: BaseFilter = new BaseFilter(this.originalList);
   list: any[];
 
   constructor(private titleService: Title) {
@@ -74,8 +75,7 @@ export class ArticlesComponent implements OnInit {
       ArrayHelper.GetSelectList(this.originalList, 0),
       'fa-bookmark'
     );
-    filter.applyFilter = () =>
-      (this.list = this.articlesFIlter.filterArticles());
+    filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
     filter.cancelFilter = () => (this.list = this.articlesFIlter.resetFilter());
     this.filterBar = filter;
   }
