@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MessageboxService } from 'src/app/shared/service/messagebox.service';
 import { Router } from '@angular/router';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
+import { SubscriptionsHelper } from 'src/app/models/subscriptions';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +18,10 @@ export class NavbarComponent extends SubscriptionDestroyer {
   ) {
     super();
     this.AddSubscription(
-      router.events.subscribe(() => (this.url = this.router.url))
+      SubscriptionsHelper.RouteSubscription(
+        router,
+        () => (this.url = this.router.url)
+      )
     );
     this.messageBoxService = messageBoxService;
   }

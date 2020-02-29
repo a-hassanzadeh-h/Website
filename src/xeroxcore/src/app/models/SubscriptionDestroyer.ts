@@ -11,7 +11,6 @@ export class SubscriptionDestroyer implements OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    console.log('destroyed');
     this.subscritption.unsubscribe();
   }
 }

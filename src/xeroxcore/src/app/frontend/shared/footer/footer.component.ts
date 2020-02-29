@@ -2,6 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { MessageboxService } from 'src/app/shared/service/messagebox.service';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
 import { Router } from '@angular/router';
+import { SubscriptionsHelper } from 'src/app/models/subscriptions';
 
 @Component({
   selector: 'app-footer',
@@ -19,7 +20,10 @@ export class FooterComponent extends SubscriptionDestroyer
   ) {
     super();
     this.AddSubscription(
-      router.events.subscribe(() => (this.url = this.router.url))
+      SubscriptionsHelper.RouteSubscription(
+        router,
+        () => (this.url = this.router.url)
+      )
     );
     this.messageBoxService = messageBoxService;
   }
