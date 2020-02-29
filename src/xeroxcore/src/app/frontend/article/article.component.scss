@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+
+#article {
+  background: $white;
+  border-radius: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 120px;
+  transition: all 400ms ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: $dark !important;
+  max-width: 700px;
+  padding: 10px 10px;
+}
+
+.underline {
+  border-bottom: 2px solid $dark;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.hide {
+  top: -450px !important;
+}
+
+.button {
+  color: $dark;
+}

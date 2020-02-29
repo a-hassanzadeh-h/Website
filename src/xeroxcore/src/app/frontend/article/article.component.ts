@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IArticle } from '../Models/Interface/IArticle';
 
 @Component({
@@ -7,8 +7,15 @@ import { IArticle } from '../Models/Interface/IArticle';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
-  @Input() article: IArticle;
+  public article: IArticle;
   constructor() {}
 
   ngOnInit(): void {}
+  public closeArticle() {
+    this.article = null;
+  }
+
+  getText(text) {
+    return document.write(text);
+  }
 }

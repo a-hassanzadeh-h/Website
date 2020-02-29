@@ -1,1 +1,29 @@
-<p>article works!</p>
+<div id="article" class="container" [class.hide]="!article">
+  <header class="row">
+    <div class="col-xl-6 title bold">
+      <p class="title bold m-0">{{ article?.title }}</p>
+    </div>
+    <div class="col-xl-3 vertical-center">
+      <button class="badge security d-block m-auto">Security</button>
+    </div>
+    <div class="col-xl-3 title bold">
+      <p class="title bold m-0">{{ article?.date }}</p>
+    </div>
+  </header>
+  <div class="row underline w-100  mx-auto my-2"></div>
+  <div class="row ">
+    <div class="col-xl-12">
+      <p class="m-0">
+        {{ getText(article?.content) }}
+      </p>
+    </div>
+  </div>
+  <footer class="row py-2">
+    <div class="col-xl-12 text-right">
+      <button class="button py-2 mx-1 proceed ">Read Later</button>
+      <button class="button py-2 mx-1 warning" (click)="article = null">
+        Close
+      </button>
+    </div>
+  </footer>
+</div>

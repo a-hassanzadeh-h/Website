@@ -1,9 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
 import { BaseFilter } from '../Models/baseFilter';
 import { FetchDataService } from 'src/app/shared/service/fetch-data.service';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
+import { IArticle } from '../Models/Interface/IArticle';
+import { ArticleComponent } from '../article/article.component';
 
 @Component({
   selector: 'app-articles',
@@ -12,8 +14,10 @@ import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
   animations: [PopUpAnimation]
 })
 export class ArticlesComponent extends SubscriptionDestroyer {
-  articlesFilter: BaseFilter = new BaseFilter();
+  @ViewChild(ArticleComponent) articleComponent;
 
+  public articlesFilter: BaseFilter = new BaseFilter();
+  public article: IArticle;
   constructor(
     private titleService: Title,
     private articleService: FetchDataService
