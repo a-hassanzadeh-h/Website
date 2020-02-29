@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
 import { BaseFilter } from '../Models/baseFilter';
+import { FetchDataService } from 'src/app/shared/service/fetch-data.service';
+import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
+import { SUPER_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-downloads',
@@ -9,19 +12,32 @@ import { BaseFilter } from '../Models/baseFilter';
   styleUrls: ['./downloads.component.scss'],
   animations: [PopUpAnimation]
 })
-export class DownloadsComponent implements OnInit {
-  originalList = [];
-  downloadsFilter: BaseFilter = new BaseFilter(this.originalList);
+export class DownloadsComponent extends SubscriptionDestroyer {
+  downloadsFilter: BaseFilter = new BaseFilter();
   list: any[];
 
-  constructor(private titleService: Title) {
+  constructor(
+    private titleService: Title,
+    private downloadService: FetchDataService
+  ) {
+    super();
     titleService.setTitle('Xeroxcore Downloads');
-    this.downloadsFilter.CreateFilterBar(
-      'App, name',
-      0,
-      'Version',
-      3,
-      'fa-th-list'
+    this.initDownloadList();
+  }
+
+  private initDownloadList() {
+    this.AddSubscription(
+      this.downloadService.getDownloads().subscribe(list => {
+        this.downloadsFilter.originalList = list;
+        this.downloadsFilter.list = list;
+        this.downloadsFilter.CreateFilterBar(
+          'App, name',
+          0,
+          'Version',
+          3,
+          'fa-th-list'
+        );
+      })
     );
   }
 
@@ -31,9 +47,5 @@ export class DownloadsComponent implements OnInit {
 
   public setSource($event): void {
     this.downloadsFilter.filter.version = $event;
-  }
-
-  ngOnInit(): void {
-    this.list = this.downloadsFilter.resetFilter();
   }
 }

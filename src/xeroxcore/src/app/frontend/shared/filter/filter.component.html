@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div id="filter" class="filter row box-shadow">
         <mat-form-field appearance="outline" class="col-xl-3">
-          <mat-label>{{ filterBar.select1 }}</mat-label>
+          <mat-label>{{ filterBar?.select1 }}</mat-label>
           <mat-select (selectionChange)="setSelect1Filter($event)">
             <mat-option
               *ngFor="let item of filterBar?.select1List"
@@ -23,7 +23,7 @@
           <mat-datepicker #picker disabled="false"></mat-datepicker>
         </mat-form-field>
         <mat-form-field appearance="outline" class="col-xl-3">
-          <mat-label>{{ filterBar.select2 }}</mat-label>
+          <mat-label>{{ filterBar?.select2 }}</mat-label>
           <mat-select (selectionChange)="setSelect2Filter($event)">
             <mat-option
               *ngFor="let item of filterBar?.select2List"
@@ -49,7 +49,7 @@
   <div class="col-xl-1 p-0">
     <div class="action-container box-shadow vertical-center">
       <button id="bookmark" class=" m-auto">
-        <i class="fa {{ filterBar.faIcon }} m-auto"></i>
+        <i class="fa {{ filterBar?.faIcon }} m-auto"></i>
       </button>
     </div>
   </div>

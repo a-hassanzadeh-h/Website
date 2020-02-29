@@ -4,6 +4,6 @@ export interface IBaseFilter {
 
   ApplyFilter(propertyIndex: number, filter): any[];
   filterByAppAndProperty(propertyIndex: number, filter): any[];
-  resetFilter(): any[];
+  resetFilter();
   noMatch(): {};
 }

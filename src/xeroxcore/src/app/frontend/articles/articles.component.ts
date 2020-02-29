@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PopUpAnimation } from '../Models/animation';
 import { BaseFilter } from '../Models/baseFilter';
+import { FetchDataService } from 'src/app/shared/service/fetch-data.service';
+import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
 
 @Component({
   selector: 'app-articles',
@@ -9,20 +11,33 @@ import { BaseFilter } from '../Models/baseFilter';
   styleUrls: ['./articles.component.scss'],
   animations: [PopUpAnimation]
 })
-export class ArticlesComponent implements OnInit {
-  originalList = [];
-  articlesFilter: BaseFilter = new BaseFilter(this.originalList);
+export class ArticlesComponent extends SubscriptionDestroyer {
+  articlesFilter: BaseFilter = new BaseFilter();
   list: any[];
   downloadFilter: any;
 
-  constructor(private titleService: Title) {
+  constructor(
+    private titleService: Title,
+    private articleService: FetchDataService
+  ) {
+    super();
     titleService.setTitle('Xeroxcore Articles');
-    this.articlesFilter.CreateFilterBar(
-      'Badge',
-      3,
-      'App name',
-      0,
-      'fa-bookmark'
+    this.initArticleList();
+  }
+
+  private initArticleList() {
+    this.AddSubscription(
+      this.articleService.getArticles().subscribe(list => {
+        this.articlesFilter.originalList = list;
+        this.articlesFilter.list = list;
+        this.articlesFilter.CreateFilterBar(
+          'Badge',
+          3,
+          'App name',
+          0,
+          'fa-bookmark'
+        );
+      })
     );
   }
 
@@ -36,9 +51,5 @@ export class ArticlesComponent implements OnInit {
 
   public GetBadgeClass(type: string): string {
     return type.toLowerCase();
-  }
-
-  ngOnInit(): void {
-    this.list = this.articlesFilter.resetFilter();
   }
 }

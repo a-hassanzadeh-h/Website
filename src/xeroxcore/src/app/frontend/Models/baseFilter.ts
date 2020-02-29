@@ -5,7 +5,8 @@ import { IFilterBar } from './Interface/IFilterbar';
 import { FilterBar } from './FilterBar';
 
 export class BaseFilter implements IBaseFilter {
-  public list: any[];
+  public list: any[] = [];
+  public originalList: any[];
   componentfilter: IFilterBar;
   public filter = {
     version: 'all',
@@ -14,9 +15,7 @@ export class BaseFilter implements IBaseFilter {
     badge: 'all'
   };
 
-  constructor(originaList: any[]) {
-    this.list = originaList;
-  }
+  constructor() {}
 
   public CreateFilterBar(
     selec1: string,
@@ -27,9 +26,9 @@ export class BaseFilter implements IBaseFilter {
   ) {
     this.componentfilter = new FilterBar(
       selec1,
-      ArrayHelper.GetSelectList(this.list, propertyIndex),
+      ArrayHelper.GetSelectList(this.originalList, propertyIndex),
       select2,
-      ArrayHelper.GetSelectList(this.list, propertyIndex2),
+      ArrayHelper.GetSelectList(this.originalList, propertyIndex2),
       () => (this.list = this.filterList()),
       () => (this.list = this.resetFilter()),
       faicon
@@ -37,7 +36,7 @@ export class BaseFilter implements IBaseFilter {
   }
 
   public ApplyFilter(propertyIndex: number, filter): any[] {
-    return ArrayHelper.filterArray(this.list, propertyIndex, filter);
+    return ArrayHelper.filterArray(this.originalList, propertyIndex, filter);
   }
 
   public filterByAppAndProperty(propertyIndex: number, filter): any[] {
@@ -47,14 +46,40 @@ export class BaseFilter implements IBaseFilter {
   }
 
   public resetFilter(): any[] {
-    return this.list;
+    return this.originalList;
+  }
+
+  private GetFieldIndex(text: string): number {
+    switch (text) {
+      case 'app':
+        return 0;
+      case 'data':
+        return 1;
+      case 'version':
+        return 3;
+      case 'badge':
+        return 3;
+
+      default:
+        return -1;
+    }
   }
 
   public filterList(): any[] {
-    let copyList = this.list;
+    let copyList = this.originalList;
+
+    const properties = Object.getOwnPropertyNames(this.filter);
+    properties.forEach(item => {
+      if (!Validation.stringAreEqual(item, 'all')) {
+        console.log(this.GetFieldIndex(item));
+      }
+    });
+    console.log(copyList);
+    console.log(this.filter);
 
     if (!Validation.stringAreEqual(this.filter.badge, 'all')) {
       copyList = this.ApplyFilter(3, this.filter.badge);
+      console.log(copyList);
     }
 
     if (!Validation.stringAreEqual(this.filter.app, 'all')) {
