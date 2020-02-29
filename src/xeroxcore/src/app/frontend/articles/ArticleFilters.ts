@@ -9,15 +9,15 @@ export class ArticleFilter extends BaseFilter {
     let copyList = this.list;
 
     if (this.filter.badge !== 'all') {
-      copyList = this.filterByBadge();
+      copyList = this.ApplyFilter(3, this.filter.badge);
     }
 
     if (this.filter.app !== 'all') {
-      copyList = this.filterByApp();
+      copyList = this.ApplyFilter(0, this.filter.app);
     }
 
     if (this.filter.badge !== 'all' && this.filter.app !== 'all') {
-      copyList = this.filterByBadgeAndApp();
+      copyList = this.filterByAppAndProperty(3, this.filter.badge);
     }
 
     if (copyList.length === 0) {

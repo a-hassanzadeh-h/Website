@@ -9,15 +9,15 @@ export class DownloadFilter extends BaseFilter {
     let copyList = this.list;
 
     if (this.filter.version !== 'all') {
-      copyList = this.filterByVersion();
+      copyList = this.ApplyFilter(3, this.filter.version);
     }
 
     if (this.filter.app !== 'all') {
-      copyList = this.filterByApp();
+      copyList = this.ApplyFilter(0, this.filter.app);
     }
 
     if (this.filter.version !== 'all' && this.filter.app !== 'all') {
-      copyList = this.filterByVersionAndApp();
+      copyList = this.filterByAppAndProperty(3, this.filter.version);
     }
 
     if (copyList.length === 0) {

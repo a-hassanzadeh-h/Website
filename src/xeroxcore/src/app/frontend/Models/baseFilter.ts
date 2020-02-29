@@ -15,32 +15,14 @@ export class BaseFilter implements IBaseFilter {
     this.list = originaList;
   }
 
-  public filterByVersion(): any[] {
-    return ArrayHelper.filterArray(this.list, 3, this.filter.version);
+  public ApplyFilter(propertyIndex: number, filter): any[] {
+    return ArrayHelper.filterArray(this.list, propertyIndex, filter);
   }
 
-  public filterByApp(): any[] {
-    return ArrayHelper.filterArray(this.list, 0, this.filter.app);
-  }
-
-  public filterByBadge(): any[] {
-    return ArrayHelper.filterArray(this.list, 3, this.filter.badge);
-  }
-
-  public filterByDate(): any[] {
-    return ArrayHelper.filterArray(this.list, 1, this.filter.date);
-  }
-
-  public filterByVersionAndApp(): any[] {
-    let list = this.filterByApp();
-    list = ArrayHelper.filterArray(list, 3, this.filter.version);
-    return list;
-  }
-
-  public filterByBadgeAndApp(): any[] {
-    let list = this.filterByApp();
-    list = ArrayHelper.filterArray(list, 3, this.filter.badge);
-    return list;
+  public filterByAppAndProperty(propertyIndex: number, filter): any[] {
+    let newList = this.ApplyFilter(0, this.filter.app);
+    newList = ArrayHelper.filterArray(newList, propertyIndex, filter);
+    return newList;
   }
 
   public resetFilter(): any[] {
