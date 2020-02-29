@@ -15,20 +15,20 @@ import { ArrayHelper } from 'src/app/models/arrayHelper';
 export class DownloadsComponent implements OnInit {
   originalList = [
     {
+      appname: 'Xeroxcore-website',
       date: '2020-01-15',
       title: 'Xeroxcore-website',
       version: '3.52.2',
       size: '2.05mb',
-      source: 'Xeroxcore',
-      appname: 'Xeroxcore-website'
+      source: 'Xeroxcore'
     },
     {
+      appname: 'Xeroxcore',
       date: '2020-01-14',
       title: 'Xeroxcore',
       version: '2.48.5',
       size: '3.00mb',
-      source: 'Github',
-      appname: 'Xeroxcore'
+      source: 'Github'
     }
   ];
   filterBar: IFilterBar;
@@ -43,9 +43,9 @@ export class DownloadsComponent implements OnInit {
   private createDownloadFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'App name',
-      ArrayHelper.GetSelectList(this.originalList, 5),
+      ArrayHelper.GetSelectList(this.originalList, 0),
       'Version',
-      ArrayHelper.GetSelectList(this.originalList, 2),
+      ArrayHelper.GetSelectList(this.originalList, 3),
       'fa-th-list'
     );
     filter.applyFilter = () => (this.list = this.downloadFilter.filterList());

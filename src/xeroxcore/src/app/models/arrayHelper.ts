@@ -1,7 +1,8 @@
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
+import { Validation } from './validation';
 
 export class ArrayHelper {
-  private static GetPropertie(object: any): string[] {
+  public static GetPropertie(object: any): string[] {
     return Object.getOwnPropertyNames(object[0]);
   }
 
@@ -14,6 +15,17 @@ export class ArrayHelper {
     const newList = [];
     list.forEach(item => {
       newList.push(item[propertyList[propertyIndex]]);
+    });
+    return newList;
+  }
+
+  public static filterArray(list: any[], index: number, value: string): any[] {
+    const properties = this.GetPropertie(list);
+    const newList = [];
+    list.forEach(item => {
+      if (Validation.stringAreEqual(item[properties[index]], value)) {
+        newList.push(item);
+      }
     });
     return newList;
   }

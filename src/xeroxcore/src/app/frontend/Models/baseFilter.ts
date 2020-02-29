@@ -1,5 +1,5 @@
-import { Validation } from 'src/app/models/validation';
 import { IBaseFilter } from './Interface/IBaseFilter';
+import { ArrayHelper } from 'src/app/models/arrayHelper';
 
 export class BaseFilter implements IBaseFilter {
   public list: any[];
@@ -16,43 +16,31 @@ export class BaseFilter implements IBaseFilter {
   }
 
   public filterByVersion(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.version, this.filter.version)
-    );
-  }
-
-  public filterByBadge(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.badge, this.filter.badge)
-    );
-  }
-
-  public filterByVersionAndApp(): any[] {
-    return this.list.filter(
-      item =>
-        Validation.stringAreEqual(item.version, this.filter.version) &&
-        Validation.stringAreEqual(item.appname, this.filter.app)
-    );
-  }
-
-  public filterByBadgeAndApp(): any[] {
-    return this.list.filter(
-      item =>
-        Validation.stringAreEqual(item.badge, this.filter.badge) &&
-        Validation.stringAreEqual(item.appname, this.filter.app)
-    );
+    return ArrayHelper.filterArray(this.list, 3, this.filter.version);
   }
 
   public filterByApp(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.appname, this.filter.app)
-    );
+    return ArrayHelper.filterArray(this.list, 0, this.filter.app);
+  }
+
+  public filterByBadge(): any[] {
+    return ArrayHelper.filterArray(this.list, 3, this.filter.badge);
   }
 
   public filterByDate(): any[] {
-    return this.list.filter(item =>
-      Validation.stringAreEqual(item.date, this.filter.date)
-    );
+    return ArrayHelper.filterArray(this.list, 1, this.filter.date);
+  }
+
+  public filterByVersionAndApp(): any[] {
+    let list = this.filterByApp();
+    list = ArrayHelper.filterArray(list, 3, this.filter.version);
+    return list;
+  }
+
+  public filterByBadgeAndApp(): any[] {
+    let list = this.filterByApp();
+    list = ArrayHelper.filterArray(list, 3, this.filter.badge);
+    return list;
   }
 
   public resetFilter(): any[] {

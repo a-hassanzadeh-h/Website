@@ -2,8 +2,8 @@ export interface IBaseFilter {
   list: any[];
   filter: {};
 
-  filterByApp(): any[];
-  filterByDate(): any[];
+  filterByApp(list: any[]): any[];
+  filterByDate(list: any[]): any[];
   resetFilter(): any[];
   noMatch(): {};
 }

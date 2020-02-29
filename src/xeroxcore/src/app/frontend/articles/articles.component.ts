@@ -15,46 +15,46 @@ import { ArrayHelper } from 'src/app/models/arrayHelper';
 export class ArticlesComponent implements OnInit {
   originalList = [
     {
+      appname: 'Xeroxcore-website',
       date: '2020-01-15',
       title: 'Security Patch 3.58.2',
       badge: 'Security',
-      content: '',
-      appname: 'Xeroxcore-website'
+      content: ''
     },
     {
+      appname: 'Xeroxcore-website',
       date: '2020-01-14',
       title: 'Security Patch 3.58.2',
       badge: 'Bug Fix',
-      content: '',
-      appname: 'Xeroxcore-website'
+      content: ''
     },
     {
+      appname: 'Xeroxcore-mini',
       date: '2020-01-13',
       title: 'Security Patch 3.58.2',
       badge: 'Patch',
-      content: '',
-      appname: 'Xeroxcore-mini'
+      content: ''
     },
     {
+      appname: 'Xeroxcore-website',
       date: '2020-01-12',
       title: 'Security Patch 3.58.2',
       badge: 'Security',
-      content: '',
-      appname: 'Xeroxcore-website'
+      content: ''
     },
     {
+      appname: 'Xeroxcore-mini',
       date: '2020-01-11',
       title: 'Security Patch 3.58.2',
       badge: 'Security',
-      content: '',
-      appname: 'Xeroxcore-mini'
+      content: ''
     },
     {
+      appname: 'Xeroxcore',
       date: '2020-01-10',
       title: 'Security Patch 3.58.2',
       badge: 'Security',
-      content: '',
-      appname: 'Xeroxcore'
+      content: ''
     }
   ];
   filterBar: IFilterBar;
@@ -69,9 +69,9 @@ export class ArticlesComponent implements OnInit {
   private createArticleFilterBar() {
     const filter = new FilterBarSettings().CreateFilterBar(
       'Badge ',
-      ArrayHelper.GetSelectList(this.originalList, 2),
+      ArrayHelper.GetSelectList(this.originalList, 3),
       'App name',
-      ArrayHelper.GetSelectList(this.originalList, 4),
+      ArrayHelper.GetSelectList(this.originalList, 0),
       'fa-bookmark'
     );
     filter.applyFilter = () => (this.list = this.articlesFIlter.filterList());
