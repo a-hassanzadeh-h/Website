@@ -1,16 +1,5 @@
-import { TestBed } from '@angular/core/testing';
-
 import { MessageboxService } from './messagebox.service';
+import { ServiceTestClass } from 'src/app/models/serviceTestClass';
 
-describe('MessageboxService', () => {
-  let service: MessageboxService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(MessageboxService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+const service = new ServiceTestClass(MessageboxService);
+service.runtTest('MessageboxService');

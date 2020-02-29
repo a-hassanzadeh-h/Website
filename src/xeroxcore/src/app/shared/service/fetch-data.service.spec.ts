@@ -1,16 +1,5 @@
-import { TestBed } from '@angular/core/testing';
-
 import { FetchDataService } from './fetch-data.service';
+import { ServiceTestClass } from 'src/app/models/serviceTestClass';
 
-describe('FetchDataService', () => {
-  let service: FetchDataService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(FetchDataService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+const service = new ServiceTestClass(FetchDataService);
+service.runtTest('FetchDataService');
