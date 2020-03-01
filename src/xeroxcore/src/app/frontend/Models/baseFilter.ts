@@ -47,34 +47,15 @@ export class BaseFilter implements IBaseFilter {
     switch (text) {
       case 'app':
         return 0;
-      case 'datee':
+      case 'date':
         return 1;
       case 'version':
         return 3;
       case 'badge':
         return 3;
-
       default:
         return -1;
     }
-  }
-
-  public filterList(): any[] {
-    let copyList = this.originalList;
-
-    const properties = Object.keys(this.filter);
-    properties.forEach(item => {
-      if (!Validation.stringAreEqual(this.filter[item], 'all')) {
-        const index = this.GetFieldIndex(item);
-        copyList = this.ApplyFilter(copyList, index, this.filter[item]);
-        console.log(copyList);
-      }
-    });
-
-    if (Validation.ArrayIsEmpty(copyList)) {
-      copyList[0] = this.noMatch();
-    }
-    return copyList;
   }
 
   public noMatch(): {} {
@@ -85,5 +66,32 @@ export class BaseFilter implements IBaseFilter {
       content: '',
       appname: ''
     };
+  }
+
+  private arrayIsEmpty(list: any[]) {
+    if (Validation.ArrayIsEmpty(list)) {
+      list.push(this.noMatch());
+    }
+    return list;
+  }
+
+  private shouldFilterList(text: string) {
+    return !Validation.stringAreEqual(text, 'all');
+  }
+
+  public filterList(): any[] {
+    let copyList = this.originalList;
+    console.log(this.filter);
+    console.log(copyList);
+    const properties = Object.keys(this.filter);
+    properties.forEach(item => {
+      if (this.shouldFilterList(this.filter[item])) {
+        const index = this.GetFieldIndex(item);
+        copyList = this.ApplyFilter(copyList, index, this.filter[item]);
+      }
+    });
+
+    copyList = this.arrayIsEmpty(copyList);
+    return copyList;
   }
 }

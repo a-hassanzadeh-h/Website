@@ -4,7 +4,10 @@
       <div id="filter" class="filter row box-shadow">
         <mat-form-field appearance="outline" class="col-xl-3">
           <mat-label>{{ filterBar?.select1 }}</mat-label>
-          <mat-select (selectionChange)="setSelect1Filter($event)">
+          <mat-select
+            (selectionChange)="setSelect1Filter($event)"
+            [(value)]="selected"
+          >
             <mat-option
               *ngFor="let item of filterBar?.select1List"
               [value]="item.value"
@@ -15,16 +18,24 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="col-xl-3">
           <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker" />
+          <input
+            matInput
+            [matDatepicker]="picker"
+            (dateChange)="setDateChanged($event)"
+            disabled
+          />
           <mat-datepicker-toggle
             matSuffix
             [for]="picker"
           ></mat-datepicker-toggle>
-          <mat-datepicker #picker disabled="false"></mat-datepicker>
+          <mat-datepicker #picker disabled="true"></mat-datepicker>
         </mat-form-field>
         <mat-form-field appearance="outline" class="col-xl-3">
           <mat-label>{{ filterBar?.select2 }}</mat-label>
-          <mat-select (selectionChange)="setSelect2Filter($event)">
+          <mat-select
+            (selectionChange)="setSelect2Filter($event)"
+            [(value)]="selected2"
+          >
             <mat-option
               *ngFor="let item of filterBar?.select2List"
               [value]="item.value"

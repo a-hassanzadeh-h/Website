@@ -51,7 +51,7 @@ export class ArticlesComponent extends SubscriptionDestroyer {
     this.articlesFilter.filter.badge = text;
   }
 
-  public GetBadgeClass(type: string): string {
-    return type.toLowerCase();
+  public setDate(text: string): void {
+    this.articlesFilter.filter.date = text;
   }
 }

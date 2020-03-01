@@ -12,6 +12,27 @@
   color: $dark !important;
   max-width: 700px;
   padding: 10px 10px;
+  z-index: 1;
+
+  @media (orientation: portrait) {
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  @media (max-width: 812px) and (orientation: landscape) {
+    top: 0px;
+  }
+}
+
+#text {
+  overflow-y: auto;
+  max-height: 400px;
+  @media (max-width: 812px) and (orientation: landscape) {
+    max-height: 150px;
+  }
 }
 
 .underline {

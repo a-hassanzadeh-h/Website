@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IArticle } from '../Models/Interface/IArticle';
 
 @Component({
@@ -6,16 +6,11 @@ import { IArticle } from '../Models/Interface/IArticle';
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss']
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent {
   public article: IArticle;
   constructor() {}
 
-  ngOnInit(): void {}
   public closeArticle() {
     this.article = null;
-  }
-
-  getText(text) {
-    return document.write(text);
   }
 }

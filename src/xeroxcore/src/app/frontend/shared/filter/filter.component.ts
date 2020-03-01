@@ -19,20 +19,29 @@ export class FilterComponent implements OnInit {
   @Output() select1 = new EventEmitter<string>();
   @Output() select2 = new EventEmitter<string>();
   @Output() date = new EventEmitter<string>();
-
+  selected = 'all';
+  selected2 = 'all';
   constructor() {}
 
   ngOnInit(): void {}
 
   public setSelect1Filter($event): void {
+    this.selected = $event.value;
     this.select1.emit($event.value);
   }
 
   public setSelect2Filter($event): void {
+    this.selected2 = $event.value;
     this.select2.emit($event.value);
   }
 
+  public setDateChanged($event) {
+    this.date.emit($event.value);
+  }
+
   public resetFilter(): void {
+    this.selected = 'all';
+    this.selected2 = 'all';
     this.filterBar.cancelFilter();
   }
 

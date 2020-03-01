@@ -4,6 +4,7 @@
       [filterBar]="articlesFilter.componentfilter"
       (select1)="setBadge($event)"
       (select2)="setApp($event)"
+      (date)="setDate($event)"
     ></app-filter>
     <div class="row scroll">
       <div
@@ -20,7 +21,7 @@
               <p class="m-0 bold text">{{ item.title }}</p>
             </div>
             <div class="col-xl-2 col-md-12 vertical-center my-2">
-              <button class="badge {{ GetBadgeClass(item.badge) }}">
+              <button class="badge {{ item.badge.toLowerCase() }}">
                 {{ item.badge }}
               </button>
             </div>

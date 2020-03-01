@@ -46,4 +46,8 @@ export class DownloadsComponent extends SubscriptionDestroyer {
   public setSource($event): void {
     this.downloadsFilter.filter.version = $event;
   }
+
+  public setDate(text: string): void {
+    this.downloadsFilter.filter.date = text;
+  }
 }
