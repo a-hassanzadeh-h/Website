@@ -32,4 +32,21 @@ export class MessageboxService {
     message.multiOption = false;
     this.message.next(message);
   }
+
+  public viewHash(hash: string): void {
+    const message = new Messagebox();
+    message.title = 'SHA256';
+    message.text = hash;
+    message.multiOption = true;
+    message.optionTitle = 'Copy Hash';
+    message.action = () => {
+      const dummy = document.createElement('textarea');
+      document.body.appendChild(dummy);
+      dummy.value = hash;
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+    };
+    this.message.next(message);
+  }
 }

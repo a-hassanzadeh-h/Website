@@ -34,6 +34,5 @@ export class MessageboxComponent extends SubscriptionDestroyer {
 
   public actionClick(): void {
     this.message.action();
-    this.showMessage = false;
   }
 }

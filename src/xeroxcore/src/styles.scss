@@ -106,6 +106,10 @@ a {
   color: $white;
 }
 
+.copied {
+  color: $green;
+}
+
 .link:after {
   display: block;
   content: '';

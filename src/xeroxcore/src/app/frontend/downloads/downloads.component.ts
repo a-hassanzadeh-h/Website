@@ -4,6 +4,7 @@ import { PopUpAnimation } from '../Models/animation';
 import { BaseFilter } from '../Models/baseFilter';
 import { FetchDataService } from 'src/app/shared/service/fetch-data.service';
 import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
+import { MessageboxService } from 'src/app/shared/service/messagebox.service';
 
 @Component({
   selector: 'app-downloads',
@@ -13,13 +14,15 @@ import { SubscriptionDestroyer } from 'src/app/models/SubscriptionDestroyer';
 })
 export class DownloadsComponent extends SubscriptionDestroyer {
   downloadsFilter: BaseFilter = new BaseFilter();
-
+  messageBox: MessageboxService;
   constructor(
     private titleService: Title,
-    private downloadService: FetchDataService
+    private downloadService: FetchDataService,
+    private messageBoxService: MessageboxService
   ) {
     super();
     titleService.setTitle('Xeroxcore Downloads');
+    this.messageBox = messageBoxService;
     this.initDownloadList();
   }
 
@@ -37,6 +40,10 @@ export class DownloadsComponent extends SubscriptionDestroyer {
         );
       })
     );
+  }
+
+  public viewHash(text: string): void {
+    this.messageBoxService.viewHash(text);
   }
 
   public setApp($event): void {

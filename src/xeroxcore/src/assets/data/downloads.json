@@ -5,7 +5,8 @@
     "title": "Xeroxcore-website",
     "version": "3.52.2",
     "size": "2.05mb",
-    "source": "Xeroxcore"
+    "source": "Xeroxcore",
+    "hash": "1e8e92d376ecbcf7cc89a6ea3b8ed53a41825892f951f40e710bcf3aeec1c67e"
   },
   {
     "appname": "Xeroxcore",
@@ -13,6 +14,7 @@
     "title": "Xeroxcore",
     "version": "2.48.5",
     "size": "3.00mb",
-    "source": "Github"
+    "source": "Github",
+    "hash": "1e8e92d376ecbcf7cc89a6ea3b8ed53a41825892f951f40e710bcf3aeec1c67e"
   }
 ]

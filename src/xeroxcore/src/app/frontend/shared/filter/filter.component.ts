@@ -26,12 +26,10 @@ export class FilterComponent implements OnInit {
   ngOnInit(): void {}
 
   public setSelect1Filter($event): void {
-    this.selected = $event.value;
     this.select1.emit($event.value);
   }
 
   public setSelect2Filter($event): void {
-    this.selected2 = $event.value;
     this.select2.emit($event.value);
   }
 
