@@ -6,4 +6,5 @@ export interface IDownload {
   size: string;
   source: string;
   hash: string;
+  id: number;
 }

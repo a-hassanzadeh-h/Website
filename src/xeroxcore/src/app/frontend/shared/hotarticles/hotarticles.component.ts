@@ -1,5 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { AnimationHelper } from '../../Models/animation';
+import { IArticle } from '../../Models/Interface/IArticle';
+import { FetchDataService } from 'src/app/shared/service/fetch-data.service';
 
 @Component({
   selector: 'app-hotarticles',
@@ -7,40 +9,9 @@ import { AnimationHelper } from '../../Models/animation';
   styleUrls: ['./hotarticles.component.scss']
 })
 export class HotarticlesComponent implements AfterViewInit {
-  list = [
-    {
-      Title: 'Patch 3.58.2',
-      type: 'Security',
-      content:
-        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dol...',
-      link: '/articles/article/3582'
-    },
-    {
-      Title: 'Patch 3.50.2',
-      type: 'Patch',
-      content:
-        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dol...',
-      link: '/articles/article/3582'
-    },
-    {
-      Title: 'Patch 3.49.9s',
-      type: 'Bug fix',
-      content:
-        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dol...',
-      link: '/articles/article/3582'
-    }
-  ];
-  constructor() {}
-
-  public GetBadgeClass(type: string): string {
-    switch (type.toLowerCase()) {
-      case 'security':
-        return 'security';
-      case 'bug fix':
-        return 'bug';
-      case 'patch':
-        return 'patch';
-    }
+  list: IArticle[] = [];
+  constructor(private articleService: FetchDataService) {
+    articleService.getArticles().subscribe(articles => (this.list = articles));
   }
 
   public ngAfterViewInit(): void {

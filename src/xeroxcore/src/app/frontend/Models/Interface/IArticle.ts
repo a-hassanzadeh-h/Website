@@ -4,4 +4,5 @@ export interface IArticle {
   title: string;
   badge: string;
   content: string;
+  id: number;
 }

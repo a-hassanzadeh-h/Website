@@ -9,18 +9,18 @@
           data-aos-offset="300"
         >
           <div class="col-xl-8 col-md-12 vertical-center">
-            <h4 class="title">{{ item.Title }}</h4>
+            <h4 class="title">{{ item.title | slice: 0:21 }}</h4>
           </div>
           <div class="col-xl-4 col-md-12 vertical-center">
-            <a class="badge m-auto {{ GetBadgeClass(item.type) }}">{{
-              item.type
+            <a class="badge m-auto {{ item.badge.toLowerCase() }}">{{
+              item.badge
             }}</a>
           </div>
           <div class="col-12 my-3">
-            <p class=" w-75">{{ item.content }}</p>
+            <p class=" w-75">{{ item.content | slice: 0:154 }}</p>
           </div>
           <div class="col-12">
-            <a href="{{ item.link }}" class="button">Go to Article</a>
+            <a href="/articles/{{ item.id }}" class="button">Go to Article</a>
           </div>
         </div>
       </div>
