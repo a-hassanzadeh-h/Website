@@ -6,6 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [MessageboxComponent, Error404Component],
   imports: [HttpClientModule],
-  exports: [MessageboxComponent]
+  exports: [MessageboxComponent, Error404Component]
 })
 export class GlobalSharedModule {}
