@@ -81,8 +81,6 @@ export class BaseFilter implements IBaseFilter {
 
   public filterList(): any[] {
     let copyList = this.originalList;
-    console.log(this.filter);
-    console.log(copyList);
     const properties = Object.keys(this.filter);
     properties.forEach(item => {
       if (this.shouldFilterList(this.filter[item])) {
