@@ -8,13 +8,13 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
 export class CarouselComponent implements AfterViewInit {
   public title = 'Supported Technology';
   public list = [
-    'netcore.webp',
-    'angular.webp',
-    'aws.webp',
-    'azure.webp',
-    'microsoft.webp',
-    'docker.webp',
-    'postgresql.webp'
+    'netcore',
+    'angular',
+    'aws',
+    'azure',
+    'microsoft',
+    'docker',
+    'postgresql'
   ];
 
   private carousel;
