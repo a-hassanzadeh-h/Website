@@ -22,6 +22,11 @@ const frontendRoutes: Routes = [
         component: ArticlesComponent,
         data: { state: 'articles' }
       },
+      {
+        path: 'articles/:id',
+        component: ArticlesComponent,
+        data: { state: 'articles' }
+      },
       { path: '**', component: Error404Component }
     ]
   }

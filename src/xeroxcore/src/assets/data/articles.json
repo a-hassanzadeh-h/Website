@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "appname": "Xeroxcore-website",
     "date": "2020-01-15",
     "title": "Security Patch 3.58.2",
@@ -7,6 +8,7 @@
     "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.<br /> Fixes<br /> * Updated OWASP Header <br /> * Implemented File hashing using SHA256<br /> * Minor SQL Injection fix<br /> * Implemented Account Lockout<br />"
   },
   {
+    "id": "2",
     "appname": "Xeroxcore-website",
     "date": "2020-01-14",
     "title": "Security Patch 3.58.2",
@@ -14,6 +16,7 @@
     "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.<br /> Fixes<br /> * Updated OWASP Header <br /> * Implemented File hashing using SHA256<br /> * Minor SQL Injection fix<br /> * Implemented Account Lockout<br />"
   },
   {
+    "id": "3",
     "appname": "Xeroxcore-mini",
     "date": "2020-01-13",
     "title": "Security Patch 3.58.2",
@@ -21,6 +24,7 @@
     "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.<br /> Fixes<br /> * Updated OWASP Header <br /> * Implemented File hashing using SHA256<br /> * Minor SQL Injection fix<br /> * Implemented Account Lockout<br />"
   },
   {
+    "id": "4",
     "appname": "Xeroxcore-website",
     "date": "2020-01-12",
     "title": "Security Patch 3.58.2",
@@ -28,6 +32,7 @@
     "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.<br /> Fixes<br /> * Updated OWASP Header <br /> * Implemented File hashing using SHA256<br /> * Minor SQL Injection fix<br /> * Implemented Account Lockout<br />"
   },
   {
+    "id": "5",
     "appname": "Xeroxcore-mini",
     "date": "2020-01-11",
     "title": "Security Patch 3.58.2",
@@ -35,6 +40,7 @@
     "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.<br /> Fixes<br /> * Updated OWASP Header <br /> * Implemented File hashing using SHA256<br /> * Minor SQL Injection fix<br /> * Implemented Account Lockout<br />"
   },
   {
+    "id": "6",
     "appname": "Xeroxcore",
     "date": "2020-01-10",
     "title": "Security Patch 3.58.2",

@@ -20,7 +20,12 @@
             <p class=" w-75">{{ item.content | slice: 0:154 }}</p>
           </div>
           <div class="col-12">
-            <a href="/articles/{{ item.id }}" class="button">Go to Article</a>
+            <a
+              href="/articles/{{ item.id }}"
+              [routerLink]="['/articles', item.id]"
+              class="button"
+              >Go to Article</a
+            >
           </div>
         </div>
       </div>
