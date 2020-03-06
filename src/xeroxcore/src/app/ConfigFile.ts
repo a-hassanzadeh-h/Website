@@ -1,3 +1,3 @@
 export const AppConfig = {
-  domain: 'http://localhost:4200/'
+  domain: 'https://xeroxcore.org'
 };

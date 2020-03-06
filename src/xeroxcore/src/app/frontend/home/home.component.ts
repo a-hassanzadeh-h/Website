@@ -9,16 +9,16 @@ import { AnimationHelper } from '../Models/animation';
 })
 export class HomeComponent implements AfterViewInit {
   actionList = [
-    { img: 'addfeatures.webp', text: 'Build more Features, no time waste' },
-    { img: 'analytics.webp', text: 'Boost revenue with faster development' },
-    { img: 'shipping.webp', text: 'Lunch your products faster than ever' }
+    { img: 'addfeatures', text: 'Build more Features, no time waste' },
+    { img: 'analytics', text: 'Boost revenue with faster development' },
+    { img: 'shipping', text: 'Lunch your products faster than ever' }
   ];
 
   benefitsList = [
-    { img: 'security.webp', text: 'Secure' },
-    { img: 'performance.webp', text: 'Efficient' },
-    { img: 'maintenance.webp', text: 'Maintainable' },
-    { img: 'deployment.webp', text: 'Easy to deply' }
+    { img: 'security', text: 'Secure' },
+    { img: 'performance', text: 'Efficient' },
+    { img: 'maintenance', text: 'Maintainable' },
+    { img: 'deployment', text: 'Easy to deply' }
   ];
 
   constructor(private titleService: Title) {

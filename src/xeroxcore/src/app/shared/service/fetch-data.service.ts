@@ -16,13 +16,13 @@ export class FetchDataService {
 
   public getArticles(): Observable<IArticle[]> {
     return this.http.get<IArticle[]>(
-      `${AppConfig.domain}assets/data/articles.json`
+      `${AppConfig.domain}/assets/data/articles.json`
     );
   }
 
   public getDownloads(): Observable<IDownload[]> {
     return this.http.get<IDownload[]>(
-      `${AppConfig.domain}assets/data/downloads.json`
+      `${AppConfig.domain}/assets/data/downloads.json`
     );
   }
 }

@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { AppConfig } from 'src/app/ConfigFile';
 
 @Component({
   selector: 'app-carousel',
@@ -7,6 +8,7 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
 })
 export class CarouselComponent implements AfterViewInit {
   public title = 'Supported Technology';
+  public domain = AppConfig.domain;
   public list = [
     'netcore',
     'angular',

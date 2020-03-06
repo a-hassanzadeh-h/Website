@@ -15,7 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ContanctComponent } from './contanct/contanct.component';
 
 @NgModule({
   imports: [
@@ -36,8 +35,7 @@ import { ContanctComponent } from './contanct/contanct.component';
     SocialMediaComponent,
     FooterComponent,
     NavbarComponent,
-    FilterComponent,
-    ContanctComponent
+    FilterComponent
   ],
   exports: [
     HighlightsComponent,
@@ -47,8 +45,7 @@ import { ContanctComponent } from './contanct/contanct.component';
     SocialMediaComponent,
     FooterComponent,
     NavbarComponent,
-    FilterComponent,
-    ContanctComponent
+    FilterComponent
   ]
 })
 export class SharedModule {}

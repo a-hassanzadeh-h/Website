@@ -18,12 +18,23 @@
           class="pb-3 action m-auto text-center"
         >
           <figure class="w-100 m-auto pb-2">
-            <img
-              class="m-auto"
-              src="../../assets/images/home/{{ item.img }}"
-              alt=".."
-              title=""
-            />
+            <picture>
+              <source
+                srcset="{{ domain }}/assets/images/home/{{ item.img }}.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="{{ domain }}/assets/images/home/{{ item.img }}.png"
+                type="image/png"
+              />
+              <img
+                class="w-75"
+                src="{{ domain }}/assets/images/home/{{ item.img }}.png"
+                type="image/png"
+                alt="..."
+                title=""
+              />
+            </picture>
           </figure>
           <figcaption class="w-60 m-auto text-center">
             {{ item.text }}

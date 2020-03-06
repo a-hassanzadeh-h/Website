@@ -1,4 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { AppConfig } from 'src/app/ConfigFile';
 
 @Component({
   selector: 'app-highlights',
@@ -7,6 +8,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HighlightsComponent {
+  public domain = AppConfig.domain;
   @Input() title: string;
   @Input() subContent: string;
   @Input() list = [];

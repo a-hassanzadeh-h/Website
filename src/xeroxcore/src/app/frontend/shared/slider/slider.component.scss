@@ -22,7 +22,6 @@
   @media (max-width: 1024px) {
     right: 0;
     left: 0;
-    margin: auto;
 
     p {
       text-align: center;
@@ -54,7 +53,7 @@
       font-size: 46px;
     }
     p {
-      margin: auto;
+      margin: 0 auto 1rem auto;
     }
   }
 }
