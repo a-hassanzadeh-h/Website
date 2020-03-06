@@ -18,19 +18,13 @@
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 75vh;
+
   @media (max-width: 1024px) and (orientation: portrait) {
-    max-height: 70vh;
+    max-height: none;
   }
 
   @media (max-width: 1024px) and (orientation: landscape) {
-    max-height: 47vh;
-  }
-
-  @media (max-width: 812px) and (orientation: portrait) {
-    max-height: 57vh;
-  }
-  @media (max-width: 736px) and (orientation: portrait) {
-    max-height: 47vh;
+    max-height: none;
   }
 }
 
@@ -89,9 +83,13 @@
     rgba(36, 150, 237, 0.1) 60%,
     rgba(255, 255, 255, 0.1) 100%
   );
-  @media (max-width: 812px) and (orientation: landscape) {
-    height: initial;
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: inherit;
     padding: 10px 0;
+  }
+
+  @media (max-width: 1024px) and (orientation: portrait) {
+    height: inherit;
   }
 }
 

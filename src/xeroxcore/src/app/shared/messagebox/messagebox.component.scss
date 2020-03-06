@@ -7,9 +7,19 @@
   left: 0;
   right: 0;
   top: 120px;
-  transition: all 400ms ease-in-out;
+  transition: all 300ms ease-in-out;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   color: $dark !important;
+
+  @media (max-width: 1024px) {
+    width: 90% !important;
+  }
+}
+
+#text-content {
+  overflow-wrap: break-word;
+  width: 95%;
+  margin: auto;
 }
 
 .hide {
