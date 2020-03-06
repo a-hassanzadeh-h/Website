@@ -40,6 +40,9 @@ export class FilterComponent implements OnInit {
   public resetFilter(): void {
     this.selected = 'all';
     this.selected2 = 'all';
+    const defaultFilter = { value: 'all' };
+    this.setSelect1Filter(defaultFilter);
+    this.setSelect2Filter(defaultFilter);
     this.filterBar.cancelFilter();
   }
 
