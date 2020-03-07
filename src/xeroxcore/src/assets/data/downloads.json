@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "appname": "Xeroxcore-website",
     "date": "2020-01-15",
     "title": "Xeroxcore-website",
@@ -9,6 +10,7 @@
     "hash": "1e8e92d376ecbcf7cc89a6ea3b8ed53a41825892f951f40e710bcf3aeec1c67e"
   },
   {
+    "id": "2",
     "appname": "Xeroxcore",
     "date": "2020-01-14",
     "title": "Xeroxcore",

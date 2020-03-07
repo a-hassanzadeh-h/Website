@@ -46,13 +46,13 @@ export class BaseFilter implements IBaseFilter {
   private GetFieldIndex(text: string): number {
     switch (text) {
       case 'app':
-        return 0;
+        return 1;
       case 'date':
         return 1;
       case 'version':
-        return 3;
+        return 4;
       case 'badge':
-        return 3;
+        return 4;
       default:
         return -1;
     }

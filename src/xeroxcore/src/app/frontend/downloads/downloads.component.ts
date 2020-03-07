@@ -33,9 +33,9 @@ export class DownloadsComponent extends SubscriptionDestroyer {
         this.downloadsFilter.list = list;
         this.downloadsFilter.CreateFilterBar(
           'App, name',
-          0,
+          1,
           'Version',
-          3,
+          4,
           'fa-th-list'
         );
       })
