@@ -34,9 +34,9 @@ export class ArticlesComponent extends SubscriptionDestroyer {
         this.articlesFilter.list = list;
         this.articlesFilter.CreateFilterBar(
           'Badge',
-          3,
+          4,
           'App name',
-          0,
+          1,
           'fa-bookmark'
         );
       })
