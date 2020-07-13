@@ -1,0 +1,13 @@
+# This setup is design for node.js apps 
+# So the docker file mighre require  
+# adjustments to function properly.
+
+FROM node:12-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+
+EXPOSE 8080
+
+RUN node -v
+CMD [ "npm", "start" ]
