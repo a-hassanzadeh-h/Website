@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MetaData } from './core/models/metadata';
 import { LocalStorage } from './core/models/localstorage';
+import { DateTime } from './core/pipes/datetime';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DateTime],
   imports: [BrowserModule, AppRoutingModule],
   providers: [MetaData, LocalStorage],
   bootstrap: [AppComponent],

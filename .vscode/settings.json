@@ -6,6 +6,7 @@
         "Xeroxcore",
         "appconfig",
         "commandline",
+        "datetime",
         "localstorage"
     ]
 }

@@ -8,5 +8,6 @@ import { MetaData } from './core/models/metadata';
 })
 export class AppComponent {
   title = 'Xeroxcore';
+  date = new Date();
   constructor(private meta: MetaData) {}
 }
