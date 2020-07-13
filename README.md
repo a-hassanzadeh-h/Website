@@ -12,7 +12,7 @@
 
 Xeroxcore website shows of how to integrate with xeroxcore API and at the same time giving other
 developers a template site to copy and change for their own needs. This project is good for
-new Anuglar Developers trying to learn more about Angular.
+new Angular Developers trying to learn more about Angular.
 
 ### Getting started
 
@@ -30,7 +30,7 @@ are installed and if not, install them utilizing the provider's main pages.
 ### Installing
 
 This sections explains how to install necessary components to run the Angular App in a development
-enviroment. Each section will explain how to install
+environment. Each section will explain how to install
 
 #### Node.js
 
@@ -38,14 +38,14 @@ enviroment. Each section will explain how to install
 
 ```
 1. open a browser and go to Node.js website https://node.org
-2. Dowload the latest version.
+2. Download the latest version.
 3. run node-v.xx.xx.x-x64.msi and follow the installation steps
 4. open command line an enter npm -v output: x.xx.x showing version.
 ```
 
 #### Angular CLI
 
-Installing Angular requres node.js so if you havent installed Node.js then go to the previuse step
+Installing Angular requires node.js so if you haven't installed Node.js then go to the previous step
 and install Node.js.
 
 ```
@@ -57,7 +57,7 @@ and install Node.js.
 ### Deployment
 
 This part explain how to deploy Xeroxcore Website on a server in a non containerized
-enviroment.
+environment.
 
 ```
 1. Open commandline to and navigate to src/xeroxcore.
