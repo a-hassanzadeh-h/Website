@@ -8,6 +8,8 @@
         "commandline",
         "datetime",
         "datetimepipe",
+        "downlevel",
+        "esnext",
         "localstorage"
     ]
 }
