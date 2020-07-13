@@ -1,6 +1,8 @@
 import { Title, Meta } from '@angular/platform-browser';
 import { IMeta } from './interface/IMeta';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class MetaData {
   constructor(private title: Title, private meta: Meta) {}
 

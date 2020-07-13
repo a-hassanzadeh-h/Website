@@ -1,5 +1,6 @@
-import { Component, isDevMode } from '@angular/core';
-import { AppConfig } from './appconfig';
+import { Component } from '@angular/core';
+import { MetaData } from './core/models/metadata';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,5 @@ import { AppConfig } from './appconfig';
 })
 export class AppComponent {
   title = 'Xeroxcore';
+  constructor(private meta: MetaData) {}
 }
