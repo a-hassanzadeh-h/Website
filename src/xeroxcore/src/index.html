@@ -30,5 +30,13 @@
   </head>
   <body>
     <app-root></app-root>
+    <script>
+      const isIEOrEdge = /msie\s|trident\//i.test(window.navigator.userAgent);
+      if (isIEOrEdge) {
+        alert(
+          "Xeroxcore does not support Internet Explorer, use Chrome or Firefox"
+        );
+      }
+    </script>
   </body>
 </html>
