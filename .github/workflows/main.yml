@@ -28,6 +28,9 @@ jobs:
         working-directory: src/xeroxcore
         run: npm install
         run: npm run test --no-watch
+      - name: Execute Unit Tests
+        working-directory: src/xeroxcore
+        run: npm run test --no-watch
       - name: Release Angular App
         working-directory: src/xeroxcore
         run: ng b --prod=true
