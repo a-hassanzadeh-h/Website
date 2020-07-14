@@ -27,7 +27,6 @@ jobs:
       - name: Install Angular App Dependencies
         working-directory: src/xeroxcore
         run: npm install
-        run: npm run test --no-watch
       - name: Execute Unit Tests
         working-directory: src/xeroxcore
         run: npm run test --no-watch
