@@ -24,11 +24,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Angular Cli
-        run: npm install -g @angular/cli
       - name: Install Angular App Dependencies
         working-directory: src/xeroxcore
-        run: npm update
+        run: npm install
+        run: npm run test --no-watch
       - name: Release Angular App
         working-directory: src/xeroxcore
         run: ng b --prod=true
