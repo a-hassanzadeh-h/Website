@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LocalStorage {
-  constructor() {}
-
   private keyIsTEmptyOrNull(key: string) {
     if (!key) throw new Error('You have parsed an empty key');
   }

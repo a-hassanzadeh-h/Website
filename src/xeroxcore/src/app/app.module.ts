@@ -11,6 +11,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MetaData } from './core/models/metadata.model';
 import { LocalStorage } from './core/models/localstorage.model';
 import { DateTimePipe } from './core/pipes/datetime.pipe';
+import { HTTP } from './core/models/http.model';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  providers: [MetaData, LocalStorage],
+  providers: [MetaData, LocalStorage, HTTP],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

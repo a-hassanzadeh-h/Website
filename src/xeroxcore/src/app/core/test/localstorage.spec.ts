@@ -21,7 +21,6 @@ describe('Test Localstorage', () => {
   it(`Delete data from localstorage'`, () => {
     storage.removeData('test');
     let sample = storage.getData('test');
-
     expect(sample).toBeNull();
   });
 });
