@@ -8,9 +8,9 @@ import { AppComponent } from './app.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // Custom packages
-import { MetaData } from './core/models/metadata';
-import { LocalStorage } from './core/models/localstorage';
-import { DateTimePipe } from './core/pipes/datetimepipe';
+import { MetaData } from './core/models/metadata.model';
+import { LocalStorage } from './core/models/localstorage.model';
+import { DateTimePipe } from './core/pipes/datetime.pipe';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
