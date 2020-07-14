@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 
 import { DateTimePipe } from './core/pipes/datetime.pipe';
 import { CoreModule } from './core/core.module';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
-  declarations: [AppComponent, DateTimePipe],
+  declarations: [AppComponent, DateTimePipe, NotfoundComponent],
   imports: [BrowserModule, AppRoutingModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent],
