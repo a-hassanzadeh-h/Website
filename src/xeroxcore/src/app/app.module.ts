@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { DateTimePipe } from './core/pipes/datetime.pipe';
 import { CoreModule } from './core/core.module';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NotfoundComponent } from './error/notfound/notfound.component';
 
 @NgModule({
   declarations: [AppComponent, DateTimePipe, NotfoundComponent],
