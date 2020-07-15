@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotfoundComponent } from './notfound.component';
 import { MetaData } from 'src/app/core/models/metadata.model';
+import { CoreModule } from 'src/app/core/core.module';
+import { Language } from 'src/app/core/models/language.model';
 
 describe('NotfoundComponent', () => {
   let component: NotfoundComponent;
@@ -9,10 +11,10 @@ describe('NotfoundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotfoundComponent ],
-      providers: [MetaData]
-    })
-    .compileComponents();
+      imports: [CoreModule],
+      declarations: [NotfoundComponent],
+      providers: [MetaData],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
