@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Language } from './core/models/language.model';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Xeroxcore';
 
-  constructor() {}
+  constructor(private language: Language) {}
 }

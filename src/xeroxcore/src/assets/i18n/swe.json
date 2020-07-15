@@ -1,5 +1,10 @@
 {
   "HOME": {
     "title": "Hej världen"
+  },
+  "NOTFOUND": {
+    "title": "404 sidan kunde inte hittas",
+    "text": "Sidan du letar efter finns inte eller har flyttats eller raderats. Vi ber om ursäkt för besväret. <br/> <br/> Vi kunde inte hitta följande sida:",
+    "button": "Ta mig tillbaka"
   }
 }

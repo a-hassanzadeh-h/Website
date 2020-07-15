@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // Custom packages
 import { MetaData } from './models/metadata.model';
 import { LocalStorage } from './models/localstorage.model';
+import { Language } from './models/language.model';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -25,6 +26,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
   ],
   exports: [TranslateModule],
-  providers: [MetaData, LocalStorage],
+  providers: [MetaData, LocalStorage, Language],
 })
 export class CoreModule {}
