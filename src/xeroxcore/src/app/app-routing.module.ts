@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { NotfoundComponent } from './error/notfound/notfound.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
+    path: 'home',
+    component: HomeComponent,
+    data: { state: 'home' } 
+  },
+  {
     path: '**',
-    component: NotfoundComponent,
+    redirectTo: '/notfound',
+    pathMatch: 'full'
   },
 ];
 
