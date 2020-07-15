@@ -24,7 +24,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
-  exports: [TranslateModule ],
+  exports: [TranslateModule],
   providers: [MetaData, LocalStorage],
 })
 export class CoreModule {}

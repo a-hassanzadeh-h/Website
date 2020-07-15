@@ -1,9 +1,1 @@
 <router-outlet></router-outlet>
-
-<h2>{{ "HOME.title" | translate }}</h2>
-<select #language (change)="translate.use(language.value)">
-  <option *ngFor="let lang of translate.getLangs()" value="{{ lang }}"
-    >{{ lang }}
-  </option>
-</select>
-<p>{{ date | DateTime: "MMMM Do YYYY" }}</p>

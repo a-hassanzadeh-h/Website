@@ -1,1 +1,28 @@
-<p>notfound works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-xs-12">
+      <figure>
+        <img
+          src="../../../assets/images/notfound.png"
+          class="w-100 h-100"
+          alt="..."
+          title="oops page not found"
+        />
+      </figure>
+    </div>
+    <div id="error-content" class="col-lg-6 col-xs-12">
+      <div>
+        <h1><b>Error 404 page Cant be found</b></h1>
+        <p>
+          The page that you are looking for does not exist or has been moved or
+          deleted. We apologize for the inconvenience. <br />
+          <br />
+          We could not find the following page: {{ getUrl() }}
+        </p>
+        <button class="button" (click)="previousPage()">
+          Back to previous page
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

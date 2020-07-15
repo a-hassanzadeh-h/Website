@@ -32,4 +32,12 @@ export class NotfoundComponent implements OnInit {
     ]);
   }
   ngOnInit(): void {}
+
+  public getUrl(): string {
+    return window.location.href;
+  }
+
+  public previousPage(): void {
+    window.history.back();
+  }
 }
