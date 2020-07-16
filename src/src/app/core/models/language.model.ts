@@ -10,12 +10,8 @@ export class Language {
   ) {
     translate.addLangs(['en', 'th', 'swe']);
     const lang = storage.getData('lang');
-    if (lang && this.languageExist(lang)) translate.use(lang);
+    if (lang && this.exist(lang)) translate.use(lang);
     else this.defaultLanguage();
-  }
-
-  private languageExist(lang: string): boolean {
-    return this.translate.getLangs().includes(lang);
   }
 
   private defaultLanguage(): void {
@@ -24,10 +20,22 @@ export class Language {
     this.translate.use(browserLang.match(/th|swe/) ? browserLang : 'en');
   }
 
-  public setLanguage(value: string): void {
-    if (this.languageExist(value)) {
+  private exist(lang: string): boolean {
+    return this.translate.getLangs().includes(lang);
+  }
+
+  private using(lang: string): string {
+    return this.translate.currentLang;
+  }
+
+  public set(value: string): void {
+    if (this.exist(value)) {
       this.storage.insertData('lang', value);
       this.translate.use(value);
     }
+  }
+
+  public getAll(): string[] {
+    return this.translate.getLangs();
   }
 }

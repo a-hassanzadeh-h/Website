@@ -1,7 +1,7 @@
 <p>home works!</p>
 <h2>{{ "HOME.title" | translate }}</h2>
-<select #language (change)="translate.use(language.value)">
-  <option *ngFor="let lang of translate.getLangs()" value="{{ lang }}"
+<select #lang (change)="language.set(lang.value)">
+  <option *ngFor="let lang of language.getAll()" value="{{ lang }}"
     >{{ lang }}
   </option>
 </select>

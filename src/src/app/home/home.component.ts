@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Language } from '../core/models/language.model';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   date = new Date();
-  constructor(public translate: TranslateService) {}
-
-  ngOnInit(): void {}
+  constructor(public language: Language) { }
 }
