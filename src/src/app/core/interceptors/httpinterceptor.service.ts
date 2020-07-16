@@ -17,27 +17,27 @@ export class HttpInterceptorService implements HttpInterceptor {
   }
 
   private handelError(error: HttpErrorResponse): string {
-    let message;
+    let errorMessage: string;
     if (error.error instanceof ErrorEvent) return 'A Client side error occurred'
 
     switch (error.status) {
       case 404:
-        message = '';
+        errorMessage = 'The url could not be found';
         break;
       case 401:
-        message = '';
+        errorMessage = 'Not authorized to access resources';
         break;
       case 403:
-        message = '';
+        errorMessage = 'Missing permission';
         break;
       case 500:
-        message = "";
+        errorMessage = "Internal server error occurred";
         break;
       default:
-        message = '';
+        errorMessage = 'An unknown http error has occurred';
         break;
     }
 
-    return message;
+    return errorMessage;
   }
 }
