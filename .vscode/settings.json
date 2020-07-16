@@ -12,6 +12,7 @@
         "datetimepipe",
         "downlevel",
         "esnext",
+        "httpinterceptor",
         "localstorage",
         "msie",
         "notfound",
