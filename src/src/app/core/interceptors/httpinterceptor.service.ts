@@ -19,7 +19,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   private handelError(error: HttpErrorResponse): string {
     let errorMessage: string;
     if (error.error instanceof ErrorEvent) return 'A Client side error occurred'
-
+    console.log(error);
     switch (error.status) {
       case 404:
         errorMessage = 'The url could not be found';

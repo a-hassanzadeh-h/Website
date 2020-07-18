@@ -1,4 +1,3 @@
-import { TestBed, async } from '@angular/core/testing';
 import { DateTime } from '../models/datetime.model';
 
 describe('Datetime', () => {
