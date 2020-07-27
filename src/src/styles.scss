@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-$green: #42e695;
+$green: #2cd1aa;
 $darkPurple: #2e0f3a;
 $purple: #3c144c;
 $dark: #333333;
@@ -40,12 +40,12 @@ a {
   border-radius: 5px;
   padding: 10px 30px;
   margin: 20px 0 10px;
-  font-size: 12px;
+  font-size: 15px;
   background: transparent;
   border: 1px solid $green;
   color: $white;
   outline: transparent;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .button:hover,
@@ -106,10 +106,25 @@ a {
   font-weight: 900;
 }
 
+.w-90 {
+  width: 90%;
+}
+
+.h100 {
+  height: 100% !important;
+}
+
 html,
 body {
   height: 100%;
 }
 body {
+  @media (orientation: portrait) {
+    text-align: center;
+  }
+
+  @media (max-width: 812px) {
+    text-align: center;
+  }
   margin: 0;
 }

@@ -1,6 +1,8 @@
 {
   "HOME": {
-    "title": "Hej världen"
+    "slideTitle": "Upplever du långsam utveckling?",
+    "slideText": "Vi kan ge dig rätt utvecklingsmedel, ge dina team snabbare och effektivare applikationsutveckling. Låt inte denna potential passera och kolla in våra produkter nu.",
+    "slideButton": "Se våra produkter"
   },
   "NOTFOUND": {
     "title": "404 sidan kunde inte hittas",

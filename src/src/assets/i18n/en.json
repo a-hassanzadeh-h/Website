@@ -1,6 +1,8 @@
 {
   "HOME": {
-    "title": "hello world"
+    "slideTitle": "Experiencing slow Development?",
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
+    "slideButton": "View our Products"
   },
   "NOTFOUND": {
     "title": "404 page not found",

@@ -10,6 +10,30 @@
   transition: all 1s ease-in-out;
   min-height: 30vh;
   height: 83.5vh;
+
+  @media (max-width: 1024px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 812px) {
+    height: auto;
+  }
+}
+
+#image {
+  @media (max-width: 1024px) and (orientation: landscape) {
+    display: none;
+  }
+
+  @media (max-width: 736px) and (orientation: portrait) {
+    display: none;
+  }
+}
+
+.auto-tablet {
+  @media (max-width: 1024px) and (orientation: portrait) {
+    margin: auto;
+  }
 }
 
 h1 {

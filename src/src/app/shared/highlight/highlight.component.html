@@ -1,25 +1,27 @@
 <div id="background" class="container-fluid">
-  <div class="container-fluid h-100">
-    <div class="row h-100">
-      <div class="col-xl-6 f-white">
-        <div class="d-flex align-items-center h-100">
-          <div>
-            <h1 class="title">Experiencing slow Development?</h1>
-            <p>
-              We can provide you with the proper means of development,
-              empowering your teams with faster and more efficient application
-              development. Don't let this potential pass by and check out our
-              tools now.
-            </p>
+  <div class="container-fluid h100">
+    <div class="row h100">
+      <div id="image" class="col-xl-6 order-xl-6 f-white">
+        <div class="d-flex align-items-center h100">
+          <div class="auto-tablet">
+            <img
+              class="w-100"
+              src="../../../assets/image/home/development.png"
+              alt="..."
+            />
           </div>
         </div>
       </div>
       <div class="col-xl-6 f-white">
-        <div>
-          <div class="d-flex align-items-center h-100">
-            <div>
-              <img src="" alt="..." />
-            </div>
+        <div class="d-flex align-items-center h100">
+          <div class="w-90 m-auto">
+            <h1 class="title">{{ "HOME.slideTitle" | translate }}</h1>
+            <p>
+              {{ "HOME.slideText" | translate }}
+            </p>
+            <a href="/products" class="button d-inline-block mt-5">
+              {{ "HOME.slideButton" | translate }}
+            </a>
           </div>
         </div>
       </div>
