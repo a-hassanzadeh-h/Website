@@ -16,6 +16,7 @@
         "localstorage",
         "msie",
         "notfound",
-        "scrollbar"
+        "scrollbar",
+        "transitionend"
     ]
 }
