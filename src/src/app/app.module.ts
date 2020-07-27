@@ -13,8 +13,14 @@ import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, DateTimePipe, NotfoundComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, ErrorRoutingModule, SharedModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    ErrorRoutingModule,
+    SharedModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss']
+  styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements AfterViewInit {
+  items = [
+    { key: 'key 1', img: ['ang', 'c#', 'vscode'] },
+    { key: 'key 1', img: ['npm', '3G', 'php'] },
+    { key: 'key 1', img: ['MySql', 'c#', 'Saiyan Web'] },
+    { key: 'key 2', img: ['C++', 'C', 'MCS Unity'] },
+  ];
   slider;
   sliderItems;
   prev;
   next;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.slider = document.getElementById('slider');
     this.sliderItems = document.getElementById('slides');
     this.prev = document.getElementById('prev');
@@ -25,10 +31,10 @@ export class CarouselComponent implements OnInit {
       posX2 = 0,
       posInitial,
       posFinal,
-      threshold = 100,
       slides = items.getElementsByClassName('slide'),
       slidesLength = slides.length,
       slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
+      threshold = 10,
       firstSlide = slides[0],
       lastSlide = slides[slidesLength - 1],
       cloneFirst = firstSlide.cloneNode(true),
@@ -50,8 +56,12 @@ export class CarouselComponent implements OnInit {
     items.addEventListener('touchmove', dragAction);
 
     // Click events
-    prev.addEventListener('click', () => { shiftSlide(-1, null) });
-    next.addEventListener('click', () => { shiftSlide(1, null) });
+    prev.addEventListener('click', () => {
+      shiftSlide(-1, null);
+    });
+    next.addEventListener('click', () => {
+      shiftSlide(1, null);
+    });
 
     // Transition events
     items.addEventListener('transitionend', checkIndex);
@@ -80,7 +90,7 @@ export class CarouselComponent implements OnInit {
         posX2 = posX1 - e.clientX;
         posX1 = e.clientX;
       }
-      items.style.left = (items.offsetLeft - posX2) + "px";
+      items.style.left = items.offsetLeft - posX2 + 'px';
     }
 
     function dragEnd(e) {
@@ -90,7 +100,7 @@ export class CarouselComponent implements OnInit {
       } else if (posFinal - posInitial > threshold) {
         shiftSlide(-1, 'drag');
       } else {
-        items.style.left = (posInitial) + "px";
+        items.style.left = posInitial + 'px';
       }
 
       document.onmouseup = null;
@@ -101,16 +111,18 @@ export class CarouselComponent implements OnInit {
       items.classList.add('shifting');
 
       if (allowShift) {
-        if (!action) { posInitial = items.offsetLeft; }
+        if (!action) {
+          posInitial = items.offsetLeft;
+        }
 
         if (dir == 1) {
-          items.style.left = (posInitial - slideSize) + "px";
+          items.style.left = posInitial - slideSize + 'px';
           index++;
         } else if (dir == -1) {
-          items.style.left = (posInitial + slideSize) + "px";
+          items.style.left = posInitial + slideSize + 'px';
           index--;
         }
-      };
+      }
 
       allowShift = false;
     }
@@ -119,12 +131,12 @@ export class CarouselComponent implements OnInit {
       items.classList.remove('shifting');
 
       if (index == -1) {
-        items.style.left = -(slidesLength * slideSize) + "px";
+        items.style.left = -(slidesLength * slideSize) + 'px';
         index = slidesLength - 1;
       }
 
       if (index == slidesLength) {
-        items.style.left = -(1 * slideSize) + "px";
+        items.style.left = -(1 * slideSize) + 'px';
         index = 0;
       }
 

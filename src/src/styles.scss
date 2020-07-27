@@ -5,7 +5,7 @@ $purple: #3c144c;
 $dark: #333333;
 $white: #fff;
 $red: #d34b4b;
-$font: "Bai Jamjuree", sans-serif !important;
+$font: "Nunito Sans", san-serif !important;
 
 body {
   font-family: $font;
@@ -19,6 +19,9 @@ body {
   }
 }
 
+.f-white {
+  color: $white;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -98,6 +101,9 @@ a {
 
 .box-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.title {
+  font-weight: 900;
 }
 
 html,

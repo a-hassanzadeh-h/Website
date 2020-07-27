@@ -1,13 +1,21 @@
-<div id="slider" class="slider">
-    <div class="wrapper">
-        <div id="slides" class="slides">
-            <span class="slide">Slide 1</span>
-            <span class="slide">Slide 2</span>
-            <span class="slide">Slide 3</span>
-            <span class="slide">Slide 4</span>
-            <span class="slide">Slide 5</span>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div id="slider" class="slider">
+        <div class="wrapper">
+          <div id="slides" class="slides">
+            <span *ngFor="let item of items" class="slide">
+              <div class="row">
+                <div class="col-xl-4 text-center" *ngFor="let img of item.img">
+                  {{ img }}
+                </div>
+              </div>
+            </span>
+          </div>
         </div>
+        <a id="prev" class="control prev"></a>
+        <a id="next" class="control next"></a>
+      </div>
     </div>
-    <a id="prev" class="control prev"></a>
-    <a id="next" class="control next"></a>
+  </div>
 </div>
