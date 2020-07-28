@@ -10,7 +10,7 @@ import { SubscriptionDestroyer } from 'src/app/core/models/subscriptiondestroyer
 export class HighlightComponent extends SubscriptionDestroyer {
   public title: string = 'HOME.slideTitle';
   public text: string = 'HOME.slideText';
-  private url: string;
+  private url: string = '';
   constructor(private router: Router) {
     super();
     this.AddSubscription(

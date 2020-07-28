@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent extends SubscriptionDestroyer {
   date = new Date();
-  url: string;
+  url: string = '';
   constructor(private language: Language, private router: Router) {
     super();
     this.AddSubscription(

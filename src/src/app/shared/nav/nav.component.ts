@@ -9,7 +9,7 @@ import { SubscriptionDestroyer } from 'src/app/core/models/subscriptiondestroyer
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent extends SubscriptionDestroyer {
-  private url: string;
+  private url: string = '';
   constructor(private language: Language, private router: Router) {
     super();
     this.AddSubscription(
