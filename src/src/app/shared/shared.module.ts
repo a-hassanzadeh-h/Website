@@ -6,6 +6,7 @@ import { CoreModule } from '../core/core.module';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { DateTimePipe } from '../core/pipes/datetime.pipe';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { DateTimePipe } from '../core/pipes/datetime.pipe';
     NavComponent,
     DateTimePipe,
   ],
-  imports: [CommonModule, CoreModule],
+  imports: [CommonModule, CoreModule, RouterModule],
   exports: [
     DateTimePipe,
     CarouselComponent,

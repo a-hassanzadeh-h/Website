@@ -9,9 +9,15 @@ import { NotfoundComponent } from './error/notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorRoutingModule } from './error/error-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
-  declarations: [AppComponent, NotfoundComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    NotfoundComponent,
+    HomeComponent,
+    ProductsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
