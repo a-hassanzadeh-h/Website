@@ -52,6 +52,7 @@
                 <a
                   href=""
                   class="link"
+                  [routerLink]="['/legal:terms']"
                   rel="noreferrer"
                   [class.active]="isActive('terms')"
                   >{{ "HOME.terms" | translate }}</a
@@ -61,6 +62,7 @@
                 <a
                   href=""
                   class="link"
+                  [routerLink]="['/legal:privacy']"
                   rel="noreferrer"
                   [class.active]="isActive('privacy')"
                   >{{ "HOME.privacy" | translate }}</a
@@ -75,7 +77,8 @@
               <li><p class="mb-0">Interesting</p></li>
               <li>
                 <a
-                  href=""
+                  href="/about"
+                  [routerLink]="['/about']"
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('about')"
@@ -84,7 +87,8 @@
               </li>
               <li>
                 <a
-                  href=""
+                  href="/blog"
+                  [routerLink]="['/blog']"
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('blog')"
