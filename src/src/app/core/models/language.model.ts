@@ -24,7 +24,7 @@ export class Language {
     return this.translate.getLangs().includes(lang);
   }
 
-  private using(lang: string): string {
+  public using(): string {
     return this.translate.currentLang;
   }
 

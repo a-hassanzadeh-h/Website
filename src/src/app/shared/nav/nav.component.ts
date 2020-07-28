@@ -11,8 +11,12 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  changeLanguage(lang: string): boolean {
+  public changeLanguage(lang: string): boolean {
     this.language.set(lang);
     return false;
+  }
+
+  public lang(): string {
+    return this.language.using();
   }
 }

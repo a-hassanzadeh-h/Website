@@ -5,7 +5,8 @@
     "slideButton": "View our Products",
     "home": "Home",
     "products": "Products",
-    "contact": "Contact"
+    "contact": "Contact",
+    "builtBy": "Developed by MCS Unity"
   },
   "NOTFOUND": {
     "title": "404 page not found",

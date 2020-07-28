@@ -4,10 +4,15 @@
   position: fixed;
   top: 0;
   width: 100%;
+  min-height: 95px;
   height: 95px;
   z-index: 3;
   background-color: $white;
   z-index: 1;
+
+  @media (max-width: 812px) and (orientation: portrait) {
+    height: auto;
+  }
 }
 
 #logo {
@@ -22,10 +27,31 @@
 }
 
 #pages {
-  border-left: 1px solid #c4c4c4;
-  border-right: 1px solid #c4c4c4;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
   a {
     padding: 15px 20px;
+  }
+}
+
+#lang {
+  border-right: 1px solid $gray;
+  a {
+    padding: 15px 5px;
+    color: $gray;
+  }
+
+  .selected {
+    color: $dark;
+    font-weight: 900;
+  }
+}
+
+#social {
+  a {
+    font-size: 20px;
+    padding: 15px 15px;
+    color: $dark;
   }
 }
 
@@ -38,21 +64,9 @@
 }
 
 .link:after {
-  border-bottom: 4px solid #2cd1aa;
+  border-bottom: 4px solid $green;
 }
 
 .borders {
   padding: 0 30px;
-}
-
-#lang {
-  border-right: 1px solid #c4c4c4;
-  a {
-    padding: 15px 5px;
-    color: gray;
-  }
-
-  .selected {
-    color: $dark;
-  }
 }

@@ -6,6 +6,7 @@ $dark: #333333;
 $white: #fff;
 $red: #d34b4b;
 $font: "Nunito Sans", san-serif !important;
+$gray: #c4c4c4;
 
 body {
   font-family: $font;
@@ -96,12 +97,13 @@ a {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: $green;
+  background-color: $purple;
 }
 
 .box-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 .title {
   font-weight: 900;
 }

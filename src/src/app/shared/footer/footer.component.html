@@ -1,2 +1,79 @@
-<p>footer works!</p>
-<p>{{ date | DateTime: "MMMM Do YYYY" }}</p>
+<div class="container-fluid">
+  <div class="row"></div>
+  <div
+    id="marketing"
+    class="row text-center box-shadow d-flex align-items-center"
+  >
+    <div class="col-xl-4 py-3">
+      <p class="m-0">
+        © Copyright all rights reserved Xeroxcore
+        {{ date | DateTime: "YYYY" }}
+      </p>
+    </div>
+    <div class="col-xl-4 py-3">
+      <a
+        id="mcs"
+        class="link"
+        href="https://mcsunity.com"
+        rel="noreferrer"
+        target="_bland"
+        >{{ "HOME.builtBy" | translate }}</a
+      >
+    </div>
+    <div class="col-xl-4">
+      <div id="footer-lang" class="d-inline-block borders">
+        <a
+          href=""
+          class="link"
+          rel="noreferrer"
+          (click)="changeLanguage('en')"
+          [class.selected]="lang() == 'en'"
+          >EN</a
+        >
+        <a
+          href=""
+          class="link"
+          rel="noreferrer"
+          (click)="changeLanguage('th')"
+          [class.selected]="lang() == 'th'"
+          >TH</a
+        >
+        <a
+          href=""
+          class="link"
+          rel="noreferrer"
+          (click)="changeLanguage('swe')"
+          [class.selected]="lang() == 'swe'"
+          >SWE</a
+        >
+      </div>
+      <div id="footer-social" class="d-inline-block">
+        <a
+          class="link"
+          href="https://www.linkedin.com/company/xeroxcore/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          class="link"
+          href="https://www.facebook.com/xeroxcore/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-facebook-square"></i>
+        </a>
+
+        <a
+          class="link"
+          href="https://github.com/Xeroxcore"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-github-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

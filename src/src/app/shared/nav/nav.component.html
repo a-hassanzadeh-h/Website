@@ -14,27 +14,49 @@
           href=""
           class="link"
           (click)="changeLanguage('en')"
-          [class.selected]=""
+          [class.selected]="lang() == 'en'"
           >EN</a
         >
         <a
           href=""
           class="link"
           (click)="changeLanguage('th')"
-          [class.selected]=""
+          [class.selected]="lang() == 'th'"
           >TH</a
         >
         <a
           href=""
           class="link"
           (click)="changeLanguage('swe')"
-          [class.selected]=""
+          [class.selected]="lang() == 'swe'"
           >SWE</a
         >
       </div>
       <div id="social" class="d-inline-block">
-        <a>
+        <a
+          class="link"
+          href="https://www.linkedin.com/company/xeroxcore/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          class="link"
+          href="https://www.facebook.com/xeroxcore/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i class="fab fa-facebook-square"></i>
+        </a>
+
+        <a
+          class="link"
+          href="https://github.com/Xeroxcore"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-github-square"></i>
         </a>
       </div>
     </div>

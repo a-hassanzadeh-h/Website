@@ -5,7 +5,8 @@
     "slideButton": "Se våra produkter",
     "home": "Hem",
     "products": "Produkter",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "builtBy": "Utvecklad av MCS Unity"
   },
   "NOTFOUND": {
     "title": "404 sidan kunde inte hittas",
