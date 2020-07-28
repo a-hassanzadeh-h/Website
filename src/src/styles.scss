@@ -20,6 +20,10 @@ body {
   }
 }
 
+.active::after {
+  transform: scaleX(1) !important;
+}
+
 .f-white {
   color: $white;
 }

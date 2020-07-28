@@ -12,19 +12,34 @@
             <ul>
               <li><p class="mb-0">Page Links</p></li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.home" | translate
-                }}</a>
+                <a
+                  href="/home"
+                  [routerLink]="['/home']"
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('home')"
+                  >{{ "HOME.home" | translate }}</a
+                >
               </li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.products" | translate
-                }}</a>
+                <a
+                  href="/products"
+                  [routerLink]="['/products']"
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('products')"
+                  >{{ "HOME.products" | translate }}</a
+                >
               </li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.contact" | translate
-                }}</a>
+                <a
+                  href="/contact"
+                  [routerLink]="['/contact']"
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('contact')"
+                  >{{ "HOME.contact" | translate }}</a
+                >
               </li>
             </ul>
           </div>
@@ -34,14 +49,22 @@
             <ul>
               <li><p class="mb-0">Important</p></li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.terms" | translate
-                }}</a>
+                <a
+                  href=""
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('terms')"
+                  >{{ "HOME.terms" | translate }}</a
+                >
               </li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.privacy" | translate
-                }}</a>
+                <a
+                  href=""
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('privacy')"
+                  >{{ "HOME.privacy" | translate }}</a
+                >
               </li>
             </ul>
           </div>
@@ -51,14 +74,22 @@
             <ul>
               <li><p class="mb-0">Interesting</p></li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.about" | translate
-                }}</a>
+                <a
+                  href=""
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('about')"
+                  >{{ "HOME.about" | translate }}</a
+                >
               </li>
               <li>
-                <a href="" class="link" rel="noreferrer">{{
-                  "HOME.blog" | translate
-                }}</a>
+                <a
+                  href=""
+                  class="link"
+                  rel="noreferrer"
+                  [class.active]="isActive('blog')"
+                  >{{ "HOME.blog" | translate }}</a
+                >
               </li>
             </ul>
           </div>

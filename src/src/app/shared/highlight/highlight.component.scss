@@ -30,6 +30,15 @@
   }
 }
 
+.banner {
+  align-items: flex-end !important;
+}
+
+.highlight {
+  height: 35vh !important;
+  padding-bottom: 30px;
+}
+
 .auto-tablet {
   @media (max-width: 1024px) and (orientation: portrait) {
     margin: auto;

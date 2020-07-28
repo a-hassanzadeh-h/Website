@@ -1,7 +1,19 @@
-<div id="background" class="container-fluid">
-  <div class="container-fluid h100">
+<div
+  id="background"
+  class="container-fluid"
+  [class.highlight]="!isActive('home')"
+>
+  <div
+    class="h100"
+    [class.container-fluid]="isActive('home')"
+    [class.container]="!isActive('home')"
+  >
     <div class="row h100">
-      <div id="image" class="col-xl-6 order-xl-6 f-white">
+      <div
+        id="image"
+        class="col-xl-6 order-xl-6 f-white"
+        *ngIf="isActive('home')"
+      >
         <div class="d-flex align-items-center h100">
           <div class="auto-tablet">
             <img
@@ -12,14 +24,26 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-6 f-white">
-        <div class="d-flex align-items-center h100">
-          <div class="w-90 m-auto">
-            <h1 class="title">{{ "HOME.slideTitle" | translate }}</h1>
+      <div
+        class="f-white"
+        [class.col-xl-6]="isActive('home')"
+        [class.col-xl-12]="!isActive('home')"
+      >
+        <div
+          class="d-flex align-items-center h100"
+          [class.banner]="!isActive('home')"
+        >
+          <div class="w-90" [class.m-auto]="isActive('home')">
+            <h1 class="title">{{ title | translate }}</h1>
             <p>
-              {{ "HOME.slideText" | translate }}
+              {{ text | translate }}
             </p>
-            <a href="/products" class="button d-inline-block mt-5">
+            <a
+              href="/products"
+              [routerLink]="['/products']"
+              class="button d-inline-block mt-5"
+              *ngIf="isActive('home')"
+            >
               {{ "HOME.slideButton" | translate }}
             </a>
           </div>

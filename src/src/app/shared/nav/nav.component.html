@@ -7,15 +7,27 @@
         </a>
       </div>
       <div id="pages" class="d-inline-block borders">
-        <a href="/home" [routerLink]="['/home']" class="link">{{
-          "HOME.home" | translate
-        }}</a>
-        <a href="/products" [routerLink]="['/products']" class="link">{{
-          "HOME.products" | translate
-        }}</a>
-        <a href="/contact" [routerLink]="['/contact']" class="link">{{
-          "HOME.contact" | translate
-        }}</a>
+        <a
+          href="/home"
+          [routerLink]="['/home']"
+          class="link"
+          [class.active]="isActive('home')"
+          >{{ "HOME.home" | translate }}</a
+        >
+        <a
+          href="/products"
+          [routerLink]="['/products']"
+          class="link"
+          [class.active]="isActive('products')"
+          >{{ "HOME.products" | translate }}</a
+        >
+        <a
+          href="/contact"
+          [routerLink]="['/contact']"
+          class="link"
+          [class.active]="isActive('contact')"
+          >{{ "HOME.contact" | translate }}</a
+        >
       </div>
       <div id="lang" class="d-inline-block borders">
         <a

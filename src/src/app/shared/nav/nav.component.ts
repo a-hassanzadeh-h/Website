@@ -1,13 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Language } from 'src/app/core/models/language.model';
+import { Router } from '@angular/router';
+import { SubscriptionDestroyer } from 'src/app/core/models/subscriptiondestroyer';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
-  constructor(private language: Language) {}
+export class NavComponent extends SubscriptionDestroyer {
+  private url: string;
+  constructor(private language: Language, private router: Router) {
+    super();
+    this.AddSubscription(
+      router.events.subscribe(() => {
+        this.url = this.router.url;
+      })
+    );
+  }
 
   ngOnInit(): void {}
 
@@ -18,5 +28,12 @@ export class NavComponent implements OnInit {
 
   public lang(): string {
     return this.language.using();
+  }
+
+  isActive(page: string): boolean {
+    if (this.url.includes(page)) {
+      return true;
+    }
+    return false;
   }
 }
