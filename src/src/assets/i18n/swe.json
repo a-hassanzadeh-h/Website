@@ -6,7 +6,11 @@
     "home": "Hem",
     "products": "Produkter",
     "contact": "Kontakt",
-    "builtBy": "Utvecklad av MCS Unity"
+    "builtBy": "Utvecklad av MCS Unity",
+    "terms": "Användarvillkor",
+    "privacy": "Integritetspolicy",
+    "about": "Om oss",
+    "blog": "Blog"
   },
   "NOTFOUND": {
     "title": "404 sidan kunde inte hittas",

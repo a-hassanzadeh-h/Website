@@ -8,6 +8,27 @@
   color: $gray;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  text-decoration: none;
+  li {
+    padding: 5px 0;
+    p {
+      font-weight: 600;
+    }
+    a {
+      color: $dark;
+    }
+  }
+}
+
+.center-tablet {
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+}
+
 #footer-lang {
   margin-right: 10px;
   a {
