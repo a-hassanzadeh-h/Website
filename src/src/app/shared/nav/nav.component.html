@@ -1,0 +1,42 @@
+<div id="nav" class="box-shadow">
+  <div class="d-flex align-items-center h-100">
+    <div class="m-auto">
+      <div id="logo" class="d-inline-block">
+        <img src="../../../assets/image/xeroxcore.png" alt="" />
+      </div>
+      <div id="pages" class="d-inline-block borders">
+        <a href="" class="link active">{{ "HOME.home" | translate }}</a>
+        <a href="" class="link">{{ "HOME.products" | translate }}</a>
+        <a href="" class="link">{{ "HOME.contact" | translate }}</a>
+      </div>
+      <div id="lang" class="d-inline-block borders">
+        <a
+          href=""
+          class="link"
+          (click)="changeLanguage('en')"
+          [class.selected]=""
+          >EN</a
+        >
+        <a
+          href=""
+          class="link"
+          (click)="changeLanguage('th')"
+          [class.selected]=""
+          >TH</a
+        >
+        <a
+          href=""
+          class="link"
+          (click)="changeLanguage('swe')"
+          [class.selected]=""
+          >SWE</a
+        >
+      </div>
+      <div id="social" class="d-inline-block">
+        <a>
+          <i class="fab fa-facebook-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

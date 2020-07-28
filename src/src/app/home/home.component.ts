@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Language } from '../core/models/language.model';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +6,5 @@ import { Language } from '../core/models/language.model';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  date = new Date();
-  constructor(public language: Language) { }
+  constructor() {}
 }

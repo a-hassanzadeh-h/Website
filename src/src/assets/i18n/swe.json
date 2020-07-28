@@ -2,7 +2,10 @@
   "HOME": {
     "slideTitle": "Upplever du långsam utveckling?",
     "slideText": "Vi kan ge dig rätt utvecklingsmedel, ge dina team snabbare och effektivare applikationsutveckling. Låt inte denna potential passera och kolla in våra produkter nu.",
-    "slideButton": "Se våra produkter"
+    "slideButton": "Se våra produkter",
+    "home": "Hem",
+    "products": "Produkter",
+    "contact": "Kontakt"
   },
   "NOTFOUND": {
     "title": "404 sidan kunde inte hittas",
