@@ -39,6 +39,11 @@
   padding-bottom: 30px;
 }
 
+.remove {
+  min-height: 0 !important;
+  height: 0 !important;
+}
+
 .auto-tablet {
   @media (max-width: 1024px) and (orientation: portrait) {
     margin: auto;

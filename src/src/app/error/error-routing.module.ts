@@ -6,13 +6,12 @@ const errorRoutes: Routes = [
   {
     path: 'notfound',
     component: NotfoundComponent,
+    data: { state: 'notfound' },
   },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(errorRoutes)
-  ],
+  imports: [RouterModule.forChild(errorRoutes)],
   exports: [RouterModule],
 })
 export class ErrorRoutingModule {}

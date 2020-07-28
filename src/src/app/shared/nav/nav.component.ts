@@ -19,8 +19,6 @@ export class NavComponent extends SubscriptionDestroyer {
     );
   }
 
-  ngOnInit(): void {}
-
   public changeLanguage(lang: string): boolean {
     this.language.set(lang);
     return false;
