@@ -9,10 +9,35 @@
   z-index: 3;
   background-color: $white;
   z-index: 1;
+  transition: all 600ms ease-in-out;
 
   @media (max-width: 812px) and (orientation: portrait) {
-    height: auto;
+    height: 30px;
   }
+}
+
+.open {
+  @media (max-width: 812px) and (orientation: portrait) {
+    height: 345px !important;
+  }
+}
+
+#not-mobile {
+  display: block;
+  @media (max-width: 812px) and (orientation: portrait) {
+    display: none;
+  }
+}
+
+#mobile {
+  display: none;
+  @media (max-width: 812px) and (orientation: portrait) {
+    display: block;
+  }
+}
+
+div.box-shadow {
+  overflow: hidden;
 }
 
 #logo {
@@ -20,10 +45,23 @@
   img {
     width: 100%;
   }
+
+  @media (max-width: 812px) and (orientation: portrait) {
+    padding: 5px 0;
+    img {
+      width: auto !important;
+    }
+  }
 }
 
 .link {
   color: $dark;
+}
+
+.d-inline-block {
+  @media (max-width: 812px) and (orientation: portrait) {
+    display: block !important;
+  }
 }
 
 #pages {
@@ -32,10 +70,20 @@
   a {
     padding: 15px 20px;
   }
+
+  @media (max-width: 812px) and (orientation: portrait) {
+    border: none;
+
+    a {
+      display: block !important;
+      width: 100%;
+    }
+  }
 }
 
 #lang {
   border-right: 1px solid $gray;
+
   a {
     padding: 15px 5px;
     color: $gray;
@@ -44,6 +92,13 @@
   .selected {
     color: $dark;
     font-weight: 900;
+  }
+
+  @media (max-width: 812px) and (orientation: portrait) {
+    border-right: none;
+    a {
+      padding: 15px 5px;
+    }
   }
 }
 

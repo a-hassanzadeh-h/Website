@@ -10,6 +10,7 @@ import { SubscriptionDestroyer } from 'src/app/core/models/subscriptiondestroyer
 })
 export class NavComponent extends SubscriptionDestroyer {
   private url: string = '';
+  public openNav = false;
   constructor(private language: Language, private router: Router) {
     super();
     this.AddSubscription(
@@ -17,6 +18,10 @@ export class NavComponent extends SubscriptionDestroyer {
         this.url = this.router.url;
       })
     );
+  }
+
+  showNav() {
+    this.openNav = !this.openNav;
   }
 
   public changeLanguage(lang: string): boolean {
