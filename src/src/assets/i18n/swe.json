@@ -18,7 +18,22 @@
   },
   "CONTACT": {
     "slideTitle": "Var inte blyg, kontaka oss idag",
-    "slideText": "Vi kan ge dig rätt utvecklingsmedel, ge dina team snabbare och effektivare applikationsutveckling. Låt inte denna potential passera och kolla in våra produkter nu."
+    "slideText": "Vi kan ge dig rätt utvecklingsmedel, ge dina team snabbare och effektivare applikationsutveckling. Låt inte denna potential passera och kolla in våra produkter nu.",
+    "name": "Namn",
+    "nameHint": "Ange ditt förnamn och efternamn",
+    "subject": "Ämne",
+    "subjectHint": "Varför kontaktar du oss?",
+    "email": "Mejl address",
+    "emailHint": "Ange din mejl address dinemail@example.com",
+    "company": "Företag",
+    "companyHint": "Ge oss ditt företagsnamn",
+    "comments": "kommentar",
+    "commentsHint": "Försök ge oss mer information om varför du når ut till oss",
+    "condition": "Villkor",
+    "cond1": "Genom att klicka på skicka formulär, godkänner du vårt",
+    "cond2": "och att du har läst vår",
+    "clear": "Rensa formulär",
+    "submit": "Skicka formulär"
   },
   "NOTFOUND": {
     "title": "404 sidan kunde inte hittas",

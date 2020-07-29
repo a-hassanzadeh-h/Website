@@ -18,7 +18,22 @@
   },
   "CONTACT": {
     "slideTitle": "Don’t be shy reach out to us",
-    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now."
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
+    "name": "Name",
+    "nameHint": "Enter you first name and last name",
+    "subject": "Subject",
+    "subjectHint": "Why are you contacting us",
+    "email": "Email",
+    "emailHint": "Enter your email youmail@example.com",
+    "company": "Company",
+    "companyHint": "Provide us with your Company name",
+    "comments": "Comments",
+    "commentsHint": "Try to provide us with more information to why you are reaching out to us",
+    "condition": "Terms and conditions",
+    "cond1": "By Clicking submit form, you agree to our",
+    "cond2": "and that you have read our",
+    "clear": "Clear form",
+    "submit": "Submit form"
   },
   "ABOUT": {
     "slideTitle": "We love open source",

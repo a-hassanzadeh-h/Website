@@ -12,7 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-
+import { MaterialModule } from './shared/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
     AboutComponent,
   ],
   imports: [
+    MaterialModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,

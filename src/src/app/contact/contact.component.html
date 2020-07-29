@@ -1,1 +1,76 @@
-<p>contact works!</p>
+<div class="container mt-5">
+  <div class="row mb-3">
+    <div class="col-xl-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label> {{ "CONTACT.name" | translate }}</mat-label>
+        <input matInput />
+        <mat-hint> {{ "CONTACT.nameHint" | translate }}</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-xl-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label> {{ "CONTACT.subject" | translate }}</mat-label>
+        <input matInput />
+        <mat-hint> {{ "CONTACT.subjectHint" | translate }}</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-xl-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ "CONTACT.email" | translate }}</mat-label>
+        <input matInput />
+        <mat-hint> {{ "CONTACT.emailHint" | translate }}</mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-xl-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label> {{ "CONTACT.company" | translate }}</mat-label>
+        <input matInput />
+        <mat-hint> {{ "CONTACT.companyHint" | translate }}</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label> {{ "CONTACT.comments" | translate }}</mat-label>
+        <textarea matInput rows="15"></textarea>
+        <mat-hint> {{ "CONTACT.commentsHint" | translate }}</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="padding">
+      <h3 class="title">{{ "CONTACT.condition" | translate }}</h3>
+      <p>
+        {{ "CONTACT.cond1" | translate }}
+        <span
+          ><a
+            href=""
+            class="link"
+            [routerLink]="['/legal:terms']"
+            rel="noreferrer"
+            [class.active]="isActive('terms')"
+            >{{ "HOME.terms" | translate }}</a
+          >
+        </span>
+        {{ "CONTACT.cond2" | translate }}
+        <a
+          href=""
+          class="link"
+          [routerLink]="['/legal:privacy']"
+          rel="noreferrer"
+          [class.active]="isActive('privacy')"
+          >{{ "HOME.privacy" | translate }}</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="row padding">
+    <button class="button warning my-3">
+      {{ "CONTACT.clear" | translate }}
+    </button>
+    <button class="button m-3">{{ "CONTACT.submit" | translate }}</button>
+  </div>
+</div>
