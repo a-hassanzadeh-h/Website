@@ -1,1 +1,30 @@
-<p>products works!</p>
+<div class="container">
+  <!--<div class="row">
+    <div class="col-xl-4"></div>
+    <div class="col-xl-4"></div>
+    <div class="col-xl-4">
+      <button class="button mx-1">Apply Filter</button>
+      <button class="button warning mx-1">Reset Filter</button>
+    </div>
+  </div>-->
+  <div class="row mt-3">
+    <div
+      class="col-xl-6 col-md-6 col-sm-12 my-3"
+      *ngFor="let product of products"
+    >
+      <div class="w-90 m-auto p-3 box-shadow">
+        <h2 class="title">{{ product.title }}</h2>
+        <p class="mb-0">{{ product.description }}</p>
+        <div class="mt-2">
+          <a
+            href="{{ product.url }}"
+            target="_blank"
+            rel="noreferrer"
+            class="button d-block-inline"
+            >Visit Repo</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

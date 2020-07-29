@@ -1,0 +1,20 @@
+@import "../../styles.scss";
+
+.title {
+  font-size: 22px;
+}
+
+div.box-shadow {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+  border-radius: 5px;
+}
+
+.button {
+  color: $dark;
+}
+
+a.button {
+  display: inline-block;
+  font-size: 12px;
+}

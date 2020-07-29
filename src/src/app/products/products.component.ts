@@ -1,14 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaData } from '../core/models/metadata.model';
+import { ProductsService } from '../services/products.service';
+import { IProduct } from '../models/IProduct';
+import { SubscriptionDestroyer } from '../core/models/subscriptiondestroyer';
+import { Language } from '../core/models/language.model';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent implements OnInit {
-  constructor(private meta: MetaData) {
+export class ProductsComponent extends SubscriptionDestroyer {
+  public products: IProduct[] = [];
+  constructor(
+    private meta: MetaData,
+    private product: ProductsService,
+    private language: Language
+  ) {
+    super();
     this.setMetaData();
+    this.loadProducts();
+  }
+
+  loadProducts(): void {
+    this.AddSubscription(
+      this.product.getProducts().subscribe((resp) => {
+        this.products = resp[this.language.using()];
+      })
+    );
   }
 
   private setMetaData(): void {
@@ -32,6 +51,4 @@ export class ProductsComponent implements OnInit {
       },
     ]);
   }
-
-  ngOnInit(): void {}
 }

@@ -16,6 +16,12 @@
   }
 }
 
+#progress {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
 .open {
   @media (max-width: 812px) and (orientation: portrait) {
     height: 345px !important;

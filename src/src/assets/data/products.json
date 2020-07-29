@@ -1,1 +1,128 @@
-[]
+{
+  "en": [
+    {
+      "title": "Xeroxcore",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/Xeroxcore"
+    },
+    {
+      "title": "Xcore CLI",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/cli"
+    },
+    {
+      "title": "XAuth",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/xAuth"
+    },
+    {
+      "title": "XSql",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/xSQL"
+    },
+    {
+      "title": "XEventLogger",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/xevent-logger"
+    },
+    {
+      "title": "XHeader",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/xheader-security"
+    },
+    {
+      "title": "XFilewriter",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/xFilewriter"
+    },
+    {
+      "title": "XFilehash",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni enimsamp...",
+      "url": "https://github.com/Xeroxcore/xfilehash-security"
+    }
+  ],
+  "swe": [
+    {
+      "title": "Xeroxcore",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/Xeroxcore"
+    },
+    {
+      "title": "Xcore CLI",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/cli"
+    },
+    {
+      "title": "XAuth",
+      "description": "https://github.com/Xeroxcore/xAuth",
+      "url": "https://github.com/Xeroxcore/xAuth"
+    },
+    {
+      "title": "XSql",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xSQL"
+    },
+    {
+      "title": "XEventLogger",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xevent-logger"
+    },
+    {
+      "title": "XHeader",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xheader-security"
+    },
+    {
+      "title": "XFilewriter",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xFilewriter"
+    },
+    {
+      "title": "XFilehash",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xfilehash-security"
+    }
+  ],
+  "th": [
+    {
+      "title": "Xeroxcore",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/Xeroxcore"
+    },
+    {
+      "title": "Xcore CLI",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/cli"
+    },
+    {
+      "title": "XAuth",
+      "description": "https://github.com/Xeroxcore/xAuth",
+      "url": "https://github.com/Xeroxcore/xAuth"
+    },
+    {
+      "title": "XSql",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xSQL"
+    },
+    {
+      "title": "XEventLogger",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xevent-logger"
+    },
+    {
+      "title": "XHeader",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xheader-security"
+    },
+    {
+      "title": "XFilewriter",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xFilewriter"
+    },
+    {
+      "title": "XFilehash",
+      "description": "",
+      "url": "https://github.com/Xeroxcore/xfilehash-security"
+    }
+  ]
+}
