@@ -16,6 +16,14 @@
     "slideTitle": "Find a fix that suits you",
     "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now."
   },
+  "CONTACT": {
+    "slideTitle": "Don’t be shy reach out to us",
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now."
+  },
+  "ABOUT": {
+    "slideTitle": "We love open source",
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now."
+  },
   "NOTFOUND": {
     "title": "404 page not found",
     "text": "The page you are looking for does not exist or has been moved or deleted. We apologize for the inconvenience.<br/> <br/>We could not find the following page:",

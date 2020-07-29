@@ -10,6 +10,8 @@ import { ErrorRoutingModule } from './error/error-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotfoundComponent,
     HomeComponent,
     ProductsComponent,
+    ContactComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
