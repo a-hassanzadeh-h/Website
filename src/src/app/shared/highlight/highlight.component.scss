@@ -31,12 +31,47 @@
 }
 
 .banner {
-  align-items: flex-end !important;
+  padding-top: 85px;
+}
+
+div.w-90 {
+  @media (max-width: 1024px) and (orientation: portrait) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 736px) and (orientation: landscape) {
+    margin: 0 auto;
+  }
 }
 
 .highlight {
-  height: 35vh !important;
-  padding-bottom: 30px;
+  height: 40vh !important;
+  padding-bottom: 25px;
+
+  @media (max-width: 1136px) and (orientation: portrait) {
+    min-height: 25vh !important;
+    height: 25vh !important;
+  }
+
+  @media (max-width: 1024px) and (orientation: portrait) {
+    height: 35vh !important;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    height: 45vh !important;
+  }
+
+  @media (max-width: 812px) and (orientation: landscape) {
+    height: 100vh !important;
+  }
+
+  @media (max-width: 736px) and (orientation: landscape) {
+    height: 120vh !important;
+  }
+
+  @media (max-width: 736px) and (orientation: portrait) {
+    height: 85vh !important;
+  }
 }
 
 .remove {
@@ -52,8 +87,21 @@
 
 h1 {
   font-size: 48px;
+
+  @media (max-width: 812px) and (orientation: landscape) {
+    padding-top: 120px;
+    font-size: 28px;
+  }
+
+  @media (max-width: 736px) {
+    padding-top: 95px;
+    font-size: 28px;
+  }
 }
 
 p {
   font-size: 24px;
+  @media (max-width: 736px) {
+    font-size: 18;
+  }
 }

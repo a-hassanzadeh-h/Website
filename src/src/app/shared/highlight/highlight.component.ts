@@ -26,15 +26,19 @@ export class HighlightComponent extends SubscriptionDestroyer {
     switch (true) {
       case page.includes('home'):
         this.title = 'HOME.slideTitle';
+        this.text = 'HOME.slideText';
         break;
       case page.includes('products'):
         this.title = 'PRODUCTS.slideTitle';
+        this.text = 'PRODUCTS.slideText';
         break;
       case page.includes('products'):
         this.title = 'ABOUT.slideTitle';
+        this.text = 'ABOUT.slideText';
         break;
       case page.includes('products'):
         this.title = 'CONTACT.slideTitle';
+        this.text = 'CONTACT.slideText';
         break;
     }
   }
