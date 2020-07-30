@@ -1,4 +1,5 @@
-<div class="container-fluid box-shadow mt-5">
+<app-carousel></app-carousel>
+<div class="container-fluid box-shadow">
   <div class="row">
     <div class="container">
       <div class="row py-5 center-tablet">
@@ -52,7 +53,7 @@
                 <a
                   href=""
                   class="link"
-                  [routerLink]="['/legal:terms']"
+                  [routerLink]="['/legal/terms']"
                   rel="noreferrer"
                   [class.active]="isActive('terms')"
                   >{{ "HOME.terms" | translate }}</a
@@ -62,7 +63,7 @@
                 <a
                   href=""
                   class="link"
-                  [routerLink]="['/legal:privacy']"
+                  [routerLink]="['/legal/privacy']"
                   rel="noreferrer"
                   [class.active]="isActive('privacy')"
                   >{{ "HOME.privacy" | translate }}</a

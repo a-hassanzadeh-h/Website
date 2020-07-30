@@ -10,7 +10,25 @@
     "terms": "เงื่อนไขการให้บริการ",
     "privacy": "นโยบายความเป็นส่วนตัว",
     "about": "เกี่ยวกับเรา",
-    "blog": "บล็อก"
+    "blog": "บล็อก",
+    "idea": "ฉันมีความคิดมาทำสิ่งนี้",
+    "ideaText": "เราสามารถจัดหาวิธีการที่เหมาะสมในการพัฒนาเสริมศักยภาพให้ทีมของคุณด้วยการพัฒนาแอปพลิเคชั่นที่รวดเร็วและมีประสิทธิภาพยิ่งขึ้น อย่าปล่อยให้โอกาสนี้ผ่านไปและตรวจสอบผลิตภัณฑ์ของเราตอนนี้ อย่าปล่อยให้โอกาสนี้ผ่านไปและตร. <br/> <br/> เราสามารถจัดหาวิธีการที่เหมาะสมในการพัฒนาเสริมศักยภาพให้ทีมของคุณด้วยการพัฒนาแอปพลิเคชั่นที่รวดเร็วและมีประสิทธิภาพยิ่งขึ้น อย่าปล่อยให้โอกาสนี้ผ่านไปและตรวจสอบผลิตภัณฑ์ของเราตอนนี้",
+    "delivery": "เวลาจัดส่ง",
+    "deliveryText": "เราสามารถจัดหาวิธีการที่เหมาะสมในการพัฒนาเสริมศักยภาพให้ทีมของคุณด้วยการพัฒนาแอปพลิเคชั่นที่รวดเร็วและมีป",
+    "impact": "ผลกระทบต่อตลาด",
+    "impactText": "เราสามารถจัดหาวิธีการที่เหมาะสมในการพัฒนาเสริมศักยภาพให้ทีมของคุณด้วยการพัฒนาแอปพลิเคชั่นที่รวดเร็วและมีประสิ",
+    "bannerTitle": "ปรับปรุงเวลาในการจัดส่ง",
+    "bannerButton": "ดูผลิตภัณฑ์ของเรา",
+    "bannerText": "ไม่ต้องรอเร่งการพัฒนาของคุณทันที",
+    "bannerUrl": "/products"
+  },
+  "ABOUT": {
+    "slideTitle": "We love open source",
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
+    "bannerTitle": "Got a special request? Contact us",
+    "bannerButton": "Contact us",
+    "bannerText": "Sending a mail to us takes but a moment, don’t wait",
+    "bannerUrl": "/contact"
   },
   "PRODUCTS": {
     "slideTitle": "ค้นหาการแก้ไขที่เหมาะกับคุณ",

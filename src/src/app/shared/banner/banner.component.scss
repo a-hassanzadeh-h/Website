@@ -1,0 +1,25 @@
+@import "../../../styles.scss";
+
+#banner {
+  height: 280px;
+  background-position: center;
+  background: rgba(60, 20, 76, 0.73);
+  color: $white;
+  #banner-title {
+    font-size: 36px;
+  }
+}
+
+.overlay {
+  background-color: transparent;
+}
+
+.w-99 {
+  width: 99%;
+}
+
+.hide-tablet {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

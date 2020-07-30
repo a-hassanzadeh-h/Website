@@ -10,7 +10,25 @@
     "terms": "Användarvillkor",
     "privacy": "Integritetspolicy",
     "about": "Om oss",
-    "blog": "Blog"
+    "blog": "Blog",
+    "idea": "Jag har en idé, låt oss göra det här",
+    "ideaText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. <br/> <br/> consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+    "delivery": "Leveranstid",
+    "deliveryText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "impact": "Marknadspåverkan",
+    "impactText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "bannerTitle": "Förbättra leveranstiden",
+    "bannerButton": "Se våra produkter",
+    "bannerText": "Vänta inte, påskynda din utveckling nu",
+    "bannerUrl": "/products"
+  },
+  "ABOUT": {
+    "slideTitle": "We love open source",
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
+    "bannerTitle": "Got a special request? Contact us",
+    "bannerButton": "Contact us",
+    "bannerText": "Sending a mail to us takes but a moment, don’t wait",
+    "bannerUrl": "/contact"
   },
   "PRODUCTS": {
     "slideTitle": "Hitta en lösning som passar dig",

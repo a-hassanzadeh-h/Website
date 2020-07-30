@@ -8,7 +8,7 @@
   height: 95px;
   z-index: 3;
   background-color: $white;
-  z-index: 1;
+  z-index: 2;
   transition: all 600ms ease-in-out;
 
   @media (max-width: 812px) and (orientation: portrait) {

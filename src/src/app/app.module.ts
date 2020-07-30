@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { MaterialModule } from './shared/material.module';
+import { LegalComponent } from './legal/legal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { MaterialModule } from './shared/material.module';
     ProductsComponent,
     ContactComponent,
     AboutComponent,
+    LegalComponent,
   ],
   imports: [
     MaterialModule,

@@ -7,6 +7,12 @@ import { MetaData } from '../core/models/metadata.model';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  banner = {
+    title: 'HOME.bannerTitle',
+    button: 'HOME.bannerButton',
+    text: 'HOME.bannerText',
+    url: 'HOME.bannerUrl',
+  };
   constructor(private meta: MetaData) {
     this.setMetaData();
   }

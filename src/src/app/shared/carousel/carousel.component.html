@@ -1,20 +1,63 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12">
-      <div id="slider" class="slider">
-        <div class="wrapper">
-          <div id="slides" class="slides">
-            <span *ngFor="let item of items" class="slide">
-              <div class="row">
-                <div class="col-xl-4 text-center" *ngFor="let img of item.img">
-                  {{ img }}
-                </div>
-              </div>
-            </span>
-          </div>
-        </div>
-        <a id="prev" class="control prev"></a>
-        <a id="next" class="control next"></a>
+<div class="w-100 box-shadow py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template class="text-center" carouselSlide>
+            <div class="text-center">
+              <img
+                class="w-75"
+                src="../../../assets/image/technology/angular.png"
+                alt="..."
+              />
+            </div>
+          </ng-template>
+          <ng-template class="text-center" carouselSlide>
+            <div class="text-center">
+              <img
+                class="w-75"
+                src="../../../assets/image/technology/postgresql.png"
+                alt="..."
+              />
+            </div>
+          </ng-template>
+          <ng-template class="text-center" carouselSlide>
+            <div class="text-center">
+              <img
+                class="w-75"
+                src="../../../assets/image/technology/netcore.png"
+                alt="..."
+              />
+            </div>
+          </ng-template>
+          <ng-template class="text-center" carouselSlide>
+            <div class="text-center">
+              <img
+                class="w-75"
+                src="../../../assets/image/technology/docker.png"
+                alt="..."
+              />
+            </div>
+          </ng-template>
+          <ng-template class="text-center" carouselSlide>
+            <div class="text-center">
+              <img
+                class="w-75"
+                src="../../../assets/image/technology/azure.png"
+                alt="..."
+              />
+            </div>
+          </ng-template>
+          <ng-template class="text-center" carouselSlide>
+            <div class="text-center">
+              <img
+                class="w-75"
+                src="../../../assets/image/technology/aws.png"
+                alt="..."
+              />
+            </div>
+          </ng-template>
+        </owl-carousel-o>
       </div>
     </div>
   </div>

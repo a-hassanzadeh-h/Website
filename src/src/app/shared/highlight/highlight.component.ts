@@ -40,6 +40,14 @@ export class HighlightComponent extends SubscriptionDestroyer {
         this.title = 'CONTACT.slideTitle';
         this.text = 'CONTACT.slideText';
         break;
+      case page.includes('terms'):
+        this.title = 'TERMS.slideTitle';
+        this.text = 'TERMS.slideText';
+        break;
+      case page.includes('privacy'):
+        this.title = 'PRIVACY.slideTitle';
+        this.text = 'PRIVACY.slideText';
+        break;
     }
   }
 

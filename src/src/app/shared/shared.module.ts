@@ -8,6 +8,9 @@ import { NavComponent } from './nav/nav.component';
 import { DateTimePipe } from '../core/pipes/datetime.pipe';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BannerComponent } from './banner/banner.component';
+import { HintsComponent } from './hints/hints.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,24 @@ import { MaterialModule } from './material.module';
     FooterComponent,
     NavComponent,
     DateTimePipe,
+    BannerComponent,
+    HintsComponent,
   ],
-  imports: [CommonModule, CoreModule, RouterModule, MaterialModule],
+  imports: [
+    CommonModule,
+    CoreModule,
+    RouterModule,
+    MaterialModule,
+    CarouselModule,
+  ],
   exports: [
     DateTimePipe,
     CarouselComponent,
     HighlightComponent,
     FooterComponent,
     NavComponent,
+    BannerComponent,
+    HintsComponent,
   ],
 })
 export class SharedModule {}
