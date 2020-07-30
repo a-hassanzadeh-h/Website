@@ -2,16 +2,8 @@
   <div class="row">
     <div class="col-xl-6 col-md-6">
       <div>
-        <h1 class="title">Who we are</h1>
-        <p>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt. Neque porro quisquam est, qui dolorem. <br />
-          <br />
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia
-          voluptas sit aspernatur aut odit aut fugit, sed quia
-        </p>
+        <h1 class="title">{{ "ABOUT.title" | translate }}</h1>
+        <p [innerHTML]="'ABOUT.titleText' | translate"></p>
       </div>
     </div>
     <div class="col-xl-6 col-md-6">
@@ -20,27 +12,24 @@
   </div>
   <div class="row">
     <div class="col-xl-4 col-md-4">
-      <h2 class="title">Time to delivery</h2>
+      <h2 class="title">{{ "ABOUT.time" | translate }}</h2>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni
+        {{ "ABOUT.timeText" | translate }}
       </p>
     </div>
     <div class="col-xl-4 col-md-4">
-      <h2 class="title">Market impact</h2>
+      <h2 class="title">{{ "ABOUT.impact" | translate }}</h2>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni
+        {{ "ABOUT.impactText" | translate }}
       </p>
     </div>
     <div class="col-xl-4 col-md-4">
-      <h2 class="title">Low Cost</h2>
+      <h2 class="title">{{ "ABOUT.cost" | translate }}</h2>
       <p>
-        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-        fugit, sed quia consequuntur magni
+        {{ "ABOUT.costText" | translate }}
       </p>
     </div>
   </div>
 </div>
 <app-banner [banner]="banner"></app-banner>
-<app-hints></app-hints>
+<app-hints [hints]="hints"></app-hints>

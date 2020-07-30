@@ -1,8 +1,5 @@
 {
-  "HOME": {
-    "slideTitle": "Experiencing slow Development?",
-    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
-    "slideButton": "View our Products",
+  "COMMON": {
     "home": "Home",
     "products": "Products",
     "contact": "Contact",
@@ -11,6 +8,14 @@
     "privacy": "Privacy Policy",
     "about": "About",
     "blog": "Blog",
+    "links": "Page Links",
+    "important": "Important",
+    "interesting": "Interesting"
+  },
+  "HOME": {
+    "slideTitle": "Experiencing slow Development?",
+    "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
+    "slideButton": "View our Products",
     "idea": "I got an Idea, let’s do this",
     "ideaText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. <br/> <br/> consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
     "delivery": "Time to delivery",
@@ -48,6 +53,14 @@
   "ABOUT": {
     "slideTitle": "We love open source",
     "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
+    "title": "Who we are",
+    "titleText": " Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. <br /> <br /> consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+    "time": "Time to delivery",
+    "timeText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "impact": "Market impact",
+    "impactText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "cost": "Low Cost",
+    "costText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
     "bannerTitle": "Got a special request? Contact us",
     "bannerButton": "Contact us",
     "bannerText": "Sending a mail to us takes but a moment, don’t wait",

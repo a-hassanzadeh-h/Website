@@ -11,7 +11,9 @@
         <div class="col-xl-2 col-md-12">
           <div id="logo" class="d-inline-block">
             <ul>
-              <li><p class="mb-0">Page Links</p></li>
+              <li>
+                <p class="mb-0">{{ "COMMON.links" | translate }}</p>
+              </li>
               <li>
                 <a
                   href="/home"
@@ -19,7 +21,7 @@
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('home')"
-                  >{{ "HOME.home" | translate }}</a
+                  >{{ "COMMON.home" | translate }}</a
                 >
               </li>
               <li>
@@ -29,7 +31,7 @@
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('products')"
-                  >{{ "HOME.products" | translate }}</a
+                  >{{ "COMMON.products" | translate }}</a
                 >
               </li>
               <li>
@@ -39,7 +41,7 @@
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('contact')"
-                  >{{ "HOME.contact" | translate }}</a
+                  >{{ "COMMON.contact" | translate }}</a
                 >
               </li>
             </ul>
@@ -48,7 +50,9 @@
         <div class="col-xl-2 col-md-12">
           <div id="logo" class="d-inline-block">
             <ul>
-              <li><p class="mb-0">Important</p></li>
+              <li>
+                <p class="mb-0">{{ "COMMON.important" | translate }}</p>
+              </li>
               <li>
                 <a
                   href=""
@@ -56,7 +60,7 @@
                   [routerLink]="['/legal/terms']"
                   rel="noreferrer"
                   [class.active]="isActive('terms')"
-                  >{{ "HOME.terms" | translate }}</a
+                  >{{ "COMMON.terms" | translate }}</a
                 >
               </li>
               <li>
@@ -66,7 +70,7 @@
                   [routerLink]="['/legal/privacy']"
                   rel="noreferrer"
                   [class.active]="isActive('privacy')"
-                  >{{ "HOME.privacy" | translate }}</a
+                  >{{ "COMMON.privacy" | translate }}</a
                 >
               </li>
             </ul>
@@ -75,7 +79,9 @@
         <div class="col-xl-2 col-md-12">
           <div id="logo" class="d-inline-block">
             <ul>
-              <li><p class="mb-0">Interesting</p></li>
+              <li>
+                <p class="mb-0">{{ "COMMON.interesting" | translate }}</p>
+              </li>
               <li>
                 <a
                   href="/about"
@@ -83,7 +89,7 @@
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('about')"
-                  >{{ "HOME.about" | translate }}</a
+                  >{{ "COMMON.about" | translate }}</a
                 >
               </li>
               <li>
@@ -93,7 +99,7 @@
                   class="link"
                   rel="noreferrer"
                   [class.active]="isActive('blog')"
-                  >{{ "HOME.blog" | translate }}</a
+                  >{{ "COMMON.blog" | translate }}</a
                 >
               </li>
             </ul>
@@ -119,7 +125,7 @@
         href="https://mcsunity.com"
         rel="noreferrer"
         target="_bland"
-        >{{ "HOME.builtBy" | translate }}</a
+        >{{ "COMMON.builtBy" | translate }}</a
       >
     </div>
     <div class="col-xl-4">

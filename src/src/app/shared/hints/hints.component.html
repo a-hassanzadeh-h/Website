@@ -6,80 +6,30 @@
           <div class="row">
             <div class="col-12">
               <owl-carousel-o [options]="customOptions">
-                <ng-template carouselSlide>
+                <ng-template *ngFor="let hint of hints" carouselSlide>
                   <div class="container-fluid py-1">
-                    <div class="row box-shadow p-5">
-                      <div class="col-xl-4">
-                        <h3 class="title">Faster development</h3>
-                        <p>
-                          Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut odit aut fugit, sed quia consequuntur
-                          magni dolores eos qui ratione voluptatem sequi
-                          nesciunt. Neque porro quisquam est, qui dolorem.<br /><br />
-                          consequuntur magni dolores eos qui ratione voluptatem
-                          sequi nesciunt. Neque porro quisquam est, qui dolorem.
-                          Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut odit aut fugit, sed quia
-                        </p>
-                      </div>
-                      <div class="col-xl-8">
-                        <img
-                          class="w-100"
-                          src="../../../assets/image/home/success.png"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                  <div class="container-fluid py-1">
-                    <div class="row box-shadow p-5">
-                      <div class="col-xl-4">
-                        <h3 class="title">Secure Environment</h3>
-                        <p>
-                          Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut odit aut fugit, sed quia consequuntur
-                          magni dolores eos qui ratione voluptatem sequi
-                          nesciunt. Neque porro quisquam est, qui dolorem.<br /><br />
-                          consequuntur magni dolores eos qui ratione voluptatem
-                          sequi nesciunt. Neque porro quisquam est, qui dolorem.
-                          Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut odit aut fugit, sed quia
-                        </p>
-                      </div>
-                      <div class="col-xl-8">
-                        <img
-                          class="w-100"
-                          src="../../../assets/image/home/success.png"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                  <div class="container-fluid py-1">
-                    <div class="row box-shadow p-5">
-                      <div class="col-xl-4">
-                        <h3 class="title">Performance oriented</h3>
-                        <p>
-                          Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut odit aut fugit, sed quia consequuntur
-                          magni dolores eos qui ratione voluptatem sequi
-                          nesciunt. Neque porro quisquam est, qui dolorem.<br /><br />
-                          consequuntur magni dolores eos qui ratione voluptatem
-                          sequi nesciunt. Ne que porro quisquam est, qui
-                          dolorem. Nemo enim ipsam voluptatem quia voluptas sit
-                          aspernatur aut odit aut fugit, sed quia
-                        </p>
-                      </div>
-                      <div class="col-xl-8">
-                        <img
-                          class="w-100"
-                          src="../../../assets/image/home/success.png"
-                          alt="..."
-                        />
+                    <div class="p-2">
+                      <div class="row box-shadow p-5">
+                        <div class="col-xl-4">
+                          <h3 class="title">Faster development</h3>
+                          <p>
+                            Nemo enim ipsam voluptatem quia voluptas sit
+                            aspernatur aut odit aut fugit, sed quia consequuntur
+                            magni dolores eos qui ratione voluptatem sequi
+                            nesciunt. Neque porro quisquam est, qui dolorem.<br /><br />
+                            consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Neque porro quisquam est,
+                            qui dolorem. Nemo enim ipsam voluptatem quia
+                            voluptas sit aspernatur aut odit aut fugit, sed quia
+                          </p>
+                        </div>
+                        <div class="col-xl-8">
+                          <img
+                            class="w-100"
+                            src="../../../assets/image/home/success.png"
+                            alt="..."
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,17 @@
 {
+  "COMMON": {
+    "home": "Hem",
+    "products": "Produkter",
+    "contact": "Kontakt",
+    "builtBy": "Utvecklad av MCS Unity",
+    "terms": "Användarvillkor",
+    "privacy": "Integritetspolicy",
+    "about": "Om oss",
+    "blog": "Blog",
+    "links": "Sidlänkar",
+    "important": "Viktigt",
+    "interesting": "Intressant"
+  },
   "HOME": {
     "slideTitle": "Upplever du långsam utveckling?",
     "slideText": "Vi kan ge dig rätt utvecklingsmedel, ge dina team snabbare och effektivare applikationsutveckling. Låt inte denna potential passera och kolla in våra produkter nu.",
@@ -23,11 +36,19 @@
     "bannerUrl": "/products"
   },
   "ABOUT": {
-    "slideTitle": "We love open source",
+    "slideTitle": "Vi älskar open-source",
     "slideText": "We can provide you with the proper means of development, empowering your teams with faster and more efficient application development. Don't let this potential pass by and check out our products now.",
-    "bannerTitle": "Got a special request? Contact us",
-    "bannerButton": "Contact us",
-    "bannerText": "Sending a mail to us takes but a moment, don’t wait",
+    "title": "Vilka är vi",
+    "titleText": " Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. <br /> <br /> consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+    "time": "Leveranstid",
+    "timeText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "impact": "Marknadseffekt",
+    "impactText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "cost": "kostnadseffektivt",
+    "costText": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni",
+    "bannerTitle": "Har du en speciell begäran? Kontakta oss",
+    "bannerButton": "Kontakta oss",
+    "bannerText": "Att skicka ett mail till oss tar bara ett ögonblick, vänta inte",
     "bannerUrl": "/contact"
   },
   "PRODUCTS": {

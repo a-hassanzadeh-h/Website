@@ -4,6 +4,7 @@
 img {
   transition: all 500ms ease-in-out;
   filter: grayscale(100%);
+  width: 20vh !important;
 }
 
 img:hover {

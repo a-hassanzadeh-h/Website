@@ -7,6 +7,11 @@ import { MetaData } from '../core/models/metadata.model';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  hints = [
+    { title: '', text: '', img: '' },
+    { title: '', text: '', img: '' },
+    { title: '', text: '', img: '' },
+  ];
   banner = {
     title: 'HOME.bannerTitle',
     button: 'HOME.bannerButton',

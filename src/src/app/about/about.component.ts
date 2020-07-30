@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
+  hints = [
+    { title: '', text: '', img: '' },
+    { title: '', text: '', img: '' },
+    { title: '', text: '', img: '' },
+  ];
   banner = {
     title: 'ABOUT.bannerTitle',
     button: 'ABOUT.bannerButton',

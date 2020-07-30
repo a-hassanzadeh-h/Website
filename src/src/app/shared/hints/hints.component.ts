@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { IHint } from 'src/app/models/IHint';
 
 @Component({
   selector: 'app-hints',
@@ -7,7 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./hints.component.scss'],
 })
 export class HintsComponent implements OnInit {
-  customOptions: OwlOptions = {
+  @Input() hints: IHint;
+  public customOptions: OwlOptions = {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -29,6 +31,7 @@ export class HintsComponent implements OnInit {
       },
     },
   };
+
   constructor() {}
 
   ngOnInit(): void {}
